@@ -22,16 +22,17 @@ var hit := [] setget _hited
 var input_direction := 0
 var input_jump := 0
 var input_down := false
-var input_bloq := true
+var input_bloq := false
 
 var _in_air = false
 var _in_damage = false
 var _in_atack = false
-var _in_onslaught = false
 var _in_slide = false
 var _in_down = false
 var _in_bloq = false
+var _in_onslaught := false
 var _flag_swap_dir := 0
+
 
 var _bloq_break_down = false
 var _atk_condition = null
@@ -113,15 +114,16 @@ func _physics_process(delta):
 		motion.x = lerp(motion.x, speed_target_air, 0.2)
 
 
-func atack_inputs(_atk, _is_special := false):
-	if _in_damage or _in_slide or _atk_condition != null:
+func atack_inputs(_atk, _is_onslaught := false):
+	if _in_onslaught or _in_damage or _in_slide or _atk_condition != null:
 		return
 	
 	if _in_air and not _aereo_kick:
 		return
 	
+	_in_onslaught = _is_onslaught
+	
 	if _combo_anim_list.size() == 0:
-		_in_onslaught = _is_special
 		_in_atack = true
 		_combo_anim_list.append(_atk)
 
@@ -242,11 +244,6 @@ func _atack_state():
 			return
 		
 		if _combo_anim_list.size() == 0:
-			if _in_onslaught:
-				if not animation.is_playing():
-					pass
-				return
-			
 			if not animation.is_playing():
 				_in_atack = false
 			return
@@ -265,6 +262,8 @@ func _atack_state():
 			_combo_await = false
 	
 	else:
+		_combo_anim_list.clear()
+		_in_onslaught = false
 		_combo_current_atk = -1
 		_combo_count = -1
 		_combo_await = false

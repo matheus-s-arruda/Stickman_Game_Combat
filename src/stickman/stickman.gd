@@ -9,7 +9,7 @@ func _init():
 			Vector2(0, -24), Vector2(40, 24), 2]
 	
 	_hit_data_jump = [
-			[15, Vector2(100, 0)],
+			[15, Vector2(100, -50), null],
 			Vector2(0, -24), Vector2(40, 24), 2]
 
 
@@ -23,8 +23,10 @@ func _process(delta):
 func _physics_process(delta):
 	input_direction = Input.get_action_strength("RIGHT") - Input.get_action_strength("LEFT")
 	input_jump = Input.get_action_strength("JUMP")
-	input_down = Input.is_action_pressed("DOWM")
+	
 	input_bloq = Input.is_action_pressed("BLOQ")
+	
+	input_down = Input.is_action_pressed("DOWM")
 	
 	if Input.is_action_just_pressed("atk_1"):
 		atack_inputs(0)
@@ -33,7 +35,7 @@ func _physics_process(delta):
 		atack_inputs(1)
 	
 	elif Input.is_action_just_pressed("atk_3"):
-		atack_inputs(2)
+		atack_inputs(2, true)
 
 
 func set_shape_size(size):

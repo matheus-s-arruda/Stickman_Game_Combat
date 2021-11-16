@@ -1,32 +1,81 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://src/stickman/animations/down_idle.tres" type="Animation" id=1]
-[ext_resource path="res://src/stickman/cabeca.gd" type="Script" id=2]
+[ext_resource path="res://src/stickman/enemy/enemy_articulacao.gd" type="Script" id=2]
 [ext_resource path="res://src/stickman/animations/damage_2_contact.tres" type="Animation" id=3]
-[ext_resource path="res://src/stickman/line.gd" type="Script" id=4]
-[ext_resource path="res://src/stickman/articulacao.gd" type="Script" id=5]
+[ext_resource path="res://src/stickman/enemy/enemy_line.gd" type="Script" id=4]
+[ext_resource path="res://src/stickman/enemy/enemy_head.gd" type="Script" id=5]
 [ext_resource path="res://src/stickman/animations/damage_2.tres" type="Animation" id=6]
 [ext_resource path="res://src/stickman/animations/walk.tres" type="Animation" id=7]
 [ext_resource path="res://src/stickman/animations/damage_1.tres" type="Animation" id=8]
 [ext_resource path="res://src/stickman/animations/down_walk.tres" type="Animation" id=9]
 [ext_resource path="res://src/stickman/animations/bloq.tres" type="Animation" id=10]
+[ext_resource path="res://src/stickman/animations/atks/atk_special_1.tres" type="Animation" id=11]
+[ext_resource path="res://src/stickman/animations/atks/atk_kick_2.tres" type="Animation" id=12]
+[ext_resource path="res://src/stickman/animations/atks/atk_kick_1.tres" type="Animation" id=13]
+[ext_resource path="res://src/stickman/animations/atks/atk_kick_3.tres" type="Animation" id=14]
+[ext_resource path="res://src/stickman/animations/atks/atk_punch_1.tres" type="Animation" id=15]
+[ext_resource path="res://src/stickman/animations/atks/atk_punch_2.tres" type="Animation" id=16]
+[ext_resource path="res://src/stickman/animations/atks/atk_punch_3.tres" type="Animation" id=17]
 
 [sub_resource type="GDScript" id=70]
 script/source = "extends Stickman
 
 
+export(NodePath) onready var target = get_node(target)
 
+var _distance_to_target
 
-
+var _cooldown_1 := 0.0
 
 func _physics_process(delta):
+	if _cooldown_1 > 0.0:
+		_cooldown_1 -= delta
+	else:
+		_cooldown_1 = 0.0
 	
-	if global_position.x > 150:
-		input_direction = -1
-	elif global_position.x < 50:
+	_distance_to_target = global_position.distance_to(target.global_position)
+	
+	if target.global_position.x > global_position.x:
 		input_direction = 1
 	else:
-		input_direction = 0
+		input_direction = -1
+	
+	input_bloq = _distance_to_target < 220
+		
+	atks()
+
+
+func atks():
+	if _cooldown_1 == 0.0:
+		if _distance_to_target < 135 and _distance_to_target > 105:
+			_cooldown_1 = 5.0
+			atack_inputs(2, true)
+			return
+	
+	if _distance_to_target < 70 and _distance_to_target > 50:
+		atack_inputs(1)
+		return
+	
+	if _distance_to_target < 50:
+		atack_inputs(0)
+		#return
+
+
+func hitbox(_atk : int):
+	match _atk:
+		0: #normal punch
+			spawn_hitbox([10, Vector2(origin.scale.x * 70, 0)], Vector2(0, -96), Vector2(48, 16))
+		1: #hook
+			spawn_hitbox([25, Vector2(origin.scale.x * 100, -120)], Vector2(0, -106), Vector2(32, 60))
+		2: #normal kick
+			spawn_hitbox([25, Vector2(origin.scale.x * 100, -50)], Vector2(0, -96), Vector2(29, 32))
+		3: #down kick
+			spawn_hitbox([25, Vector2(origin.scale.x * 100, -50)], Vector2(0, -46), Vector2(48, 30))
+		4: #knock out
+			spawn_hitbox([40, Vector2(origin.scale.x * 500, -400), null], Vector2(0, -96), Vector2(48, 32))
+		5: #especial_1, anim sincronia
+			spawn_hitbox([0, Vector2(origin.scale.x * -700, -400), true], Vector2(90, -124), Vector2(8, 8))
 "
 
 [sub_resource type="RectangleShape2D" id=71]
@@ -1932,6 +1981,7 @@ __meta__ = {
 }
 origin = NodePath("origin")
 animation = NodePath("AnimationPlayer")
+_atks = [ [ "atk_punch_1", "atk_punch_2", "atk_punch_1", "atk_punch_2", "atk_punch_3" ], [ "atk_kick_1", "atk_kick_2", "atk_kick_3" ], [ "atk_special_1" ] ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -75 )
@@ -1940,83 +1990,17 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="origin" type="Position2D" parent="."]
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="bacia" type="Position2D" parent="origin"]
-position = Vector2( 0, -76 )
-script = ExtResource( 5 )
-
-[node name="tronco" type="Position2D" parent="origin/bacia"]
-position = Vector2( 0, -24 )
-script = ExtResource( 4 )
-max_length = 24.0
-
-[node name="clavícula" type="Position2D" parent="origin/bacia/tronco"]
-position = Vector2( 0, -24 )
-script = ExtResource( 4 )
-max_length = 24.0
-
-[node name="cabeca" type="Position2D" parent="origin/bacia/tronco/clavícula"]
-position = Vector2( 0, -14 )
-script = ExtResource( 2 )
-
-[node name="braco_2" type="Position2D" parent="origin/bacia/tronco/clavícula"]
-position = Vector2( 16, 24 )
-script = ExtResource( 4 )
-max_length = 29.0
-
-[node name="mao_2" type="Position2D" parent="origin/bacia/tronco/clavícula/braco_2"]
-position = Vector2( 16, 24 )
-script = ExtResource( 4 )
-max_length = 29.0
-
-[node name="braco_1" type="Position2D" parent="origin/bacia/tronco/clavícula"]
-position = Vector2( -16, 24 )
-script = ExtResource( 4 )
-max_length = 29.0
-
-[node name="mao_1" type="Position2D" parent="origin/bacia/tronco/clavícula/braco_1"]
-position = Vector2( -16, 24 )
-script = ExtResource( 4 )
-max_length = 29.0
-
-[node name="perna_1" type="Position2D" parent="origin/bacia"]
-position = Vector2( -16, 36 )
-script = ExtResource( 4 )
-max_length = 40.0
-
-[node name="pe_1" type="Position2D" parent="origin/bacia/perna_1"]
-position = Vector2( -12, 36 )
-script = ExtResource( 4 )
-max_length = 38.0
-
-[node name="ponta_pe_1" type="Position2D" parent="origin/bacia/perna_1/pe_1"]
-position = Vector2( -6, 0 )
-script = ExtResource( 4 )
-max_length = 6.0
-
-[node name="perna_2" type="Position2D" parent="origin/bacia"]
-position = Vector2( 16, 36 )
-script = ExtResource( 4 )
-max_length = 40.0
-
-[node name="pe_2" type="Position2D" parent="origin/bacia/perna_2"]
-position = Vector2( 12, 36 )
-script = ExtResource( 4 )
-max_length = 38.0
-
-[node name="ponta_pe_2" type="Position2D" parent="origin/bacia/perna_2/pe_2"]
-position = Vector2( 6, 0 )
-script = ExtResource( 4 )
-max_length = 6.0
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 playback_process_mode = 0
 playback_default_blend_time = 0.1
 anims/RESET = SubResource( 52 )
+anims/atk_kick_1 = ExtResource( 13 )
+anims/atk_kick_2 = ExtResource( 12 )
+anims/atk_kick_3 = ExtResource( 14 )
+anims/atk_punch_1 = ExtResource( 15 )
+anims/atk_punch_2 = ExtResource( 16 )
+anims/atk_punch_3 = ExtResource( 17 )
+anims/atk_special_1 = ExtResource( 11 )
 anims/bloq = ExtResource( 10 )
 anims/damage_1 = ExtResource( 8 )
 anims/damage_2 = ExtResource( 6 )
@@ -2033,3 +2017,78 @@ anims/slide = SubResource( 54 )
 anims/slide_in = SubResource( 53 )
 anims/slide_out = SubResource( 55 )
 anims/walk = ExtResource( 7 )
+
+[node name="origin" type="Position2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="bacia" type="Position2D" parent="origin"]
+position = Vector2( 0, -76 )
+script = ExtResource( 2 )
+color = Color( 0.254902, 0.0196078, 0.4, 1 )
+
+[node name="tronco" type="Position2D" parent="origin/bacia"]
+position = Vector2( 0, -24 )
+script = ExtResource( 4 )
+color = Color( 0.254902, 0.0196078, 0.4, 1 )
+
+[node name="clavícula" type="Position2D" parent="origin/bacia/tronco"]
+position = Vector2( 0, -24 )
+script = ExtResource( 4 )
+color = Color( 0.254902, 0.0196078, 0.4, 1 )
+
+[node name="cabeca" type="Position2D" parent="origin/bacia/tronco/clavícula"]
+position = Vector2( 0, -14 )
+script = ExtResource( 5 )
+color = Color( 0.254902, 0.0196078, 0.4, 1 )
+
+[node name="braco_2" type="Position2D" parent="origin/bacia/tronco/clavícula"]
+position = Vector2( 16, 24 )
+script = ExtResource( 4 )
+color = Color( 0.254902, 0.0196078, 0.4, 1 )
+
+[node name="mao_2" type="Position2D" parent="origin/bacia/tronco/clavícula/braco_2"]
+position = Vector2( 16, 24 )
+script = ExtResource( 4 )
+color = Color( 0.254902, 0.0196078, 0.4, 1 )
+
+[node name="braco_1" type="Position2D" parent="origin/bacia/tronco/clavícula"]
+position = Vector2( -16, 24 )
+script = ExtResource( 4 )
+color = Color( 0.254902, 0.0196078, 0.4, 1 )
+
+[node name="mao_1" type="Position2D" parent="origin/bacia/tronco/clavícula/braco_1"]
+position = Vector2( -16, 24 )
+script = ExtResource( 4 )
+color = Color( 0.254902, 0.0196078, 0.4, 1 )
+
+[node name="perna_1" type="Position2D" parent="origin/bacia"]
+position = Vector2( -16, 36 )
+script = ExtResource( 4 )
+color = Color( 0.254902, 0.0196078, 0.4, 1 )
+
+[node name="pe_1" type="Position2D" parent="origin/bacia/perna_1"]
+position = Vector2( -12, 36 )
+script = ExtResource( 4 )
+color = Color( 0.254902, 0.0196078, 0.4, 1 )
+
+[node name="ponta_pe_1" type="Position2D" parent="origin/bacia/perna_1/pe_1"]
+position = Vector2( -6, 0 )
+script = ExtResource( 4 )
+color = Color( 0.254902, 0.0196078, 0.4, 1 )
+
+[node name="perna_2" type="Position2D" parent="origin/bacia"]
+position = Vector2( 16, 36 )
+script = ExtResource( 4 )
+color = Color( 0.254902, 0.0196078, 0.4, 1 )
+
+[node name="pe_2" type="Position2D" parent="origin/bacia/perna_2"]
+position = Vector2( 12, 36 )
+script = ExtResource( 4 )
+color = Color( 0.254902, 0.0196078, 0.4, 1 )
+
+[node name="ponta_pe_2" type="Position2D" parent="origin/bacia/perna_2/pe_2"]
+position = Vector2( 6, 0 )
+script = ExtResource( 4 )
+color = Color( 0.254902, 0.0196078, 0.4, 1 )
