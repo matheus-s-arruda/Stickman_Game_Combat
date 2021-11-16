@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+
+[sub_resource type="GDScript" id=2]
+script/source = "extends RigidBody2D
+
+
+var pos_ging := Vector2(0, 100)
+var rot_ging := 0.0
+
+
+
+func _physics_process(delta):
+	if rot_ging > 0.0:
+		rot_ging -= delta
+	
+	rotation += sin(rot_ging)
+	
+
+
+
+"
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 48, 96 )
+
+[sub_resource type="GDScript" id=3]
+script/source = "extends Area2D
+
+
+var hit := [] setget hited
+
+func hited(_damage):
+	$\"../Icon\".modulate.r = randf()
+	$\"../Icon\".modulate.g = randf()
+	$\"../Icon\".modulate.b = randf()
+	
+"
+
+[node name="soda_machine" type="RigidBody2D"]
+collision_mask = 0
+mode = 3
+gravity_scale = 3.0
+script = SubResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+script = SubResource( 3 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 1 )
+
+[node name="Icon" type="Sprite" parent="."]
+scale = Vector2( 1.5, 3 )
+texture = ExtResource( 1 )
