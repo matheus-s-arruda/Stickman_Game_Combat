@@ -37,7 +37,6 @@ var _in_bloq := false
 var _in_onslaught := false
 var _flag_swap_dir := 0
 
-
 var _bloq_break_down = false
 var _atk_condition = null
 var _combo_anim_list = []
@@ -392,8 +391,6 @@ func _calc_posture(_delta):
 		_posture_recharge += _delta
 	else:
 		_posture_recharge = POSTURE_TIME_RECHARGE
-	
-	if _posture_recharge == POSTURE_TIME_RECHARGE:
 		if posture < POSTURE_MAX:
 			posture += 25.0 * _delta
 		else:

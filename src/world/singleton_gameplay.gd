@@ -1,5 +1,7 @@
 extends Node
 
+const FX_HIT_PARTICLE = preload("res://src/assets/hits/hit_particles.tscn")
+const FX_HIT_CIRCE = preload("res://src/assets/hits/impact_circle.tscn")
 
 var hud_ko_ref
 var world_ref

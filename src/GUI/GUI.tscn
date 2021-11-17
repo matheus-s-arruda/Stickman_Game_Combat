@@ -215,6 +215,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="flash" type="ColorRect" parent="MarginContainer/HUD/center/KO"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -800.0
+margin_top = -450.0
+margin_right = 800.0
+margin_bottom = 450.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="splash_1" type="TextureRect" parent="MarginContainer/HUD/center/KO"]
 visible = false
 anchor_left = 0.5
