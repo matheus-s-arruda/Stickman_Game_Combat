@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://src/stickman/animations/down_idle.tres" type="Animation" id=1]
 [ext_resource path="res://src/stickman/enemy/enemy_articulacao.gd" type="Script" id=2]
@@ -17,6 +17,8 @@
 [ext_resource path="res://src/stickman/animations/atks/atk_punch_1.tres" type="Animation" id=15]
 [ext_resource path="res://src/stickman/animations/atks/atk_punch_2.tres" type="Animation" id=16]
 [ext_resource path="res://src/stickman/animations/atks/atk_punch_3.tres" type="Animation" id=17]
+[ext_resource path="res://src/stickman/animations/die.tres" type="Animation" id=18]
+[ext_resource path="res://src/stickman/animations/die_contact.tres" type="Animation" id=19]
 
 [sub_resource type="GDScript" id=70]
 script/source = "extends Stickman
@@ -27,6 +29,11 @@ export(NodePath) onready var target = get_node(target)
 var _distance_to_target
 
 var _cooldown_1 := 0.0
+
+
+func _init():
+	Gameplay.player_2 = self
+
 
 func _physics_process(delta):
 	if _cooldown_1 > 0.0:
@@ -65,17 +72,17 @@ func atks():
 func hitbox(_atk : int):
 	match _atk:
 		0: #normal punch
-			spawn_hitbox([10, Vector2(origin.scale.x * 70, 0)], Vector2(0, -96), Vector2(48, 16))
+			spawn_hitbox([4, Vector2(origin.scale.x * 70, 0)], Vector2(0, -96), Vector2(48, 16))
 		1: #hook
-			spawn_hitbox([25, Vector2(origin.scale.x * 100, -120)], Vector2(0, -106), Vector2(32, 60))
+			spawn_hitbox([6, Vector2(origin.scale.x * 100, -120)], Vector2(0, -106), Vector2(32, 60))
 		2: #normal kick
-			spawn_hitbox([25, Vector2(origin.scale.x * 100, -50)], Vector2(0, -96), Vector2(29, 32))
+			spawn_hitbox([5, Vector2(origin.scale.x * 100, -50)], Vector2(0, -96), Vector2(29, 32))
 		3: #down kick
-			spawn_hitbox([25, Vector2(origin.scale.x * 100, -50)], Vector2(0, -46), Vector2(48, 30))
+			spawn_hitbox([8, Vector2(origin.scale.x * 100, -50)], Vector2(0, -46), Vector2(48, 30))
 		4: #knock out
-			spawn_hitbox([40, Vector2(origin.scale.x * 500, -400), null], Vector2(0, -96), Vector2(48, 32))
+			spawn_hitbox([12, Vector2(origin.scale.x * 500, -400), null], Vector2(0, -96), Vector2(48, 32))
 		5: #especial_1, anim sincronia
-			spawn_hitbox([0, Vector2(origin.scale.x * -700, -400), true], Vector2(90, -124), Vector2(8, 8))
+			spawn_hitbox([30, Vector2(origin.scale.x * -700, -400), true], Vector2(90, -124), Vector2(8, 8))
 "
 
 [sub_resource type="RectangleShape2D" id=71]
@@ -2005,6 +2012,8 @@ anims/bloq = ExtResource( 10 )
 anims/damage_1 = ExtResource( 8 )
 anims/damage_2 = ExtResource( 6 )
 anims/damage_2_contact = ExtResource( 3 )
+anims/die = ExtResource( 18 )
+anims/die_contact = ExtResource( 19 )
 anims/down_idle = ExtResource( 1 )
 anims/down_walk = ExtResource( 9 )
 anims/idle = SubResource( 7 )

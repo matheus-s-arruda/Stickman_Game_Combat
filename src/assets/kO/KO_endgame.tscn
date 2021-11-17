@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://fonts/electrox.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=3]
+size = 200
+outline_size = 9
+outline_color = Color( 0.0823529, 0.211765, 0.494118, 1 )
+font_data = ExtResource( 2 )
+
+[node name="KO" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ko_text" type="RichTextLabel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -248.0
+margin_top = -98.0
+margin_right = 248.0
+margin_bottom = 98.0
+custom_colors/default_color = Color( 0.909804, 0.992157, 1, 1 )
+custom_fonts/normal_font = SubResource( 3 )
+bbcode_enabled = true
+bbcode_text = " [shake rate=30 level=20]K.O!!![/shake]"
+text = " K.O!!!"
+__meta__ = {
+"_edit_use_anchors_": false
+}

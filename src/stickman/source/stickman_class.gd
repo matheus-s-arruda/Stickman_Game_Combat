@@ -27,12 +27,13 @@ var input_jump := 0
 var input_down := false
 var input_bloq := false
 
-var _in_air = false
-var _in_damage = false
-var _in_atack = false
-var _in_slide = false
-var _in_down = false
-var _in_bloq = false
+var _is_dead := false
+var _in_air := false
+var _in_damage := false
+var _in_atack := false
+var _in_slide := false
+var _in_down := false
+var _in_bloq := false
 var _in_onslaught := false
 var _flag_swap_dir := 0
 
@@ -44,7 +45,7 @@ var _combo_await := false
 var _combo_count := -1
 var _combo_current_atk = -1
 
-var _damage_nockback = false
+var _damage_nockback := false
 
 var _hitbox_by_condition = null
 var _hit_data_jump := []
@@ -56,20 +57,14 @@ func _physics_process(delta):
 	var speed_target := 0.0
 	var speed_target_air := motion.x
 	
-	if _posture_recharge < POSTURE_TIME_RECHARGE:
-		_posture_recharge += delta
+	_calc_posture(delta)
+	if _is_dead:
+		if not _in_air:
+			animation.play("die_contact")
 	else:
-		_posture_recharge = POSTURE_TIME_RECHARGE
-	
-	if _posture_recharge == POSTURE_TIME_RECHARGE:
-		if posture < POSTURE_MAX:
-			posture += 25.0 * delta
-		else:
-			posture = POSTURE_MAX
-	
-	_damaged_state()
-	_motion_state()
-	_atack_state()
+		_damaged_state()
+		_motion_state()
+		_atack_state()
 	
 	motion = move_and_slide(motion, Vector2.UP, true)
 	
@@ -86,6 +81,9 @@ func _physics_process(delta):
 	if _in_damage:
 		if is_on_floor():
 			motion.x = lerp(motion.x, 0, 0.1)
+		return
+	
+	if _is_dead:
 		return
 	
 	if input_down:
@@ -238,9 +236,11 @@ func _damaged_state():
 	
 	_in_atack = false
 	
+	if life <= 0.0:
+		_die()
+	
 	if _damage_nockback and is_on_floor() and animation.current_animation == "damage_2":
 		animation.play("damage_2_contact")
-	
 	
 	if (animation.current_animation_length - animation.current_animation_position) > 0.05:
 		return
@@ -312,6 +312,9 @@ func _disable_atk_condition():
 
 
 func _hited(_hit):
+	if _is_dead:
+		return
+	
 	_in_damage = true
 	
 	if animation.current_animation == "damage_2" or animation.current_animation == "damage_2_contact":
@@ -381,4 +384,27 @@ func _spawn_hitbox_condition(_data):
 	origin.add_child(_hit)
 
 
+func _calc_posture(_delta):
+	if _is_dead:
+		return
+	
+	if _posture_recharge < POSTURE_TIME_RECHARGE:
+		_posture_recharge += _delta
+	else:
+		_posture_recharge = POSTURE_TIME_RECHARGE
+	
+	if _posture_recharge == POSTURE_TIME_RECHARGE:
+		if posture < POSTURE_MAX:
+			posture += 25.0 * _delta
+		else:
+			posture = POSTURE_MAX
 
+
+func _die():
+	if _is_dead:
+		return
+	Gameplay.end_game()
+	Engine.time_scale = 0.2
+	_is_dead = true
+	_in_atack = false
+	animation.play("die")

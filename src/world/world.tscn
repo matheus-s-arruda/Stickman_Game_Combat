@@ -1,6 +1,7 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://src/stickman/stickman.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/world/world.gd" type="Script" id=2]
 [ext_resource path="res://src/stickman/enemy/stickman_enemy.tscn" type="PackedScene" id=3]
 [ext_resource path="res://img/layer_11.png" type="Texture" id=4]
 [ext_resource path="res://img/layer_1.png" type="Texture" id=5]
@@ -35,8 +36,9 @@ func _process(delta):
 	var d = _parent.global_position.distance_to(target.global_position)
 	
 	position = a * 0.5
+	position.y -= 200
 	
-	_zoom_fator = lerp(_zoom_fator, clamp(d * 0.002, 0.8, 1.6), 0.16)
+	_zoom_fator = lerp(_zoom_fator, clamp(d * 0.002, 0.8, 1.5), 0.16)
 	zoom = Vector2.ONE * _zoom_fator
 "
 
@@ -46,11 +48,30 @@ bg_color = Color( 0.129412, 0.129412, 0.129412, 1 )
 [sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.34902, 0.105882, 0.105882, 1 )
 
+[sub_resource type="GDScript" id=12]
+script/source = "extends ProgressBar
+
+
+
+
+func _process(delta):
+	value = lerp(value, 100 - Gameplay.player_1.life, 0.1)
+"
+
 [sub_resource type="StyleBoxFlat" id=8]
 bg_color = Color( 0.129412, 0.129412, 0.129412, 1 )
 
 [sub_resource type="StyleBoxFlat" id=9]
 bg_color = Color( 0.109804, 0.313726, 0.415686, 1 )
+
+[sub_resource type="GDScript" id=15]
+script/source = "extends ProgressBar
+
+
+
+func _process(delta):
+	value = lerp(value, 100 - (Gameplay.player_1.posture * 4), 0.1)
+"
 
 [sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 0.34902, 0.105882, 0.105882, 1 )
@@ -58,17 +79,53 @@ bg_color = Color( 0.34902, 0.105882, 0.105882, 1 )
 [sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0.129412, 0.129412, 0.129412, 1 )
 
+[sub_resource type="GDScript" id=13]
+script/source = "extends ProgressBar
+
+
+
+
+func _process(delta):
+	value = lerp(value, Gameplay.player_2.life, 0.1)
+"
+
 [sub_resource type="StyleBoxFlat" id=10]
 bg_color = Color( 0.109804, 0.313726, 0.415686, 1 )
 
 [sub_resource type="StyleBoxFlat" id=11]
 bg_color = Color( 0.129412, 0.129412, 0.129412, 1 )
 
+[sub_resource type="GDScript" id=14]
+script/source = "extends ProgressBar
+
+
+
+func _process(delta):
+	value = lerp(value,Gameplay.player_2.posture * 4, 0.1)
+"
+
+[sub_resource type="GDScript" id=16]
+script/source = "extends Control
+
+const KO_SCENE = preload(\"res://src/assets/kO/KO_endgame.tscn\")
+
+
+func _init():
+	Gameplay.hud_center_ref = self
+
+
+func shot_ko_scene():
+	var _ko = KO_SCENE.instance()
+	add_child(KO_SCENE.instance())
+"
+
 [node name="world" type="Node"]
+script = ExtResource( 2 )
 
 [node name="scenery" type="Node" parent="."]
 
 [node name="Sprite" type="Sprite" parent="scenery"]
+visible = false
 position = Vector2( 527, 266 )
 scale = Vector2( 8, 8 )
 texture = ExtResource( 7 )
@@ -77,6 +134,7 @@ __meta__ = {
 }
 
 [node name="Sprite3" type="Sprite" parent="scenery"]
+visible = false
 position = Vector2( 527.018, 266.684 )
 scale = Vector2( 8, 8 )
 texture = ExtResource( 5 )
@@ -126,14 +184,13 @@ shape = SubResource( 2 )
 [node name="entities" type="Node" parent="."]
 
 [node name="player" parent="entities" instance=ExtResource( 1 )]
-position = Vector2( -100, 680 )
+position = Vector2( -300, 680 )
 
 [node name="Camera" type="Camera2D" parent="entities/player"]
-position = Vector2( 811.925, 365.657 )
 current = true
-limit_left = -495
-limit_right = 1550
-limit_bottom = 840
+limit_left = -490
+limit_top = -300
+limit_right = 1540
 smoothing_enabled = true
 smoothing_speed = 10.0
 script = SubResource( 3 )
@@ -142,7 +199,7 @@ target = NodePath("../../../enemys/enemy")
 [node name="enemys" type="Node" parent="."]
 
 [node name="enemy" parent="enemys" instance=ExtResource( 3 )]
-position = Vector2( 509, 679 )
+position = Vector2( 1400, 680 )
 target = NodePath("../../entities/player")
 
 [node name="GUI" type="CanvasLayer" parent="."]
@@ -216,6 +273,7 @@ custom_styles/fg = SubResource( 4 )
 custom_styles/bg = SubResource( 5 )
 value = 95.0
 percent_visible = false
+script = SubResource( 12 )
 
 [node name="posture_bar" type="ProgressBar" parent="GUI/MarginContainer/HUD/top/bars/HBoxContainer/left_bars"]
 margin_top = 17.0
@@ -226,6 +284,7 @@ custom_styles/fg = SubResource( 8 )
 custom_styles/bg = SubResource( 9 )
 value = 95.0
 percent_visible = false
+script = SubResource( 15 )
 
 [node name="rigth_bars" type="VBoxContainer" parent="GUI/MarginContainer/HUD/top/bars/HBoxContainer"]
 margin_left = 518.0
@@ -242,6 +301,7 @@ custom_styles/fg = SubResource( 6 )
 custom_styles/bg = SubResource( 7 )
 value = 5.0
 percent_visible = false
+script = SubResource( 13 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -255,6 +315,7 @@ custom_styles/fg = SubResource( 10 )
 custom_styles/bg = SubResource( 11 )
 value = 5.0
 percent_visible = false
+script = SubResource( 14 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -265,3 +326,13 @@ margin_right = 1250.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 100, 40 )
 color = Color( 0.223529, 0.223529, 0.223529, 0 )
+
+[node name="center" type="Control" parent="GUI/MarginContainer/HUD"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+script = SubResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

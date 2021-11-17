@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://src/stickman/line.gd" type="Script" id=1]
 [ext_resource path="res://src/stickman/stickman.gd" type="Script" id=2]
@@ -18,6 +18,8 @@
 [ext_resource path="res://src/stickman/animations/atks/atk_punch_1.tres" type="Animation" id=16]
 [ext_resource path="res://src/stickman/animations/atks/atk_punch_2.tres" type="Animation" id=17]
 [ext_resource path="res://src/stickman/animations/atks/atk_punch_3.tres" type="Animation" id=18]
+[ext_resource path="res://src/stickman/animations/die.tres" type="Animation" id=19]
+[ext_resource path="res://src/stickman/animations/die_contact.tres" type="Animation" id=20]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16, 75 )
@@ -1408,7 +1410,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.225 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 2, -12 ), Vector2( 3.33333, -12 ) ]
+"values": [ Vector2( 6.00004, -10 ), Vector2( 3.33333, -12 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("origin/bacia:position")
@@ -1432,7 +1434,7 @@ tracks/2/keys = {
 "times": PoolRealArray( 0, 0.225 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -2, -18 ), Vector2( 1.83333, -18 ) ]
+"values": [ Vector2( 11.0001, -17 ), Vector2( 1.83333, -18 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("origin/bacia/tronco/clavícula/braco_1:position")
@@ -1480,7 +1482,7 @@ tracks/6/keys = {
 "times": PoolRealArray( 0, 0.225 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -4, -20 ), Vector2( -1.33333, -20 ) ]
+"values": [ Vector2( 4, -20 ), Vector2( 0.666656, -20.6667 ) ]
 }
 tracks/7/type = "value"
 tracks/7/path = NodePath("origin/bacia/tronco/clavícula/braco_2:position")
@@ -2094,7 +2096,7 @@ __meta__ = {
 }
 origin = NodePath("origin")
 animation = NodePath("AnimationPlayer")
-_atks = [ [ "atk_punch_1", "atk_punch_2", "atk_punch_3" ], [ "atk_kick_1", "atk_kick_2", "atk_kick_3" ], [ "atk_special_1" ] ]
+_atks = [ [ "atk_punch_1", "atk_punch_2", "atk_punch_3" ], [ "atk_kick_1", "atk_kick_1", "atk_kick_2", "atk_kick_3" ], [ "atk_special_1" ] ]
 _aereo_kick = "atk_jump_1"
 _atk_special = [ "atk_jump_1" ]
 
@@ -2122,6 +2124,8 @@ anims/bloq = ExtResource( 11 )
 anims/damage_1 = ExtResource( 9 )
 anims/damage_2 = ExtResource( 6 )
 anims/damage_2_contact = ExtResource( 5 )
+anims/die = ExtResource( 19 )
+anims/die_contact = ExtResource( 20 )
 anims/down_idle = ExtResource( 8 )
 anims/down_walk = ExtResource( 10 )
 anims/idle = SubResource( 7 )
