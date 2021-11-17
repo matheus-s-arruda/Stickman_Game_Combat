@@ -59,7 +59,3 @@ func hitbox(_atk : int):
 			spawn_hitbox([0, Vector2(origin.scale.x * -800, -400), true], Vector2(90, -124), Vector2(8, 8), 2)
 
 
-
-
-
-

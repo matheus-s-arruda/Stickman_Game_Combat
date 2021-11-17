@@ -4,9 +4,12 @@ extends KinematicBody2D
 const hitbox = preload("res://src/stickman/physics/hitbox.tscn")
 const hitbox_free_by_condition = preload("res://src/stickman/physics/hitbox_free_by_condition.tscn")
 
-const SPEED = 800
-const GRAVITY = 1176
-const JUMP_FORCE = 600
+const SPEED := 800
+const GRAVITY := 1176
+const JUMP_FORCE := 600
+const POSTURE_TIME_RECHARGE := 4.0
+const POSTURE_MAX := 25.0
+const LIFE_MAX := 100.0
 
 export(NodePath) onready var origin = get_node(origin)
 export(NodePath) onready var animation = get_node(animation)
@@ -14,8 +17,8 @@ export(Array, Array, String) var _atks
 export(String) var _aereo_kick : String
 export(Array, String) var _atk_special
 
-var life := 100
-var posture := 25
+var life := LIFE_MAX
+var posture := POSTURE_MAX
 var motion : Vector2
 var hit := [] setget _hited
 
@@ -47,10 +50,22 @@ var _hitbox_by_condition = null
 var _hit_data_jump := []
 var _hit_data_slide := []
 
+var _posture_recharge := 0.0
 
 func _physics_process(delta):
 	var speed_target := 0.0
 	var speed_target_air := motion.x
+	
+	if _posture_recharge < POSTURE_TIME_RECHARGE:
+		_posture_recharge += delta
+	else:
+		_posture_recharge = POSTURE_TIME_RECHARGE
+	
+	if _posture_recharge == POSTURE_TIME_RECHARGE:
+		if posture < POSTURE_MAX:
+			posture += 25.0 * delta
+		else:
+			posture = POSTURE_MAX
 	
 	_damaged_state()
 	_motion_state()
@@ -334,7 +349,14 @@ func _knock_block(_knock):
 
 
 func _take_damage(_hit):
-	life -= _hit[0]
+	_posture_recharge = 0.0
+	
+	if posture >= _hit[0]:
+		posture -= _hit[0]
+	else:
+		life -= _hit[0] - posture
+		posture = 0.0
+	
 	origin.scale.x = sign(-_hit[1].x) if _hit[1].x != 0 else origin.scale.x
 	motion += _hit[1]
 

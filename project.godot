@@ -24,6 +24,16 @@ config/name="stickman_combat"
 run/main_scene="res://src/world/world.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Gameplay="*res://src/world/singleton_gameplay.gd"
+
+[display]
+
+window/size/width=1280
+window/size/height=720
+window/size/fullscreen=true
+
 [input]
 
 LEFT={
