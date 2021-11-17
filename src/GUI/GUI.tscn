@@ -1,0 +1,273 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://src/assets/kO/KO.gd" type="Script" id=1]
+[ext_resource path="res://fonts/electrox.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://img/fx/splash_2.png" type="Texture" id=3]
+[ext_resource path="res://img/fx/splash_1.png" type="Texture" id=4]
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.129412, 0.129412, 0.129412, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.34902, 0.105882, 0.105882, 1 )
+
+[sub_resource type="GDScript" id=12]
+script/source = "extends ProgressBar
+
+
+
+
+func _process(delta):
+	value = lerp(value, 100 - Gameplay.player_1.life, 0.1)
+"
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.129412, 0.129412, 0.129412, 1 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.109804, 0.313726, 0.415686, 1 )
+
+[sub_resource type="GDScript" id=15]
+script/source = "extends ProgressBar
+
+
+
+func _process(delta):
+	value = lerp(value, 100 - (Gameplay.player_1.posture * 4), 0.1)
+"
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.34902, 0.105882, 0.105882, 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.129412, 0.129412, 0.129412, 1 )
+
+[sub_resource type="GDScript" id=13]
+script/source = "extends ProgressBar
+
+
+
+
+func _process(delta):
+	value = lerp(value, Gameplay.player_2.life, 0.1)
+"
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.109804, 0.313726, 0.415686, 1 )
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.129412, 0.129412, 0.129412, 1 )
+
+[sub_resource type="GDScript" id=14]
+script/source = "extends ProgressBar
+
+
+
+func _process(delta):
+	value = lerp(value,Gameplay.player_2.posture * 4, 0.1)
+"
+
+[sub_resource type="DynamicFont" id=17]
+size = 200
+outline_size = 9
+outline_color = Color( 0.494118, 0.0823529, 0.0823529, 1 )
+font_data = ExtResource( 2 )
+
+[node name="GUI" type="CanvasLayer"]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 15
+custom_constants/margin_top = 15
+custom_constants/margin_left = 15
+custom_constants/margin_bottom = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HUD" type="Control" parent="MarginContainer"]
+margin_left = 15.0
+margin_top = 15.0
+margin_right = 1265.0
+margin_bottom = 715.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="top" type="HBoxContainer" parent="MarginContainer/HUD"]
+anchor_right = 1.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="left" type="ColorRect" parent="MarginContainer/HUD/top"]
+margin_right = 100.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 100, 40 )
+color = Color( 0.223529, 0.223529, 0.223529, 0 )
+
+[node name="bars" type="MarginContainer" parent="MarginContainer/HUD/top"]
+margin_left = 104.0
+margin_right = 1146.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+custom_constants/margin_right = 5
+custom_constants/margin_top = 5
+custom_constants/margin_left = 5
+custom_constants/margin_bottom = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HUD/top/bars"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 1037.0
+margin_bottom = 35.0
+custom_constants/separation = 5
+alignment = 1
+
+[node name="left_bars" type="VBoxContainer" parent="MarginContainer/HUD/top/bars/HBoxContainer"]
+margin_right = 513.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 5
+
+[node name="life_bar" type="ProgressBar" parent="MarginContainer/HUD/top/bars/HBoxContainer/left_bars"]
+margin_right = 513.0
+margin_bottom = 12.0
+size_flags_vertical = 3
+custom_styles/fg = SubResource( 4 )
+custom_styles/bg = SubResource( 5 )
+value = 95.0
+percent_visible = false
+script = SubResource( 12 )
+
+[node name="posture_bar" type="ProgressBar" parent="MarginContainer/HUD/top/bars/HBoxContainer/left_bars"]
+margin_top = 17.0
+margin_right = 513.0
+margin_bottom = 30.0
+size_flags_vertical = 3
+custom_styles/fg = SubResource( 8 )
+custom_styles/bg = SubResource( 9 )
+value = 95.0
+percent_visible = false
+script = SubResource( 15 )
+
+[node name="rigth_bars" type="VBoxContainer" parent="MarginContainer/HUD/top/bars/HBoxContainer"]
+margin_left = 518.0
+margin_right = 1032.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="life_bar" type="ProgressBar" parent="MarginContainer/HUD/top/bars/HBoxContainer/rigth_bars"]
+margin_right = 514.0
+margin_bottom = 13.0
+size_flags_vertical = 3
+custom_styles/fg = SubResource( 6 )
+custom_styles/bg = SubResource( 7 )
+value = 5.0
+percent_visible = false
+script = SubResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="posture_bar" type="ProgressBar" parent="MarginContainer/HUD/top/bars/HBoxContainer/rigth_bars"]
+margin_top = 17.0
+margin_right = 514.0
+margin_bottom = 30.0
+size_flags_vertical = 3
+custom_styles/fg = SubResource( 10 )
+custom_styles/bg = SubResource( 11 )
+value = 5.0
+percent_visible = false
+script = SubResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="rigth" type="ColorRect" parent="MarginContainer/HUD/top"]
+margin_left = 1150.0
+margin_right = 1250.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 100, 40 )
+color = Color( 0.223529, 0.223529, 0.223529, 0 )
+
+[node name="center" type="Control" parent="MarginContainer/HUD"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="KO" type="Control" parent="MarginContainer/HUD/center"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="splash_1" type="TextureRect" parent="MarginContainer/HUD/center/KO"]
+visible = false
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -1493.56
+margin_top = -294.321
+margin_right = -679.56
+margin_bottom = 10.6787
+rect_rotation = -90.0
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="splash_2" type="TextureRect" parent="MarginContainer/HUD/center/KO"]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 730.284
+margin_top = 50.724
+margin_right = 1544.28
+margin_bottom = 355.724
+rect_rotation = -90.0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="ko_text" type="RichTextLabel" parent="MarginContainer/HUD/center/KO"]
+visible = false
+self_modulate = Color( 20, 20, 20, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -191.0
+margin_top = -102.0
+margin_right = 191.0
+margin_bottom = 102.0
+custom_colors/default_color = Color( 0.909804, 0.992157, 1, 1 )
+custom_fonts/normal_font = SubResource( 17 )
+bbcode_enabled = true
+bbcode_text = " [shake rate=30 level=20]K.O.[/shake]"
+text = " K.O."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="MarginContainer/HUD/center/KO"]

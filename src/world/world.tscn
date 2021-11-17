@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://src/stickman/stickman.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/world/world.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://img/layer_1.png" type="Texture" id=5]
 [ext_resource path="res://img/layer_0.png" type="Texture" id=6]
 [ext_resource path="res://img/background.png" type="Texture" id=7]
+[ext_resource path="res://src/GUI/GUI.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 60.109, 614.324 )
@@ -18,105 +19,19 @@ extents = Vector2( 1041.34, 124.343 )
 script/source = "extends Camera2D
 
 
-export(NodePath) var target
-
-onready var _parent = get_parent()
-
 var _zoom_fator := 1.0
 
-func _ready():
-	target = get_node(target)
 
 func _process(delta):
-	if target == null:
-		set_process(false)
-		return
 	
-	var a = _parent.to_local(target.global_position)
-	var d = _parent.global_position.distance_to(target.global_position)
+	var a = Gameplay.player_1.to_local(Gameplay.player_2.global_position)
+	var d = Gameplay.player_1.global_position.distance_to(Gameplay.player_2.global_position)
 	
 	position = a * 0.5
 	position.y -= 200
 	
 	_zoom_fator = lerp(_zoom_fator, clamp(d * 0.002, 0.8, 1.5), 0.16)
 	zoom = Vector2.ONE * _zoom_fator
-"
-
-[sub_resource type="StyleBoxFlat" id=4]
-bg_color = Color( 0.129412, 0.129412, 0.129412, 1 )
-
-[sub_resource type="StyleBoxFlat" id=5]
-bg_color = Color( 0.34902, 0.105882, 0.105882, 1 )
-
-[sub_resource type="GDScript" id=12]
-script/source = "extends ProgressBar
-
-
-
-
-func _process(delta):
-	value = lerp(value, 100 - Gameplay.player_1.life, 0.1)
-"
-
-[sub_resource type="StyleBoxFlat" id=8]
-bg_color = Color( 0.129412, 0.129412, 0.129412, 1 )
-
-[sub_resource type="StyleBoxFlat" id=9]
-bg_color = Color( 0.109804, 0.313726, 0.415686, 1 )
-
-[sub_resource type="GDScript" id=15]
-script/source = "extends ProgressBar
-
-
-
-func _process(delta):
-	value = lerp(value, 100 - (Gameplay.player_1.posture * 4), 0.1)
-"
-
-[sub_resource type="StyleBoxFlat" id=6]
-bg_color = Color( 0.34902, 0.105882, 0.105882, 1 )
-
-[sub_resource type="StyleBoxFlat" id=7]
-bg_color = Color( 0.129412, 0.129412, 0.129412, 1 )
-
-[sub_resource type="GDScript" id=13]
-script/source = "extends ProgressBar
-
-
-
-
-func _process(delta):
-	value = lerp(value, Gameplay.player_2.life, 0.1)
-"
-
-[sub_resource type="StyleBoxFlat" id=10]
-bg_color = Color( 0.109804, 0.313726, 0.415686, 1 )
-
-[sub_resource type="StyleBoxFlat" id=11]
-bg_color = Color( 0.129412, 0.129412, 0.129412, 1 )
-
-[sub_resource type="GDScript" id=14]
-script/source = "extends ProgressBar
-
-
-
-func _process(delta):
-	value = lerp(value,Gameplay.player_2.posture * 4, 0.1)
-"
-
-[sub_resource type="GDScript" id=16]
-script/source = "extends Control
-
-const KO_SCENE = preload(\"res://src/assets/kO/KO_endgame.tscn\")
-
-
-func _init():
-	Gameplay.hud_center_ref = self
-
-
-func shot_ko_scene():
-	var _ko = KO_SCENE.instance()
-	add_child(KO_SCENE.instance())
 "
 
 [node name="world" type="Node"]
@@ -194,7 +109,6 @@ limit_right = 1540
 smoothing_enabled = true
 smoothing_speed = 10.0
 script = SubResource( 3 )
-target = NodePath("../../../enemys/enemy")
 
 [node name="enemys" type="Node" parent="."]
 
@@ -202,137 +116,4 @@ target = NodePath("../../../enemys/enemy")
 position = Vector2( 1400, 680 )
 target = NodePath("../../entities/player")
 
-[node name="GUI" type="CanvasLayer" parent="."]
-
-[node name="MarginContainer" type="MarginContainer" parent="GUI"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-custom_constants/margin_right = 15
-custom_constants/margin_top = 15
-custom_constants/margin_left = 15
-custom_constants/margin_bottom = 5
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="HUD" type="Control" parent="GUI/MarginContainer"]
-margin_left = 15.0
-margin_top = 15.0
-margin_right = 1265.0
-margin_bottom = 715.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="top" type="HBoxContainer" parent="GUI/MarginContainer/HUD"]
-anchor_right = 1.0
-margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="left" type="ColorRect" parent="GUI/MarginContainer/HUD/top"]
-margin_right = 100.0
-margin_bottom = 40.0
-rect_min_size = Vector2( 100, 40 )
-color = Color( 0.223529, 0.223529, 0.223529, 0 )
-
-[node name="bars" type="MarginContainer" parent="GUI/MarginContainer/HUD/top"]
-margin_left = 104.0
-margin_right = 1146.0
-margin_bottom = 40.0
-size_flags_horizontal = 3
-custom_constants/margin_right = 5
-custom_constants/margin_top = 5
-custom_constants/margin_left = 5
-custom_constants/margin_bottom = 5
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="HBoxContainer" type="HBoxContainer" parent="GUI/MarginContainer/HUD/top/bars"]
-margin_left = 5.0
-margin_top = 5.0
-margin_right = 1037.0
-margin_bottom = 35.0
-custom_constants/separation = 5
-alignment = 1
-
-[node name="left_bars" type="VBoxContainer" parent="GUI/MarginContainer/HUD/top/bars/HBoxContainer"]
-margin_right = 513.0
-margin_bottom = 30.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_constants/separation = 5
-
-[node name="life_bar" type="ProgressBar" parent="GUI/MarginContainer/HUD/top/bars/HBoxContainer/left_bars"]
-margin_right = 513.0
-margin_bottom = 12.0
-size_flags_vertical = 3
-custom_styles/fg = SubResource( 4 )
-custom_styles/bg = SubResource( 5 )
-value = 95.0
-percent_visible = false
-script = SubResource( 12 )
-
-[node name="posture_bar" type="ProgressBar" parent="GUI/MarginContainer/HUD/top/bars/HBoxContainer/left_bars"]
-margin_top = 17.0
-margin_right = 513.0
-margin_bottom = 30.0
-size_flags_vertical = 3
-custom_styles/fg = SubResource( 8 )
-custom_styles/bg = SubResource( 9 )
-value = 95.0
-percent_visible = false
-script = SubResource( 15 )
-
-[node name="rigth_bars" type="VBoxContainer" parent="GUI/MarginContainer/HUD/top/bars/HBoxContainer"]
-margin_left = 518.0
-margin_right = 1032.0
-margin_bottom = 30.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="life_bar" type="ProgressBar" parent="GUI/MarginContainer/HUD/top/bars/HBoxContainer/rigth_bars"]
-margin_right = 514.0
-margin_bottom = 13.0
-size_flags_vertical = 3
-custom_styles/fg = SubResource( 6 )
-custom_styles/bg = SubResource( 7 )
-value = 5.0
-percent_visible = false
-script = SubResource( 13 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="posture_bar" type="ProgressBar" parent="GUI/MarginContainer/HUD/top/bars/HBoxContainer/rigth_bars"]
-margin_top = 17.0
-margin_right = 514.0
-margin_bottom = 30.0
-size_flags_vertical = 3
-custom_styles/fg = SubResource( 10 )
-custom_styles/bg = SubResource( 11 )
-value = 5.0
-percent_visible = false
-script = SubResource( 14 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="rigth" type="ColorRect" parent="GUI/MarginContainer/HUD/top"]
-margin_left = 1150.0
-margin_right = 1250.0
-margin_bottom = 40.0
-rect_min_size = Vector2( 100, 40 )
-color = Color( 0.223529, 0.223529, 0.223529, 0 )
-
-[node name="center" type="Control" parent="GUI/MarginContainer/HUD"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-script = SubResource( 16 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="GUI" parent="." instance=ExtResource( 8 )]

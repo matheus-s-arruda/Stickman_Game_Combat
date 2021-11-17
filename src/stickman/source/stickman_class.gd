@@ -404,7 +404,6 @@ func _die():
 	if _is_dead:
 		return
 	Gameplay.end_game()
-	Engine.time_scale = 0.2
 	_is_dead = true
 	_in_atack = false
 	animation.play("die")
