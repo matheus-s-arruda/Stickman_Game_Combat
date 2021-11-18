@@ -1,19 +1,10 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/stickman/stickman.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/world/world.gd" type="Script" id=2]
 [ext_resource path="res://src/stickman/enemy/stickman_enemy.tscn" type="PackedScene" id=3]
-[ext_resource path="res://img/layer_11.png" type="Texture" id=4]
-[ext_resource path="res://img/layer_1.png" type="Texture" id=5]
-[ext_resource path="res://img/layer_0.png" type="Texture" id=6]
-[ext_resource path="res://img/background.png" type="Texture" id=7]
+[ext_resource path="res://src/world/scenerys/desert_scenery.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/GUI/GUI.tscn" type="PackedScene" id=8]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 60.109, 614.324 )
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 1041.34, 124.343 )
 
 [sub_resource type="GDScript" id=3]
 script/source = "extends Camera2D
@@ -23,89 +14,35 @@ var _zoom_fator := 1.0
 
 
 func _process(delta):
-	
+
 	var a = Gameplay.player_1.to_local(Gameplay.player_2.global_position)
 	var d = Gameplay.player_1.global_position.distance_to(Gameplay.player_2.global_position)
-	
+
 	position = a * 0.5
 	position.y -= 200
-	
-	_zoom_fator = lerp(_zoom_fator, clamp(d * 0.002, 0.8, 1.5), 0.16)
+
+	_zoom_fator = lerp(_zoom_fator, clamp(d * 0.002, 0.8, 1.15), 0.16)
 	zoom = Vector2.ONE * _zoom_fator
 "
 
 [node name="world" type="Node"]
 script = ExtResource( 2 )
 
-[node name="scenery" type="Node" parent="."]
-
-[node name="Sprite" type="Sprite" parent="scenery"]
-visible = false
-position = Vector2( 527, 266 )
-scale = Vector2( 8, 8 )
-texture = ExtResource( 7 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Sprite3" type="Sprite" parent="scenery"]
-visible = false
-position = Vector2( 527.018, 266.684 )
-scale = Vector2( 8, 8 )
-texture = ExtResource( 5 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Sprite2" type="Sprite" parent="scenery"]
-position = Vector2( 527.018, 266.684 )
-scale = Vector2( 8, 8 )
-texture = ExtResource( 6 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Sprite4" type="Sprite" parent="scenery"]
-position = Vector2( 527.018, 266.684 )
-scale = Vector2( 8, 8 )
-texture = ExtResource( 4 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="StaticBody2D" type="StaticBody2D" parent="scenery"]
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="scenery/StaticBody2D"]
-position = Vector2( -506.535, 320.537 )
-shape = SubResource( 1 )
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="scenery/StaticBody2D"]
-position = Vector2( 1536.66, 314.187 )
-shape = SubResource( 1 )
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="scenery/StaticBody2D"]
-position = Vector2( 506.439, 807.343 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="scenery/StaticBody2D"]
-position = Vector2( 519.138, -346.172 )
-shape = SubResource( 2 )
-
-[node name="stuff" type="Node" parent="."]
+[node name="desert_scenery" parent="." instance=ExtResource( 4 )]
 
 [node name="entities" type="Node" parent="."]
 
 [node name="player" parent="entities" instance=ExtResource( 1 )]
-position = Vector2( -300, 680 )
+position = Vector2( 276.651, 698.688 )
 
 [node name="Camera" type="Camera2D" parent="entities/player"]
+position = Vector2( -168.19, -34.7057 )
 current = true
-limit_left = -490
-limit_top = -300
-limit_right = 1540
+zoom = Vector2( 1.15, 1.15 )
+limit_left = 0
+limit_top = 0
+limit_right = 2000
+limit_bottom = 900
 smoothing_enabled = true
 smoothing_speed = 10.0
 script = SubResource( 3 )
@@ -113,7 +50,7 @@ script = SubResource( 3 )
 [node name="enemys" type="Node" parent="."]
 
 [node name="enemy" parent="enemys" instance=ExtResource( 3 )]
-position = Vector2( 1101, 680 )
+position = Vector2( 1677.65, 698.688 )
 target = NodePath("../../entities/player")
 
 [node name="GUI" parent="." instance=ExtResource( 8 )]

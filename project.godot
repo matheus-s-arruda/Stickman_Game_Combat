@@ -32,6 +32,7 @@ Gameplay="*res://src/world/singleton_gameplay.gd"
 
 window/size/width=1280
 window/size/height=720
+window/size/fullscreen=true
 
 [input]
 

@@ -26,13 +26,15 @@ script/source = "extends Stickman
 
 export(NodePath) onready var target = get_node(target)
 
-var _distance_to_target
-
+var _distance_to_target : float
 var _cooldown_1 := 0.0
-
 
 func _init():
 	Gameplay.player_2 = self
+
+
+func _ready():
+	set_physics_process(false)
 
 
 func _physics_process(delta):
@@ -49,7 +51,6 @@ func _physics_process(delta):
 		input_direction = -1
 	
 	input_bloq = _distance_to_target < 220
-		
 	atks()
 
 
@@ -66,7 +67,6 @@ func atks():
 	
 	if _distance_to_target < 50:
 		atack_inputs(0)
-		#return
 
 
 func hitbox(_atk : int):
