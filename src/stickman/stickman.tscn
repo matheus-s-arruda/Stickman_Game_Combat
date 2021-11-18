@@ -2101,6 +2101,7 @@ _aereo_kick = "atk_jump_1"
 _atk_special = [ "atk_jump_1" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( 0, -75 )
 shape = SubResource( 1 )
 __meta__ = {

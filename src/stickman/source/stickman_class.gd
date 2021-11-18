@@ -404,3 +404,4 @@ func _die():
 	_is_dead = true
 	_in_atack = false
 	animation.play("die")
+

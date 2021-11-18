@@ -24,5 +24,6 @@ func _ready():
 "
 
 [node name="hit_particles" type="AnimatedSprite"]
+z_index = 1
 frames = SubResource( 1 )
 script = SubResource( 2 )

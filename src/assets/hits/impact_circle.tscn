@@ -16,6 +16,7 @@ func _ready():
 "
 
 [node name="impact_circle" type="Sprite"]
+z_index = 1
 texture = ExtResource( 1 )
 script = SubResource( 1 )
 
