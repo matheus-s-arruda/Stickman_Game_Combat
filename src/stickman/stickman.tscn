@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://src/stickman/line.gd" type="Script" id=1]
 [ext_resource path="res://src/stickman/stickman.gd" type="Script" id=2]
@@ -2088,6 +2088,50 @@ tracks/13/keys = {
 "values": [ Vector2( 32, 16 ), Vector2( 24, 25.3333 ), Vector2( 18.4795, 31.0667 ), Vector2( 17.5949, 31.6873 ) ]
 }
 
+[sub_resource type="GDScript" id=59]
+script/source = "extends Label
+
+
+
+onready var _parent = get_parent()
+
+
+func _process(delta):
+	text = String(_parent.master_state)
+"
+
+[sub_resource type="GDScript" id=60]
+script/source = "extends Label
+
+onready var _parent = get_parent()
+
+
+func _process(delta):
+	text = String(_parent.motion_state)
+"
+
+[sub_resource type="GDScript" id=61]
+script/source = "extends Label
+
+onready var _parent = get_parent()
+
+
+
+func _process(delta):
+	text = String(_parent.atk_state)
+"
+
+[sub_resource type="GDScript" id=62]
+script/source = "extends Label
+
+
+onready var _parent = get_parent()
+
+
+func _process(delta):
+	text = String(_parent.dmg_state)
+"
+
 [node name="stickman" type="KinematicBody2D"]
 collision_layer = 2
 script = ExtResource( 2 )
@@ -2215,3 +2259,47 @@ color = Color( 0.282353, 0.0784314, 0.0784314, 1 )
 position = Vector2( 6, 0 )
 script = ExtResource( 1 )
 color = Color( 0.282353, 0.0784314, 0.0784314, 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -26.9695
+margin_top = -252.465
+margin_right = 31.0305
+margin_bottom = -238.465
+text = "asdasdas"
+script = SubResource( 59 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = -26.2204
+margin_top = -238.98
+margin_right = 31.7796
+margin_bottom = -224.98
+text = "asdasdas"
+script = SubResource( 60 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = -28.4678
+margin_top = -209.763
+margin_right = 29.5322
+margin_bottom = -195.763
+text = "asdasdas"
+script = SubResource( 61 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="."]
+margin_left = -25.4712
+margin_top = -225.495
+margin_right = 32.5288
+margin_bottom = -211.495
+text = "asdasdas"
+script = SubResource( 62 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
