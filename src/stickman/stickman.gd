@@ -24,7 +24,7 @@ func _process(delta):
 
 func _physics_process(delta):
 	input_direction = Input.get_action_strength("RIGHT") - Input.get_action_strength("LEFT")
-	input_jump = Input.get_action_strength("JUMP")
+	input_jump = Input.is_action_pressed("JUMP")
 	
 	input_bloq = Input.is_action_pressed("BLOQ")
 	

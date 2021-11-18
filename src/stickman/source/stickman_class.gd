@@ -28,12 +28,12 @@ var motion : Vector2
 var hit := [] setget _hited
 
 var input_direction := 0
-var input_jump := 0
+var input_jump := false
 var input_down := false
 var input_bloq := false
 
 var master_state = MASTER_STATES.MOTION
-var motion_state = MOTION_STATES.STATELESS
+var motion_state = MOTION_STATES.IN_AIR
 var atk_state = ATK_STATES.STATELESS
 var dmg_state = DMG_STATES.STATELESS
 
@@ -54,34 +54,12 @@ var _hit_data_slide := []
 
 
 func _physics_process(delta):
-	var speed_target := 0.0
-	var speed_target_air := motion.x
-	_calc_posture(delta)
-	
 	motion = move_and_slide(motion, Vector2.UP, true)
-	
-	if is_on_floor():
-		motion.y = 0
-		if input_down:
-			if abs(motion.x) > 200:
-				if motion_state != MOTION_STATES.IN_DOWN:
-					motion_state = MOTION_STATES.IN_SLIDE
-			else:
-				motion_state = MOTION_STATES.IN_DOWN
-		else:
-			motion_state = MOTION_STATES.STATELESS
-	else:
-		motion.y += GRAVITY * delta
-		if abs(motion.y) > 20:
-			motion_state = MOTION_STATES.IN_AIR
-			if master_state == MASTER_STATES.DAMAGE:
-				_damage_nockback = true
+	_calc_posture(delta)
+	_moviment(delta)
 	
 	if master_state != MASTER_STATES.DAMAGE:
 		_damage_nockback = true
-	
-	if master_state != MASTER_STATES.ATACK:
-		reset_atk_props()
 	
 	match master_state:
 		MASTER_STATES.CUTSCENE:
@@ -92,8 +70,6 @@ func _physics_process(delta):
 			
 		MASTER_STATES.ATACK:
 			_atack_state()
-			if motion_state != MOTION_STATES.IN_AIR:
-				motion.x = lerp(motion.x, 0, 0.15)
 			
 		MASTER_STATES.DAMAGE:
 			if motion_state == MOTION_STATES.IN_AIR:
@@ -106,12 +82,29 @@ func _physics_process(delta):
 			if motion_state != MOTION_STATES.IN_AIR:
 				animation.play("die_contact")
 				return
+
+
+func _moviment(delta):
+	var speed_target := 0.0
+	var speed_target_air := motion.x
+	
+	if not is_on_floor():
+		if abs(motion.y) > 20:
+			motion_state = MOTION_STATES.IN_AIR
 	
 	match motion_state:
 		MOTION_STATES.STATELESS:
-			motion.y += input_jump * -JUMP_FORCE
+			motion.y = motion.y + -JUMP_FORCE if input_jump else 0
 			speed_target = 0
 			atk_state = ATK_STATES.IN_BLOQ if input_bloq else ATK_STATES.STATELESS
+			
+			if input_down:
+				if abs(motion.x) > 200:
+					if motion_state != MOTION_STATES.IN_DOWN:
+						motion_state = MOTION_STATES.IN_SLIDE
+				else:
+					motion_state = MOTION_STATES.IN_DOWN
+			
 			if animation.current_animation == "run":
 				speed_target = input_direction * SPEED
 			if animation.current_animation == "walk":
@@ -122,16 +115,25 @@ func _physics_process(delta):
 		MOTION_STATES.IN_SLIDE:
 			_atk_condition = 1
 			master_state = MASTER_STATES.ATACK
+			if not input_down or abs(motion.x) < 200:
+				motion_state = MOTION_STATES.STATELESS
 			motion.x = lerp(motion.x, 0, 0.007)
-			return
 			
 		MOTION_STATES.IN_DOWN:
 			atk_state = ATK_STATES.IN_BLOQ
-			motion.x = lerp(motion.x, input_direction * SPEED, 0.07)
+			motion.x = lerp(motion.x, input_direction * SPEED, 0.1)
+			if not input_down:
+				motion_state = MOTION_STATES.STATELESS
+			motion.x = lerp(motion.x, input_direction * SPEED * 0.1, 0.3)
 		
 		MOTION_STATES.IN_AIR:
+			if is_on_floor():
+				motion_state = MOTION_STATES.STATELESS
+			motion.y += GRAVITY * delta
 			speed_target_air = clamp(speed_target_air -(-input_direction * 100), -SPEED, SPEED)
 			motion.x = lerp(motion.x, speed_target_air, 0.2)
+			if master_state == MASTER_STATES.DAMAGE:
+				_damage_nockback = true
 
 
 func _motion_state():
@@ -203,7 +205,7 @@ func _atack_state():
 		return
 	if _combo_anim_list.size() == 0:
 		if not animation.is_playing():
-			master_state = MASTER_STATES.MOTION
+			reset_atk_props()
 		return
 	
 	if not _combo_await:
@@ -218,6 +220,7 @@ func _atack_state():
 
 func reset_atk_props():
 	_combo_anim_list.clear()
+	master_state = MASTER_STATES.MOTION
 	atk_state = ATK_STATES.STATELESS
 	_combo_current_atk = -1
 	_combo_count = -1

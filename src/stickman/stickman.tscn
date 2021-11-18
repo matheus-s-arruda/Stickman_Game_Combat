@@ -2097,7 +2097,7 @@ onready var _parent = get_parent()
 
 
 func _process(delta):
-	text = String(_parent.master_state)
+	text = _parent.MASTER_STATES.keys()[_parent.master_state]
 "
 
 [sub_resource type="GDScript" id=60]
@@ -2107,7 +2107,7 @@ onready var _parent = get_parent()
 
 
 func _process(delta):
-	text = String(_parent.motion_state)
+	text = _parent.MOTION_STATES.keys()[_parent.motion_state]
 "
 
 [sub_resource type="GDScript" id=61]
@@ -2118,7 +2118,7 @@ onready var _parent = get_parent()
 
 
 func _process(delta):
-	text = String(_parent.atk_state)
+	text = _parent.ATK_STATES.keys()[_parent.atk_state]
 "
 
 [sub_resource type="GDScript" id=62]
@@ -2130,6 +2130,7 @@ onready var _parent = get_parent()
 
 func _process(delta):
 	text = String(_parent.dmg_state)
+	text = _parent.DMG_STATES.keys()[_parent.dmg_state]
 "
 
 [node name="stickman" type="KinematicBody2D"]
