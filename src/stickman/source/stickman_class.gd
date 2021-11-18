@@ -27,14 +27,17 @@ var input_jump := 0
 var input_down := false
 var input_bloq := false
 
-var _is_dead := false
-var _in_air := false
-var _in_damage := false
+var cutscene := false
 var _in_atack := false
+var _in_damage := false
+var _is_dead := false
+
+var _in_air := false
 var _in_slide := false
 var _in_down := false
 var _in_bloq := false
 var _in_onslaught := false
+
 var _flag_swap_dir := 0
 
 var _bloq_break_down = false
@@ -64,7 +67,6 @@ func _physics_process(delta):
 		_damaged_state()
 		_motion_state()
 		_atack_state()
-	
 	motion = move_and_slide(motion, Vector2.UP, true)
 	
 	if is_on_floor():
@@ -109,7 +111,6 @@ func _physics_process(delta):
 		return
 	
 	_in_bloq = _in_down or input_bloq
-	
 	if is_on_floor():
 		motion.y = input_jump * -JUMP_FORCE
 		speed_target = 0
@@ -129,12 +130,9 @@ func _physics_process(delta):
 func atack_inputs(_atk, _is_onslaught := false):
 	if _in_onslaught or _in_damage or _in_slide or _atk_condition != null:
 		return
-	
 	if _in_air and not _aereo_kick:
 		return
-	
 	_in_onslaught = _is_onslaught
-	
 	if _combo_anim_list.size() == 0:
 		_in_atack = true
 		_combo_anim_list.append(_atk)
@@ -149,7 +147,6 @@ func atk_disable_by_condition(_condition := 0):
 				animation.play(animation.current_animation)
 			else:
 				_disable_atk_condition()
-			
 		1: #se em slide
 			if _in_slide:
 				if _hitbox_by_condition == null:
@@ -161,14 +158,12 @@ func atk_disable_by_condition(_condition := 0):
 func _motion_state():
 	if _in_atack or _in_damage:
 		return
-	
 	if _in_air:
 		origin.scale.x = input_direction if input_direction != 0 else origin.scale.x
 		if motion.y > 0:
 			animation.play("jump_down")
 		else:
 			animation.play("jump_up")
-	
 	else:
 		if animation.current_animation == "jump_up" or animation.current_animation == "jump_down":
 			animation.play("jump_contact")
@@ -176,12 +171,9 @@ func _motion_state():
 			
 		if (animation.current_animation == "jump_contact" or animation.current_animation == "run_stop" or
 				animation.current_animation == "slide_in" or animation.current_animation == "slide_out"):
-			
 			if (animation.current_animation_length - animation.current_animation_position) > 0.05:
 				return
-		
 		origin.scale.x = input_direction if input_direction != 0 else origin.scale.x
-		
 		if _in_down:
 			if input_direction == 0:
 				animation.play("down_idle")
@@ -194,7 +186,6 @@ func _motion_state():
 				if animation.current_animation != "slide_in":
 					animation.play("slide_in")
 					return
-			
 			animation.play("slide")
 			return
 		
@@ -215,7 +206,6 @@ func _motion_state():
 				animation.play("run_stop")
 				_flag_swap_dir = input_direction
 				return
-			
 			_flag_swap_dir = input_direction
 		
 		elif input_direction != 0:
@@ -224,7 +214,6 @@ func _motion_state():
 				return
 			animation.play("run")
 			return
-		
 		animation.play("idle")
 
 
@@ -232,18 +221,13 @@ func _damaged_state():
 	if not _in_damage:
 		_damage_nockback = false
 		return
-	
 	_in_atack = false
-	
 	if life <= 0.0:
 		_die()
-	
 	if _damage_nockback and is_on_floor() and animation.current_animation == "damage_2":
 		animation.play("damage_2_contact")
-	
 	if (animation.current_animation_length - animation.current_animation_position) > 0.05:
 		return
-	
 	_in_damage = false
 
 
@@ -263,6 +247,7 @@ func _atack_state():
 			return
 		
 		if not _combo_await:
+			origin.scale.x = input_direction if input_direction != 0 else origin.scale.x
 			if _combo_current_atk == _combo_anim_list[0]:
 				_combo_count += 1
 			else:
@@ -271,10 +256,8 @@ func _atack_state():
 			_combo_current_atk = _combo_anim_list[0]
 			_anim_atk_combo()
 			_combo_await = true
-			
 		elif not animation.is_playing():
 			_combo_await = false
-	
 	else:
 		_combo_anim_list.clear()
 		_in_onslaught = false
@@ -288,7 +271,6 @@ func _anim_atk_combo():
 		_anim_atk_start(_aereo_kick)
 		_atk_condition = 0
 		return
-	
 	if _combo_current_atk < _atks.size():
 		if _combo_count < _atks[_combo_current_atk].size() -1:
 			_anim_atk_start(_atks[_combo_current_atk][_combo_count])
@@ -313,9 +295,7 @@ func _disable_atk_condition():
 func _hited(_hit):
 	if _is_dead:
 		return
-	
 	_in_damage = true
-	
 	if animation.current_animation == "damage_2" or animation.current_animation == "damage_2_contact":
 		return
 	
@@ -326,12 +306,9 @@ func _hited(_hit):
 				animation.play("damage_2")
 				_take_damage(_hit)
 				return
-			
 			animation.play("damage_1")
-			life -= _hit[0] * 0.5
-			_knock_block( sign(-_hit[1].x) )
+			_take_damage(_hit, true)
 			return
-		
 		animation.play("damage_2")
 		_take_damage(_hit)
 		return
@@ -340,27 +317,26 @@ func _hited(_hit):
 		animation.play("damage_1")
 		_take_damage(_hit)
 		return
-	
 	animation.play("bloq")
-	_knock_block( sign(-_hit[1].x) )
+	_knock_block( _hit, true )
 
 
-func _knock_block(_knock):
-	origin.scale.x = _knock if _knock != 0 else origin.scale.x
-	motion += Vector2(-origin.scale.x * 50, 0)
+func _knock_block(_hit, _is_blocking := false):
+	origin.scale.x = sign(-_hit[1].x) if _hit[1].x != 0 else origin.scale.x
+	if _is_blocking:
+		motion += Vector2(-origin.scale.x * 50, 0)
+		return
+	motion += _hit[1]
 
 
-func _take_damage(_hit):
+func _take_damage(_hit, _is_blocking := false):
 	_posture_recharge = 0.0
-	
 	if posture >= _hit[0]:
 		posture -= _hit[0]
 	else:
 		life -= _hit[0] - posture
 		posture = 0.0
-	
-	origin.scale.x = sign(-_hit[1].x) if _hit[1].x != 0 else origin.scale.x
-	motion += _hit[1]
+	_knock_block( _hit, _is_blocking)
 
 
 func spawn_hitbox(_data : Array, _pos : Vector2, _size : Vector2, _mask := 1):
@@ -386,7 +362,6 @@ func _spawn_hitbox_condition(_data):
 func _calc_posture(_delta):
 	if _is_dead:
 		return
-	
 	if _posture_recharge < POSTURE_TIME_RECHARGE:
 		_posture_recharge += _delta
 	else:
