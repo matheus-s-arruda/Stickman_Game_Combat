@@ -50,7 +50,7 @@ script = SubResource( 3 )
 [node name="enemys" type="Node" parent="."]
 
 [node name="enemy" parent="enemys" instance=ExtResource( 3 )]
-position = Vector2( 1677.65, 698.688 )
+position = Vector2( 1576.66, 730.78 )
 target = NodePath("../../entities/player")
 
 [node name="GUI" parent="." instance=ExtResource( 8 )]
