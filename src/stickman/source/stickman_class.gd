@@ -110,7 +110,7 @@ func _physics_process(delta):
 				set_physics_process(false)
 			
 			if not _in_air:
-				motion.x = lerp(motion.x, 0, 0.15)
+				motion.x = lerp(motion.x, 0, 0.1)
 			return
 	
 	if _in_air:
@@ -406,8 +406,6 @@ func _die():
 		return
 	if motion.y < -40:
 		_died_standing = true
-	print(motion)
-	
 	master_state = MASTER_STATES.DEAD
 	Gameplay.end_game()
 
