@@ -9,24 +9,30 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Resource",
+"class": "GameData",
+"language": "GDScript",
+"path": "res://src/resources/game_data.gd"
+}, {
 "base": "KinematicBody2D",
 "class": "Stickman",
 "language": "GDScript",
 "path": "res://src/stickman/source/stickman_class.gd"
 } ]
 _global_script_class_icons={
+"GameData": "",
 "Stickman": ""
 }
 
 [application]
 
 config/name="stickman_combat"
-run/main_scene="res://src/world/world.tscn"
+run/main_scene="res://src/inicio/principal.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
-Gameplay="*res://src/world/singleton_gameplay.gd"
+Gameplay="*res://src/singleton_gameplay.gd"
 
 [display]
 

@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Button
+
+
+
+func _on_start_pressed():
+	Gameplay.player_1_id = 0
+	Gameplay.player_2_id = 0
+	Gameplay.scenery_id = 0
+	Gameplay.start_game()
+"
+
+[node name="principal" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.364706, 0.501961, 0.619608, 1 )
+
+[node name="controls" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="start" type="Button" parent="controls"]
+margin_left = 317.641
+margin_top = 263.702
+margin_right = 515.641
+margin_bottom = 316.702
+script = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="controls/start" to="controls/start" method="_on_start_pressed"]

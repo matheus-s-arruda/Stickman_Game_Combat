@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/world/scenerys/desert_scenery.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/GUI/GUI.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/world/camera.gd" type="Script" id=4]
+[ext_resource path="res://src/world/player_2.gd" type="Script" id=5]
+[ext_resource path="res://src/world/player_1.gd" type="Script" id=6]
+
+[node name="world" type="Node"]
+
+[node name="desert_scenery" parent="." instance=ExtResource( 2 )]
+
+[node name="GUI" parent="." instance=ExtResource( 3 )]
+
+[node name="spawn_1" type="Node2D" parent="."]
+position = Vector2( 580, 730 )
+script = ExtResource( 6 )
+
+[node name="Camera" type="Camera2D" parent="spawn_1"]
+position = Vector2( 399.617, -9.44916 )
+current = true
+zoom = Vector2( 1.15, 1.15 )
+limit_left = 0
+limit_top = 0
+limit_right = 2000
+limit_bottom = 900
+smoothing_enabled = true
+smoothing_speed = 10.0
+script = ExtResource( 4 )
+
+[node name="spawn_2" type="Node2D" parent="."]
+position = Vector2( 1380, 730 )
+script = ExtResource( 5 )
+__meta__ = {
+"_editor_description_": ""
+}

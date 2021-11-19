@@ -20,7 +20,6 @@ export(NodePath) onready var origin = get_node(origin)
 export(NodePath) onready var animation = get_node(animation)
 export(Array, Array, String) var _atks
 export(String) var _aereo_kick : String
-export(Array, String) var _atk_special
 
 var life := LIFE_MAX
 var posture := POSTURE_MAX
@@ -32,7 +31,7 @@ var input_jump := false
 var input_down := false
 var input_bloq := false
 
-var master_state = MASTER_STATES.MOTION
+var master_state = MASTER_STATES.CUTSCENE
 var motion_state = MOTION_STATES.STATELESS
 var atk_state = ATK_STATES.STATELESS
 var dmg_state = DMG_STATES.STATELESS
@@ -56,7 +55,6 @@ var _hit_data_slide := []
 
 
 func _physics_process(delta):
-	var speed_target := 0.0
 	var speed_target_air := motion.x
 	_calc_posture(delta)
 	
@@ -260,7 +258,7 @@ func atack_inputs(_atk, _is_onslaught := false):
 	
 	if _is_onslaught:
 		atk_state = ATK_STATES.ONSLAUGHT
-		
+	
 	if _combo_anim_list.size() == 0:
 		master_state = MASTER_STATES.ATACK
 		_combo_anim_list.append(_atk)
@@ -397,15 +395,4 @@ func _die():
 	
 	master_state = MASTER_STATES.DEAD
 	Gameplay.end_game()
-
-
-
-
-
-
-
-
-
-
-
 
