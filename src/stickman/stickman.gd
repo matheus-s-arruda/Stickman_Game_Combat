@@ -58,6 +58,6 @@ func hitbox(_atk : int):
 		4: #knock out
 			spawn_hitbox([20, Vector2(origin.scale.x * 500, -400), null], Vector2(0, -96), Vector2(48, 32), 2)
 		5: #especial_1, anim sincronia
-			spawn_hitbox([30, Vector2(origin.scale.x * -800, -400), true], Vector2(90, -124), Vector2(8, 8), 2)
+			spawn_hitbox([30, Vector2(origin.scale.x * -800, -400), true], Vector2(55, -124), Vector2(20, 8), 2)
 
 

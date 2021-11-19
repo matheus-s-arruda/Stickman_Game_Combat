@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://src/stickman/animations/down_idle.tres" type="Animation" id=1]
 [ext_resource path="res://src/stickman/enemy/enemy_articulacao.gd" type="Script" id=2]
@@ -31,11 +31,14 @@ var _cooldown_1 := 0.0
 
 func _init():
 	Gameplay.player_2 = self
-
-var geovani = 0
-
-func _ready():
-	print(has_meta(\"geovani\"))
+	
+#	_hit_data_slide = [
+#			[15, Vector2(400, -200), null],
+#			Vector2(0, -24), Vector2(40, 24), 2]
+#
+#	_hit_data_jump = [
+#			[15, Vector2(100, -50), null],
+#			Vector2(0, -24), Vector2(40, 24), 2]
 
 
 func _physics_process(delta):
@@ -60,7 +63,7 @@ func _physics_process(delta):
 
 func atks():
 	if _cooldown_1 == 0.0:
-		if _distance_to_target < 135 and _distance_to_target > 105:
+		if _distance_to_target < 130 and _distance_to_target > 105:
 			_cooldown_1 = 5.0
 			atack_inputs(2, true)
 			return
@@ -86,7 +89,7 @@ func hitbox(_atk : int):
 		4: #knock out
 			spawn_hitbox([12, Vector2(origin.scale.x * 500, -400), null], Vector2(0, -96), Vector2(48, 32))
 		5: #especial_1, anim sincronia
-			spawn_hitbox([30, Vector2(origin.scale.x * -700, -400), true], Vector2(90, -124), Vector2(8, 8))
+			spawn_hitbox([30, Vector2(origin.scale.x * -800, -400), true], Vector2(55, -124), Vector2(20, 8))
 "
 
 [sub_resource type="RectangleShape2D" id=71]
@@ -1984,6 +1987,51 @@ tracks/13/keys = {
 "values": [ Vector2( 32, 16 ), Vector2( 24, 25.3333 ), Vector2( 18.4795, 31.0667 ), Vector2( 17.5949, 31.6873 ), Vector2( 15.4717, 33.1768 ) ]
 }
 
+[sub_resource type="GDScript" id=72]
+script/source = "extends Label
+
+
+
+onready var _parent = get_parent()
+
+
+func _process(delta):
+	text = _parent.MASTER_STATES.keys()[_parent.master_state]
+"
+
+[sub_resource type="GDScript" id=73]
+script/source = "extends Label
+
+onready var _parent = get_parent()
+
+
+func _process(delta):
+	text = _parent.MOTION_STATES.keys()[_parent.motion_state]
+"
+
+[sub_resource type="GDScript" id=74]
+script/source = "extends Label
+
+onready var _parent = get_parent()
+
+
+
+func _process(delta):
+	text = _parent.ATK_STATES.keys()[_parent.atk_state]
+"
+
+[sub_resource type="GDScript" id=75]
+script/source = "extends Label
+
+
+onready var _parent = get_parent()
+
+
+func _process(delta):
+	text = String(_parent.dmg_state)
+	text = _parent.DMG_STATES.keys()[_parent.dmg_state]
+"
+
 [node name="enemy" type="KinematicBody2D"]
 collision_layer = 4
 script = SubResource( 70 )
@@ -2105,3 +2153,47 @@ color = Color( 0.254902, 0.0196078, 0.4, 1 )
 position = Vector2( 6, 0 )
 script = ExtResource( 4 )
 color = Color( 0.254902, 0.0196078, 0.4, 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -26.9695
+margin_top = -252.465
+margin_right = 31.0305
+margin_bottom = -238.465
+text = "asdasdas"
+script = SubResource( 72 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = -26.2204
+margin_top = -238.98
+margin_right = 31.7796
+margin_bottom = -224.98
+text = "asdasdas"
+script = SubResource( 73 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = -28.4678
+margin_top = -209.763
+margin_right = 29.5322
+margin_bottom = -195.763
+text = "asdasdas"
+script = SubResource( 74 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="."]
+margin_left = -25.4712
+margin_top = -225.495
+margin_right = 32.5288
+margin_bottom = -211.495
+text = "asdasdas"
+script = SubResource( 75 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
