@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Camera2D
+
+var _zoom_fator := 1.0
+
+func _process(delta):
+	var a = Gameplay.player_1.to_local(Gameplay.player_2.global_position)
+	var d = Gameplay.player_1.global_position.distance_to(Gameplay.player_2.global_position)
+	_zoom_fator = lerp(_zoom_fator, clamp(d * 0.002, 0.8, 1.15), 0.16)
+	
+	position = a * 0.5
+	position.y -= 200
+	zoom = Vector2.ONE * _zoom_fator
+
+"
+
+[node name="Camera" type="Camera2D"]
+position = Vector2( 1046.52, 718.421 )
+current = true
+zoom = Vector2( 1.15, 1.15 )
+limit_left = 0
+limit_top = 0
+limit_right = 2000
+limit_bottom = 900
+smoothing_enabled = true
+smoothing_speed = 10.0
+script = SubResource( 1 )

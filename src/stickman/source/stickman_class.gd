@@ -18,8 +18,9 @@ const LIFE_MAX := 100.0
 
 export(NodePath) onready var origin = get_node(origin)
 export(NodePath) onready var animation = get_node(animation)
-export(Array, Array, String) var _atks
 export(String) var _aereo_kick : String
+export(Array, Array, String) var _atks
+export(Dictionary) var skill_cooldown : Dictionary
 
 var life := LIFE_MAX
 var posture := POSTURE_MAX
@@ -44,6 +45,7 @@ var _posture_recharge := 0.0
 
 var _died_standing = false
 var _atk_condition = null
+
 var _combo_anim_list = []
 var _combo_await := false
 var _combo_count := -1
@@ -53,10 +55,11 @@ var _hitbox_by_condition = null
 var _hit_data_jump := []
 var _hit_data_slide := []
 
+onready var _flag_skill_cooldown = skill_cooldown.duplicate()
 
 func _physics_process(delta):
 	var speed_target_air := motion.x
-	_calc_posture(delta)
+	_calc_timers(delta)
 	
 	motion = move_and_slide(motion, Vector2.UP, true)
 	_moviment()
@@ -256,6 +259,12 @@ func atack_inputs(_atk, _is_onslaught := false):
 	if _in_air and not _aereo_kick:
 		return
 	
+	if skill_cooldown.has(_atk):
+		if skill_cooldown[_atk] == _flag_skill_cooldown[_atk]:
+			skill_cooldown[_atk] = 0.0
+		else:
+			return
+	
 	if _is_onslaught:
 		atk_state = ATK_STATES.ONSLAUGHT
 	
@@ -373,7 +382,7 @@ func _spawn_hitbox_condition(_data):
 	origin.add_child(_hit)
 
 
-func _calc_posture(_delta):
+func _calc_timers(_delta):
 	if master_state == MASTER_STATES.DEAD:
 		return
 	if _posture_recharge < POSTURE_TIME_RECHARGE:
@@ -384,6 +393,12 @@ func _calc_posture(_delta):
 			posture += 25.0 * _delta
 		else:
 			posture = POSTURE_MAX
+	
+	for _skill in skill_cooldown:
+		if skill_cooldown[_skill] < _flag_skill_cooldown[_skill]:
+			skill_cooldown[_skill] += _delta
+		else:
+			skill_cooldown[_skill] = _flag_skill_cooldown[_skill]
 
 
 func _die():

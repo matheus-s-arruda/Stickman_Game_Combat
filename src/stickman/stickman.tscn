@@ -2141,9 +2141,8 @@ __meta__ = {
 }
 origin = NodePath("origin")
 animation = NodePath("AnimationPlayer")
-_atks = [ [ "atk_punch_1", "atk_punch_2", "atk_punch_3" ], [ "atk_kick_1", "atk_kick_1", "atk_kick_2", "atk_kick_3" ], [ "atk_special_1" ] ]
 _aereo_kick = "atk_jump_1"
-_atk_special = [ "atk_jump_1" ]
+_atks = [ [ "atk_punch_1", "atk_punch_2", "atk_punch_3" ], [ "atk_kick_1", "atk_kick_1", "atk_kick_2", "atk_kick_3" ], [ "atk_special_1" ] ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
