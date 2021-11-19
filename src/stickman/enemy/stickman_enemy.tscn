@@ -42,8 +42,8 @@ func _init():
 
 
 func _physics_process(delta):
-	input_bloq = true
-	return
+	#input_bloq = true
+	#return
 	
 	if _cooldown_1 > 0.0:
 		_cooldown_1 -= delta
@@ -57,13 +57,13 @@ func _physics_process(delta):
 	else:
 		input_direction = -1
 	
-	input_bloq = _distance_to_target < 220
+	input_bloq = _distance_to_target < 200
 	atks()
 
 
 func atks():
 	if _cooldown_1 == 0.0:
-		if _distance_to_target < 130 and _distance_to_target > 105:
+		if _distance_to_target < 120 and _distance_to_target > 105:
 			_cooldown_1 = 5.0
 			atack_inputs(2, true)
 			return
