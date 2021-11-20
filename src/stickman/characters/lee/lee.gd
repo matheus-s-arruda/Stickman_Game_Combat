@@ -7,14 +7,6 @@ var rival_layer := 1
 func _ready():
 	skill_cooldown = {2 : 5.0}
 	_flag_skill_cooldown = {2 : 5.0}
-	
-	_hit_data_slide = [
-			[15, Vector2(400, -200), null],
-			Vector2(0, -24), Vector2(40, 24), rival_layer]
-	
-	_hit_data_jump = [
-			[15, Vector2(100, -50), null],
-			Vector2(0, -24), Vector2(40, 24), rival_layer]
 
 
 func move():
@@ -26,10 +18,10 @@ func move():
 		input_direction = -1 if _distance_to_target > 50 else 0
 	
 	if _distance_to_target < 200:
-#		input_down = true
+		input_down = true
 		atk()
-#	else:
-#		input_down = false
+	else:
+		input_down = false
 
 
 func atk():
@@ -41,6 +33,19 @@ func atk():
 			atack_inputs(1)
 	else:
 		atack_inputs(0)
+
+
+func anim_wait_floor():
+	if not _in_air:
+		animation.play("atk_jump_contact")
+
+
+func special_atks(_id):
+	match _id:
+		0: #air
+			pass
+		1:
+			pass
 
 
 func hitbox(_atk : int):

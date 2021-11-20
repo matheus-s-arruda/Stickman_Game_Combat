@@ -25,3 +25,6 @@ func _physics_process(delta):
 	
 	elif Input.is_action_just_pressed("atk_3"):
 		Gameplay.player_1.atack_inputs(2, true)
+	
+	elif Input.is_action_just_pressed("atk_4"):
+		Gameplay.player_1.atk_state = Gameplay.player_1.ATK_STATES.CONDITIONAL

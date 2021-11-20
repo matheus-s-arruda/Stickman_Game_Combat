@@ -2,7 +2,6 @@ class_name Stickman
 extends KinematicBody2D
 
 const hitbox = preload("res://src/stickman/physics/hitbox.tscn")
-const hitbox_free_by_condition = preload("res://src/stickman/physics/hitbox_free_by_condition.tscn")
 
 enum MASTER_STATES {CUTSCENE, MOTION, ATACK, DAMAGE, DEAD}
 enum ATK_STATES {STATELESS, ONSLAUGHT, IN_BLOQ, CONDITIONAL}
@@ -19,7 +18,6 @@ const LIFE_MAX := 100.0
 export(NodePath) onready var hurtbox = get_node(hurtbox)
 export(NodePath) onready var origin = get_node(origin)
 export(NodePath) onready var animation = get_node(animation)
-export(String) var _aereo_kick : String
 export(Array, Array, String) var _atks
 
 var life := LIFE_MAX
@@ -38,21 +36,16 @@ var atk_state = ATK_STATES.STATELESS
 var dmg_state = DMG_STATES.STATELESS
 
 var _in_air := false
-var _flag_swap_dir := 0
+var _died_standing = false
 var _damage_nockback := false
 var _posture_recharge := 0.0
-
-var _died_standing = false
-var _atk_condition = null
+var _flag_swap_dir := 0
 
 var _combo_anim_list = []
 var _combo_await := false
 var _combo_count := -1
 var _combo_current_atk = -1
 
-var _hitbox_by_condition = null
-var _hit_data_jump : Array
-var _hit_data_slide : Array
 var skill_cooldown : Dictionary
 var _flag_skill_cooldown : Dictionary
 
@@ -85,9 +78,7 @@ func _physics_process(delta):
 			
 		MASTER_STATES.ATACK:
 			_atack_state()
-			if motion_state == MOTION_STATES.IN_SLIDE:
-				_atk_condition = 1
-			if not _in_air and motion_state != MOTION_STATES.IN_SLIDE:
+			if not _in_air:
 				motion.x = lerp(motion.x, 0, 0.2)
 			
 		MASTER_STATES.DAMAGE:
@@ -124,11 +115,10 @@ func _moviment():
 	match motion_state:
 		MOTION_STATES.STATELESS:
 			if master_state == MASTER_STATES.MOTION:
-				_bloq_state()
+				_bloq_state(input_bloq)
 				if is_on_floor():
 					motion.y += -JUMP_FORCE if input_jump else 0
 					speed_target = 0
-					
 					if input_down:
 						if abs(motion.x) > 200:
 							if motion_state != MOTION_STATES.IN_DOWN:
@@ -141,16 +131,13 @@ func _moviment():
 					if animation.current_animation == "walk":
 						speed_target = input_direction * SPEED * 0.18
 					motion.x = lerp(motion.x, speed_target, 0.3)
-		
 		MOTION_STATES.IN_SLIDE:
-			_atk_condition = 1
-			master_state = MASTER_STATES.ATACK
-			motion.x = lerp(motion.x, 0, 0.015)
+			motion.x = lerp(motion.x, 0, 0.05)
 			if not input_down or abs(motion.x) < 200:
 				motion_state = MOTION_STATES.STATELESS
 			
 		MOTION_STATES.IN_DOWN:
-			_bloq_state()
+			_bloq_state(true)
 			motion.x = lerp(motion.x, input_direction * SPEED * 0.2, 0.3)
 			if not input_down:
 				motion_state = MOTION_STATES.STATELESS
@@ -221,9 +208,6 @@ func _damaged_state():
 
 
 func _atack_state():
-	if _atk_condition != null:
-		atk_disable_by_condition(_atk_condition)
-		return
 	if _combo_anim_list.size() == 0:
 		if not animation.is_playing():
 			reset_atk_props()
@@ -239,11 +223,11 @@ func _atack_state():
 		_combo_await = false
 
 
-func _bloq_state():
+func _bloq_state(value : bool):
 	if master_state == MASTER_STATES.MOTION:
-		if input_bloq or input_down:
+		if value:
 			atk_state = ATK_STATES.IN_BLOQ
-		else:
+		elif atk_state == ATK_STATES.IN_BLOQ:
 			atk_state = ATK_STATES.STATELESS
 
 
@@ -258,16 +242,11 @@ func reset_atk_props():
 
 
 func atack_inputs(_atk, _is_onslaught := false):
-	if (master_state == MASTER_STATES.DAMAGE 
+	if (master_state == MASTER_STATES.DAMAGE
 			or master_state == MASTER_STATES.DEAD
 			or master_state == MASTER_STATES.CUTSCENE
 			or motion_state == MOTION_STATES.IN_SLIDE
-			or atk_state == ATK_STATES.CONDITIONAL
-			or atk_state == ATK_STATES.ONSLAUGHT
-			or atk_state == ATK_STATES.IN_BLOQ):
-		return
-	
-	if _in_air and not _aereo_kick:
+			or atk_state != ATK_STATES.STATELESS):
 		return
 	
 	if skill_cooldown.has(_atk):
@@ -283,28 +262,7 @@ func atack_inputs(_atk, _is_onslaught := false):
 		_combo_anim_list.append(_atk)
 
 
-func atk_disable_by_condition(_condition := 0):
-	match _condition:
-		0: #se tocar o chao, ou inimigo
-			if _in_air:
-				if _hitbox_by_condition == null:
-					_spawn_hitbox_condition(_hit_data_jump)
-				animation.play(animation.current_animation)
-			else:
-				_disable_atk_condition()
-		1: #se em slide
-			if motion_state == MOTION_STATES.IN_SLIDE:
-				if _hitbox_by_condition == null:
-					_spawn_hitbox_condition(_hit_data_slide)
-			else:
-				_disable_atk_condition()
-
-
 func _anim_atk_combo():
-	if _in_air and _aereo_kick != "":
-		_anim_atk_start(_aereo_kick)
-		_atk_condition = 0
-		return
 	if _combo_current_atk < _atks.size():
 		if _combo_count < _atks[_combo_current_atk].size() -1:
 			_anim_atk_start(_atks[_combo_current_atk][_combo_count])
@@ -316,13 +274,6 @@ func _anim_atk_combo():
 func _anim_atk_start(anim):
 	animation.play(anim)
 	_combo_anim_list.remove(0)
-
-
-func _disable_atk_condition():
-	_atk_condition = null
-	if is_instance_valid(_hitbox_by_condition):
-		_hitbox_by_condition.queue_free()
-	_hitbox_by_condition = null
 
 
 func _hited(_hit):
@@ -375,17 +326,6 @@ func spawn_hitbox(_data : Array, _pos : Vector2, _size : Vector2, _mask := 1):
 	_hit.position = _pos
 	_hit.extent = _size
 	_hit.collide = _mask
-	origin.add_child(_hit)
-
-
-func _spawn_hitbox_condition(_data):
-	var _hit = hitbox_free_by_condition.instance()
-	_data[0][1] *= origin.scale
-	_hit.hit = _data[0]
-	_hit.position = _data[1]
-	_hit.extent = _data[2]
-	_hit.collide = _data[3]
-	_hitbox_by_condition = _hit
 	origin.add_child(_hit)
 
 
