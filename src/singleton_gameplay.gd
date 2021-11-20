@@ -21,6 +21,8 @@ func end_game():
 	if player_2.master_state != player_2.MASTER_STATES.DEAD:
 		player_2.master_state = player_2.MASTER_STATES.CUTSCENE
 		player_2.animation.play("idle")
+		yield(get_tree().create_timer(1),"timeout")
+		player_2.animation.play("open")
 
 
 func start_game():

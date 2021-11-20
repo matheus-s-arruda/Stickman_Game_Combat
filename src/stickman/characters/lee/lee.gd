@@ -26,10 +26,10 @@ func move():
 		input_direction = -1 if _distance_to_target > 50 else 0
 	
 	if _distance_to_target < 200:
-		input_bloq = true
+#		input_down = true
 		atk()
-	else:
-		input_bloq = false
+#	else:
+#		input_down = false
 
 
 func atk():

@@ -17,7 +17,6 @@ func _process(delta):
 	text += \"\\n\" + Gameplay.player_2.MOTION_STATES.keys()[Gameplay.player_2.motion_state]
 	text += \"\\n\" + Gameplay.player_2.ATK_STATES.keys()[Gameplay.player_2.atk_state]
 	text += \"\\n\" + Gameplay.player_2.DMG_STATES.keys()[Gameplay.player_2.dmg_state]
-	text += \"\\n\" + String(Gameplay.player_2.in_bloq)
 	
 	
 

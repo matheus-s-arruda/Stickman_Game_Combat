@@ -9,6 +9,7 @@ func _init():
 
 
 func _physics_process(delta):
+	return
 	Gameplay.player_2.move()
 
 
