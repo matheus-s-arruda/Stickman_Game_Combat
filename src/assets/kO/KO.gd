@@ -27,8 +27,8 @@ func start():
 	_splash_down.visible = true
 	_tween.interpolate_property(_splash_top, "rect_rotation", -10, 0, 0.2)
 	_tween.interpolate_property(_splash_down, "rect_rotation", -10, 0, 0.2)
-	_tween.interpolate_property(_splash_top, "rect_position", Vector2(-1460, -305), Vector2(-407, -305), 0.2)
-	_tween.interpolate_property(_splash_down, "rect_position", Vector2(640, 0), Vector2(-407, 0), 0.2)
+	_tween.interpolate_property(_splash_top, "rect_position", Vector2(-1460, -305), Vector2(-407, -305), 0.2, Tween.TRANS_CIRC)
+	_tween.interpolate_property(_splash_down, "rect_position", Vector2(640, 0), Vector2(-407, 0), 0.2, Tween.TRANS_CIRC)
 	_tween.start()
 
 

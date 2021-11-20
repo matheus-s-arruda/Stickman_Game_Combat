@@ -1,9 +1,22 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://src/assets/kO/KO.gd" type="Script" id=1]
 [ext_resource path="res://fonts/electrox.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://img/fx/splash_2.png" type="Texture" id=3]
 [ext_resource path="res://img/fx/splash_1.png" type="Texture" id=4]
+[ext_resource path="res://img/fx/go_splash_2.png" type="Texture" id=5]
+[ext_resource path="res://img/fx/go_splash_1.png" type="Texture" id=6]
+
+[sub_resource type="GDScript" id=28]
+script/source = "extends MarginContainer
+
+
+
+
+func _ready():
+	yield(get_tree().create_timer(Gameplay.CUTSCENE_TIME), \"timeout\")
+	visible = true
+"
 
 [sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.129412, 0.129412, 0.129412, 1 )
@@ -67,21 +80,124 @@ func _process(delta):
 	value = lerp(value,Gameplay.player_2.posture * 4, 0.1)
 "
 
+[sub_resource type="Shader" id=18]
+code = "shader_type canvas_item;
+
+
+void fragment(){
+	vec2 _uv = vec2(0.0, 0.0);
+	_uv.x = cos((TIME * 5.0) + (UV.y * 20.0)) * 0.01;
+	
+	COLOR = texture(TEXTURE, UV + (_uv * 0.1));
+}"
+
+[sub_resource type="ShaderMaterial" id=19]
+shader = SubResource( 18 )
+
+[sub_resource type="Shader" id=20]
+code = "shader_type canvas_item;
+
+
+void fragment(){
+	vec2 _uv = vec2(0.0, 0.0);
+	_uv.x = cos((TIME * 5.0) + (UV.y * 20.0)) * 0.01;
+	
+	COLOR = texture(TEXTURE, UV + (_uv * 0.1));
+}"
+
+[sub_resource type="ShaderMaterial" id=21]
+shader = SubResource( 20 )
+
 [sub_resource type="DynamicFont" id=17]
 size = 200
 outline_size = 9
 outline_color = Color( 0.494118, 0.0823529, 0.0823529, 1 )
 font_data = ExtResource( 2 )
 
+[sub_resource type="GDScript" id=22]
+script/source = "extends ColorRect
+
+
+
+onready var tween = $Tween
+
+
+func _ready():
+	yield(self, \"ready\")
+	tween.interpolate_property(self, \"color\", Color.black, Color(0, 0, 0, 0), 1.0)
+	tween.start()
+"
+
+[sub_resource type="GDScript" id=23]
+script/source = "extends Control
+
+onready var tween = $Tween
+onready var label = $go_text
+onready var splash_1 = $splash_1
+onready var splash_2 = $splash_2
+
+
+func _ready():
+	yield(get_tree().create_timer(Gameplay.CUTSCENE_TIME - 1.0), \"timeout\")
+	tween.interpolate_property(label, \"self_modulate\", Color(1, 1, 1, 0), Color(1, 1, 1, 1), 0.15)
+	tween.interpolate_property(splash_1, \"rect_position\", Vector2(1300, 360), Vector2(0, 360), 0.15, Tween.TRANS_QUAD, Tween.EASE_OUT)
+	tween.interpolate_property(splash_2, \"rect_position\", Vector2(-1300, 160), Vector2(0, 160), 0.15, Tween.TRANS_QUAD, Tween.EASE_OUT)
+	tween.start()
+	
+	yield(tween, \"tween_all_completed\")
+	tween.interpolate_property(splash_1, \"rect_position\", Vector2(0, 360), Vector2(-50, 360), 0.6)
+	tween.interpolate_property(splash_2, \"rect_position\", Vector2(0, 160), Vector2(50, 160), 0.6)
+	tween.start()
+	
+	yield(tween, \"tween_all_completed\")
+	tween.interpolate_property(label, \"rect_position\", Vector2(491, 263), Vector2(491, -300), 0.15, Tween.TRANS_CIRC)
+	tween.interpolate_property(splash_1, \"rect_position\", Vector2(-50, 360), Vector2(-1300, 360), 0.15, Tween.TRANS_QUAD, Tween.EASE_OUT)
+	tween.interpolate_property(splash_2, \"rect_position\", Vector2(50, 160), Vector2(1300, 160), 0.15, Tween.TRANS_QUAD, Tween.EASE_OUT)
+	tween.start()
+	
+	yield(tween, \"tween_all_completed\")
+	queue_free()
+"
+
+[sub_resource type="Shader" id=24]
+code = "shader_type canvas_item;
+
+
+void fragment(){
+	vec2 _uv = vec2(0.0, 0.0);
+	_uv.y = cos((TIME * 10.0) + (UV.x * 50.0)) * 0.02;
+	
+	COLOR = texture(TEXTURE, UV + (_uv * 0.2));
+}"
+
+[sub_resource type="ShaderMaterial" id=25]
+shader = SubResource( 24 )
+
+[sub_resource type="Shader" id=26]
+code = "shader_type canvas_item;
+
+
+void fragment(){
+	vec2 _uv = vec2(0.0, 0.0);
+	_uv.y = cos((TIME * 10.0) + (UV.x * 50.0)) * 0.02;
+	
+	COLOR = texture(TEXTURE, UV + (_uv * 0.2));
+}"
+
+[sub_resource type="ShaderMaterial" id=27]
+shader = SubResource( 26 )
+
 [node name="GUI" type="CanvasLayer"]
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 custom_constants/margin_right = 15
 custom_constants/margin_top = 15
 custom_constants/margin_left = 15
 custom_constants/margin_bottom = 5
+script = SubResource( 28 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -231,6 +347,7 @@ __meta__ = {
 
 [node name="splash_1" type="TextureRect" parent="MarginContainer/HUD/center/KO"]
 visible = false
+material = SubResource( 19 )
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -249,6 +366,7 @@ __meta__ = {
 
 [node name="splash_2" type="TextureRect" parent="MarginContainer/HUD/center/KO"]
 visible = false
+material = SubResource( 21 )
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = 730.284
@@ -285,3 +403,79 @@ __meta__ = {
 }
 
 [node name="Tween" type="Tween" parent="MarginContainer/HUD/center/KO"]
+
+[node name="fade_out" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 1 )
+script = SubResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="fade_out"]
+
+[node name="GO" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = SubResource( 23 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="go_text" type="RichTextLabel" parent="GO"]
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 471.0
+margin_top = 243.0
+margin_right = 769.0
+margin_bottom = 437.0
+mouse_filter = 2
+custom_colors/default_color = Color( 0.909804, 0.992157, 1, 1 )
+custom_fonts/normal_font = SubResource( 17 )
+bbcode_enabled = true
+bbcode_text = "[wave amp=30 freq=2]GO![/wave]"
+text = "GO!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="splash_1" type="TextureRect" parent="GO"]
+material = SubResource( 25 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 1280.0
+margin_top = 340.0
+margin_right = 2560.0
+margin_bottom = 540.0
+mouse_filter = 2
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="splash_2" type="TextureRect" parent="GO"]
+material = SubResource( 27 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -1320.0
+margin_top = 140.0
+margin_right = -40.0
+margin_bottom = 340.0
+mouse_filter = 2
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 5
+
+[node name="Tween" type="Tween" parent="GO"]

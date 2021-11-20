@@ -34,7 +34,8 @@ code = "shader_type canvas_item;
 
 void fragment(){
 	vec2 _uv = vec2(0.0);
-	_uv.x += cos((UV.y * 2.0) + (TIME / 2.0)) / 3.0;
+	_uv.x = -0.8 + cos( (UV.y * 5.0) + TIME) / 5.0;
+	_uv.x += cos( (UV.y * 50.0) + (TIME * 10.0)) * 0.01;
 	COLOR = texture(TEXTURE, UV + _uv * (UV.y - 0.1)); 
 }"
 
@@ -99,7 +100,11 @@ texture = ExtResource( 8 )
 
 [node name="bandeira" type="Sprite" parent="parallax/back_floor/mastro"]
 material = SubResource( 6 )
+position = Vector2( 50, 0 )
+rotation = -0.0284958
 texture = ExtResource( 9 )
+region_enabled = true
+region_rect = Rect2( 50, 0.433, 175, 519 )
 
 [node name="floor" type="ParallaxLayer" parent="parallax"]
 

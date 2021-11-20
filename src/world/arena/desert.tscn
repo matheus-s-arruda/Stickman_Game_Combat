@@ -1,9 +1,32 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/world/scenerys/desert_scenery.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/GUI/GUI.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/world/player_2.gd" type="Script" id=5]
 [ext_resource path="res://src/world/player_1.gd" type="Script" id=6]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Label
+
+
+
+
+func _process(delta):
+	
+	text = Gameplay.player_2.MASTER_STATES.keys()[Gameplay.player_2.master_state]
+	text += \"\\n\" + Gameplay.player_2.MOTION_STATES.keys()[Gameplay.player_2.motion_state]
+	text += \"\\n\" + Gameplay.player_2.ATK_STATES.keys()[Gameplay.player_2.atk_state]
+	text += \"\\n\" + Gameplay.player_2.DMG_STATES.keys()[Gameplay.player_2.dmg_state]
+	text += \"\\n\" + String(Gameplay.player_2.in_bloq)
+	
+	
+
+#
+#var master_state = MASTER_STATES.CUTSCENE
+#var motion_state = MOTION_STATES.STATELESS
+#var atk_state = ATK_STATES.STATELESS
+#var dmg_state = DMG_STATES.STATELESS
+"
 
 [node name="world" type="Node"]
 
@@ -20,4 +43,15 @@ position = Vector2( 1380, 730 )
 script = ExtResource( 5 )
 __meta__ = {
 "_editor_description_": ""
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 642.225
+margin_top = 455.643
+margin_right = 682.225
+margin_bottom = 469.643
+rect_scale = Vector2( 2, 2 )
+script = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
 }

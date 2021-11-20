@@ -36,12 +36,11 @@ func atk():
 	if _distance_to_target > 120:
 		return
 	atack_inputs(2, true)
-	atack_inputs(0)
-#	if _distance_to_target > 55:
-#		if _distance_to_target < 80:
-#			atack_inputs(1)
-#	else:
-#		atack_inputs(0)
+	if _distance_to_target > 50:
+		if _distance_to_target < 70:
+			atack_inputs(1)
+	else:
+		atack_inputs(0)
 
 
 func hitbox(_atk : int):

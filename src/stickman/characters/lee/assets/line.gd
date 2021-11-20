@@ -8,7 +8,6 @@ var color := Color(0.36, 0.15, 0.15)
 
 func _process(delta):
 	update()
-	
 	#color = Color.red if global_position.distance_to(get_parent().global_position) > _legth else Color(0.36, 0.15, 0.15)
 
 

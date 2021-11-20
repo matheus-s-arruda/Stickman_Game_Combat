@@ -5,7 +5,7 @@ const hitbox = preload("res://src/stickman/physics/hitbox.tscn")
 const hitbox_free_by_condition = preload("res://src/stickman/physics/hitbox_free_by_condition.tscn")
 
 enum MASTER_STATES {CUTSCENE, MOTION, ATACK, DAMAGE, DEAD}
-enum ATK_STATES {STATELESS, ONSLAUGHT,  CONDITIONAL}
+enum ATK_STATES {STATELESS, ONSLAUGHT, IN_BLOQ, CONDITIONAL}
 enum MOTION_STATES {STATELESS, IN_SLIDE, IN_DOWN}
 enum DMG_STATES {STATELESS, KNOCKBACK}
 
@@ -239,10 +239,10 @@ func _atack_state():
 
 
 func reset_atk_props():
+	_combo_anim_list.clear()
 	_combo_current_atk = -1
 	_combo_count = -1
 	_combo_await = false
-	_combo_anim_list.clear()
 	atk_state = ATK_STATES.STATELESS
 	
 	if master_state == MASTER_STATES.DEAD or master_state == MASTER_STATES.DAMAGE:
@@ -257,7 +257,9 @@ func atack_inputs(_atk, _is_onslaught := false):
 			or master_state == MASTER_STATES.CUTSCENE
 			or motion_state == MOTION_STATES.IN_SLIDE
 			or atk_state == ATK_STATES.CONDITIONAL
-			or atk_state == ATK_STATES.ONSLAUGHT):
+			or atk_state == ATK_STATES.IN_BLOQ
+			or atk_state == ATK_STATES.ONSLAUGHT
+			):
 		return
 	
 	if _in_air and not _aereo_kick:
@@ -269,10 +271,9 @@ func atack_inputs(_atk, _is_onslaught := false):
 		else:
 			return
 	
-	if _is_onslaught:
-		atk_state = ATK_STATES.ONSLAUGHT
-	
 	if _combo_anim_list.size() == 0:
+		if _is_onslaught:
+			atk_state = ATK_STATES.ONSLAUGHT
 		master_state = MASTER_STATES.ATACK
 		_combo_anim_list.append(_atk)
 
@@ -322,10 +323,9 @@ func _disable_atk_condition():
 func _hited(_hit):
 	if master_state == MASTER_STATES.DEAD:
 		return
-	master_state = MASTER_STATES.DAMAGE
-	reset_atk_props()
-	if animation.current_animation == "damage_2" or animation.current_animation == "damage_2_contact":
-		return
+#	if animation.current_animation == "damage_2" or animation.current_animation == "damage_2_contact":
+#		return
+	#reset_atk_props()
 	
 	if _hit.size() == 3:
 		if in_bloq:
@@ -357,6 +357,8 @@ func _knock_block(_hit, _is_blocking := false):
 
 
 func _take_damage(_hit, _is_blocking := false):
+	master_state = MASTER_STATES.DAMAGE
+	reset_atk_props()
 	_posture_recharge = 0.0
 	if posture >= _hit[0]:
 		posture -= _hit[0]

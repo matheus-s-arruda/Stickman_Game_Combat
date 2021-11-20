@@ -3,7 +3,7 @@
 [sub_resource type="GDScript" id=1]
 script/source = "extends Camera2D
 
-var _zoom_fator := 1.0
+var _zoom_fator := 1.15
 
 func _process(delta):
 	var a = Gameplay.player_1.to_local(Gameplay.player_2.global_position)
