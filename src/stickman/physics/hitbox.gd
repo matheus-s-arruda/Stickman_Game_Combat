@@ -17,13 +17,13 @@ func _ready():
 	queue_free()
 
 
-func _on_hitbox_body_entered(body):
-	body.hit = hit
+func _on_hitbox_area_entered(area):
+	area.stickman.hit = hit
 	var _fx_c = Gameplay.FX_HIT_CIRCE.instance()
 	add_child(_fx_c)
 	_fx_c.position.x = extent.x * 2
 	
-	if not body.in_bloq:
+	if not area.stickman.in_bloq:
 		var _fx_p = Gameplay.FX_HIT_PARTICLE.instance()
 		add_child(_fx_p)
 		_fx_p.position.x = extent.x * 2

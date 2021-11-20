@@ -17,7 +17,7 @@ _global_script_classes=[ {
 "base": "KinematicBody2D",
 "class": "Stickman",
 "language": "GDScript",
-"path": "res://src/stickman/source/stickman_class.gd"
+"path": "res://src/stickman/stickman_class.gd"
 } ]
 _global_script_class_icons={
 "GameData": "",

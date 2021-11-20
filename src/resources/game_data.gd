@@ -3,6 +3,9 @@ extends Resource
 
 
 
+var teste = preload("res://src/stickman/characters/lee/lee.tscn").instance()
+
+
 const sceneries_list = [
 	"res://src/world/arena/desert.tscn"
 ]

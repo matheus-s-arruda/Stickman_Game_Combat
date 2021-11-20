@@ -3,8 +3,9 @@ extends Node2D
 
 func _init():
 	Gameplay.player_1.rival_layer = 2
-	Gameplay.player_1.set_collision_layer_bit(1, true)
 	add_child(Gameplay.player_1)
+	yield(Gameplay.player_1, "ready")
+	Gameplay.player_1.hurtbox.set_collision_layer_bit(1, true)
 	Gameplay.player_1.add_child(Gameplay.camera.instance())
 
 

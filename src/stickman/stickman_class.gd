@@ -16,11 +16,12 @@ const POSTURE_TIME_RECHARGE := 4.0
 const POSTURE_MAX := 25.0
 const LIFE_MAX := 100.0
 
+export(NodePath) onready var hurtbox = get_node(hurtbox)
 export(NodePath) onready var origin = get_node(origin)
 export(NodePath) onready var animation = get_node(animation)
 export(String) var _aereo_kick : String
 export(Array, Array, String) var _atks
-export(Dictionary) var skill_cooldown : Dictionary
+var skill_cooldown : Dictionary
 
 var life := LIFE_MAX
 var posture := POSTURE_MAX
@@ -55,7 +56,7 @@ var _hitbox_by_condition = null
 var _hit_data_jump := []
 var _hit_data_slide := []
 
-onready var _flag_skill_cooldown = skill_cooldown.duplicate()
+var _flag_skill_cooldown : Dictionary
 
 func _physics_process(delta):
 	var speed_target_air := motion.x
@@ -80,6 +81,7 @@ func _physics_process(delta):
 	
 	match master_state:
 		MASTER_STATES.CUTSCENE:
+			motion.x = 0
 			return
 			
 		MASTER_STATES.MOTION:
@@ -102,10 +104,11 @@ func _physics_process(delta):
 			
 		MASTER_STATES.DEAD:
 			if _died_standing:
-				if is_on_floor() and animation.current_animation == "damage_2":
+				if not _in_air:
 					animation.play("die_contact")
+				else:
+					animation.play("damage_2")
 			else:
-				print('die')
 				animation.play("die")
 				set_physics_process(false)
 			
@@ -251,6 +254,7 @@ func reset_atk_props():
 func atack_inputs(_atk, _is_onslaught := false):
 	if (master_state == MASTER_STATES.DAMAGE 
 			or master_state == MASTER_STATES.DEAD
+			or master_state == MASTER_STATES.CUTSCENE
 			or motion_state == MOTION_STATES.IN_SLIDE
 			or atk_state == ATK_STATES.CONDITIONAL
 			or atk_state == ATK_STATES.ONSLAUGHT):
