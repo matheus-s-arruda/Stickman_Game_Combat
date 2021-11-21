@@ -17,13 +17,13 @@ export(NodePath) onready var player_2 = get_node(player_2)
 
 
 func _ready():
-	player_1.self_modulate = Gameplay.gamedata.get_character(Gameplay.player_1_id, Gameplay.player_1_color)
-	player_1.get_node(\"img\").texture = Gameplay.gamedata.get_character(Gameplay.player_1_id, 1)
-	player_1.get_node(\"name\").text = Gameplay.gamedata.get_character(Gameplay.player_1_id, 2)
+	player_1.self_modulate = Gameplay.gamedata.get_stick_data(Gameplay.player_1_id, Gameplay.gamedata.stick_info.COLORS )[ Gameplay.player_1_color]
+	player_1.get_node(\"img\").texture = Gameplay.gamedata.get_stick_data(Gameplay.player_1_id, Gameplay.gamedata.stick_info.IMG)
+	player_1.get_node(\"name\").text = Gameplay.gamedata.get_stick_data(Gameplay.player_1_id, Gameplay.gamedata.stick_info.NAME)
 	
-	player_2.self_modulate = Gameplay.gamedata.get_character(Gameplay.player_1_id, Gameplay.player_2_color)
-	player_2.get_node(\"img\").texture = Gameplay.gamedata.get_character(Gameplay.player_2_id, 1)
-	player_2.get_node(\"name\").text = Gameplay.gamedata.get_character(Gameplay.player_2_id, 2)
+	player_2.self_modulate = Gameplay.gamedata.get_stick_data(Gameplay.player_2_id, Gameplay.gamedata.stick_info.COLORS )[ Gameplay.player_2_color]
+	player_2.get_node(\"img\").texture = Gameplay.gamedata.get_stick_data(Gameplay.player_2_id, Gameplay.gamedata.stick_info.IMG)
+	player_2.get_node(\"name\").text = Gameplay.gamedata.get_stick_data(Gameplay.player_2_id, Gameplay.gamedata.stick_info.NAME)
 	
 	yield(get_tree().create_timer(Gameplay.CUTSCENE_TIME), \"timeout\")
 	visible = true
@@ -207,6 +207,7 @@ shader = SubResource( 26 )
 [node name="GUI" type="CanvasLayer"]
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 custom_constants/margin_right = 15

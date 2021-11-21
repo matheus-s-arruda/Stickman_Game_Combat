@@ -21,11 +21,12 @@ var scenery_id : int
 
 
 func start_game():
-	player_1 = gamedata.get_character(player_1_id).instance()
-	player_2 = gamedata.get_character(player_2_id).instance()
+	player_1 = gamedata.get_stick_data(player_1_id, gamedata.stick_info.SCENE).instance()
+	player_2 = gamedata.get_stick_data(player_2_id, gamedata.stick_info.SCENE).instance()
+	
 	get_tree().change_scene( gamedata.sceneries_list[scenery_id] )
 	
-	yield(get_tree().create_timer(CUTSCENE_TIME), "timeout") # tempo cutscene
+	yield(get_tree().create_timer(CUTSCENE_TIME), "timeout")
 	player_1.master_state = player_1.MASTER_STATES.MOTION
 	player_2.master_state = player_2.MASTER_STATES.MOTION
 

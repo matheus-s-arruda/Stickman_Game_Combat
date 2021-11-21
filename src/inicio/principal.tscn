@@ -6,8 +6,8 @@ script/source = "extends Button
 
 var player_1_id = 0
 var player_2_id = 0
-var player_1_color = 3
-var player_2_color = 5
+var player_1_color = 0
+var player_2_color = 1
 var scenery = 0
 
 

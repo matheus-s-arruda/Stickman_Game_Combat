@@ -5,7 +5,9 @@ func _init():
 	Gameplay.player_1.rival_layer = 2
 	add_child(Gameplay.player_1)
 	yield(Gameplay.player_1, "ready")
-	Gameplay.player_1.set_color(Gameplay.gamedata.get_character(Gameplay.player_1_id, Gameplay.player_1_color))
+	
+	var _color = Gameplay.gamedata.get_stick_data(Gameplay.player_1_id, Gameplay.gamedata.stick_info.COLORS)
+	Gameplay.player_1.set_color(_color[ Gameplay.player_1_color] )
 	Gameplay.player_1.hurtbox.set_collision_layer_bit(1, true)
 	Gameplay.player_1.add_child(Gameplay.camera.instance())
 

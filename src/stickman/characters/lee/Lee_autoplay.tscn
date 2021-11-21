@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/stickman/characters/lee/Lee_autoplay.gd" type="Script" id=1]
+
+[node name="Lee_autoplay" type="Node"]
+script = ExtResource( 1 )
