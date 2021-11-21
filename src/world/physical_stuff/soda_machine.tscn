@@ -6,6 +6,8 @@
 script/source = "extends RigidBody2D
 
 
+#export(String) var key : String
+
 var pos_ging := Vector2(0, 100)
 var rot_ging := 0.0
 
@@ -17,8 +19,8 @@ func _physics_process(delta):
 	
 	rotation += sin(rot_ging)
 	
-
-
+	
+	linear_velocity = Vector2.RIGHT * 400
 
 "
 
@@ -40,8 +42,8 @@ func hited(_damage):
 
 [node name="soda_machine" type="RigidBody2D"]
 collision_mask = 0
-mode = 3
-gravity_scale = 3.0
+mode = 2
+gravity_scale = 0.0
 script = SubResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -4,11 +4,20 @@
 script/source = "extends Button
 
 
+var player_1_id = 0
+var player_2_id = 0
+
+var player_1_color = 2
+var player_2_color = 3
+
+var scenery = 0
 
 func _on_start_pressed():
-	Gameplay.player_1_id = 0
-	Gameplay.player_2_id = 0
-	Gameplay.scenery_id = 0
+	Gameplay.player_1_id = player_1_id
+	Gameplay.player_2_id = player_2_id
+	Gameplay.player_1_color = Gameplay.gamedata.get_character(player_1_id, player_1_color)
+	Gameplay.player_2_color = Gameplay.gamedata.get_character(player_2_id, player_2_color)
+	Gameplay.scenery_id = scenery
 	Gameplay.start_game()
 "
 

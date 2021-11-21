@@ -10,9 +10,9 @@ func _process(delta):
 	var d = Gameplay.player_1.global_position.distance_to(Gameplay.player_2.global_position)
 	_zoom_fator = lerp(_zoom_fator, clamp(d * 0.002, 0.8, 1.15), 0.16)
 	
-	position = a * 0.5
-	position.y -= 200
 	zoom = Vector2.ONE * _zoom_fator
+	if (a * 0.5).length() < 700:
+		position = a * 0.5
 
 "
 

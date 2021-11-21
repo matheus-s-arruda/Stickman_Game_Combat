@@ -9,8 +9,8 @@ enum MOTION_STATES {STATELESS, IN_SLIDE, IN_DOWN}
 enum DMG_STATES {STATELESS, KNOCKBACK}
 
 const SPEED := 800
-const GRAVITY := 1176
-const JUMP_FORCE := 600
+const GRAVITY := 1400
+const JUMP_FORCE := 650
 const POSTURE_TIME_RECHARGE := 4.0
 const POSTURE_MAX := 25.0
 const LIFE_MAX := 100.0
@@ -46,9 +46,6 @@ var _combo_await := false
 var _combo_count := -1
 var _combo_current_atk = -1
 
-var skill_cooldown : Dictionary
-var _flag_skill_cooldown : Dictionary
-
 func _physics_process(delta):
 	var speed_target_air := motion.x
 	_calc_timers(delta)
@@ -60,7 +57,7 @@ func _physics_process(delta):
 		_in_air = false
 	else:
 		motion.y += GRAVITY * delta
-		if abs(motion.y) > 20:
+		if abs(motion.y) > 30:
 			_in_air = true
 			if master_state == MASTER_STATES.DAMAGE:
 				_damage_nockback = true
@@ -131,8 +128,9 @@ func _moviment():
 					if animation.current_animation == "walk":
 						speed_target = input_direction * SPEED * 0.18
 					motion.x = lerp(motion.x, speed_target, 0.3)
+					
 		MOTION_STATES.IN_SLIDE:
-			motion.x = lerp(motion.x, 0, 0.05)
+			motion.x = lerp(motion.x, 0, 0.015)
 			if not input_down or abs(motion.x) < 200:
 				motion_state = MOTION_STATES.STATELESS
 			
@@ -171,7 +169,7 @@ func _motion_state():
 					if _flag_swap_dir == 0:
 						animation.play("walk" if atk_state == ATK_STATES.IN_BLOQ else "run")
 						
-					if input_direction == 0 and animation.current_animation == "run" and abs(motion.x) > 600:
+					if input_direction == 0:
 						animation.play("run_stop")
 					
 					_flag_swap_dir = input_direction
@@ -208,6 +206,10 @@ func _damaged_state():
 
 
 func _atack_state():
+	if atk_state == ATK_STATES.CONDITIONAL:
+		return
+	
+	
 	if _combo_anim_list.size() == 0:
 		if not animation.is_playing():
 			reset_atk_props()
@@ -248,12 +250,6 @@ func atack_inputs(_atk, _is_onslaught := false):
 			or motion_state == MOTION_STATES.IN_SLIDE
 			or atk_state != ATK_STATES.STATELESS):
 		return
-	
-	if skill_cooldown.has(_atk):
-		if skill_cooldown[_atk] == _flag_skill_cooldown[_atk]:
-			skill_cooldown[_atk] = 0.0
-		else:
-			return
 	
 	if _combo_anim_list.size() == 0:
 		if _is_onslaught:
@@ -340,12 +336,6 @@ func _calc_timers(_delta):
 			posture += 25.0 * _delta
 		else:
 			posture = POSTURE_MAX
-	
-	for _skill in skill_cooldown:
-		if skill_cooldown[_skill] < _flag_skill_cooldown[_skill]:
-			skill_cooldown[_skill] += _delta
-		else:
-			skill_cooldown[_skill] = _flag_skill_cooldown[_skill]
 
 
 func _die():
