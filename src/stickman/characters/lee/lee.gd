@@ -1,17 +1,13 @@
 extends Stickman
 
-const JUMP_COOLDOWN : float = 3.0
-const THROW_COOLDOWN : float = 5.0
+const JUMP_COOLDOWN := 3.0
+const THROW_COOLDOWN := 5.0
 
-var jump_cooldown : float = JUMP_COOLDOWN
-var throw_cooldown : float = THROW_COOLDOWN
+var jump_cooldown := 0.0
+var throw_cooldown := 0.0
 
 var _distance_to_target : float
 var rival_layer := 1
-
-
-func _init():
-	pass
 
 
 func _physics_process(delta):
@@ -49,13 +45,15 @@ func automatic_play():
 func skills(_id : int):
 	match _id:
 		0:
-			if _in_air and atk_state != ATK_STATES.CONDITIONAL and jump_cooldown == JUMP_COOLDOWN and motion.y < -50:
+			if _in_air and master_state != MASTER_STATES.DEAD and atk_state != ATK_STATES.CONDITIONAL and jump_cooldown == JUMP_COOLDOWN and motion.y < -50:
 				air_atk()
 				jump_cooldown = 0.0
 			elif  not _in_air:
 				atack_inputs(0)
 		1:
-			if not _in_air:
+			if not _in_air and motion_state == MOTION_STATES.IN_DOWN:
+				down_kick_atk()
+			elif  not _in_air:
 				atack_inputs(1)
 		2:
 			if not _in_air and throw_cooldown == THROW_COOLDOWN:
@@ -96,6 +94,12 @@ func air_atk():
 	animation.play("atk_jump_in")
 
 
+func down_kick_atk():
+	atk_state = ATK_STATES.CONDITIONAL
+	master_state = MASTER_STATES.ATACK
+	animation.play("down_kick_atk")
+
+
 func set_color(_color : Color):
 	loop_set_color(origin, _color)
 
@@ -106,5 +110,4 @@ func loop_set_color(_node, _color):
 			if _node.get_child(_c) is Position2D:
 				_node.get_child(_c).color = _color
 				loop_set_color(_node.get_child(_c), _color)
-	print(_node.get_child_count())
 

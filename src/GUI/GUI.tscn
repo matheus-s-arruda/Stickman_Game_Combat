@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://src/assets/kO/KO.gd" type="Script" id=1]
 [ext_resource path="res://fonts/electrox.ttf" type="DynamicFontData" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://img/fx/go_splash_2.png" type="Texture" id=5]
 [ext_resource path="res://img/fx/go_splash_1.png" type="Texture" id=6]
 [ext_resource path="res://img/GUI/player_lifebar_HUD.png" type="Texture" id=7]
-[ext_resource path="res://img/stickmans/lee/lee.png" type="Texture" id=8]
 
 [sub_resource type="GDScript" id=28]
 script/source = "extends MarginContainer
@@ -18,8 +17,14 @@ export(NodePath) onready var player_2 = get_node(player_2)
 
 
 func _ready():
-	player_1.self_modulate = Gameplay.player_1_color
-	player_2.self_modulate = Gameplay.player_2_color
+	player_1.self_modulate = Gameplay.gamedata.get_character(Gameplay.player_1_id, Gameplay.player_1_color)
+	player_1.get_node(\"img\").texture = Gameplay.gamedata.get_character(Gameplay.player_1_id, 1)
+	player_1.get_node(\"name\").text = Gameplay.gamedata.get_character(Gameplay.player_1_id, 2)
+	
+	player_2.self_modulate = Gameplay.gamedata.get_character(Gameplay.player_1_id, Gameplay.player_2_color)
+	player_2.get_node(\"img\").texture = Gameplay.gamedata.get_character(Gameplay.player_2_id, 1)
+	player_2.get_node(\"name\").text = Gameplay.gamedata.get_character(Gameplay.player_2_id, 2)
+	
 	yield(get_tree().create_timer(Gameplay.CUTSCENE_TIME), \"timeout\")
 	visible = true
 
@@ -202,7 +207,6 @@ shader = SubResource( 26 )
 [node name="GUI" type="CanvasLayer"]
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 custom_constants/margin_right = 15
@@ -256,7 +260,6 @@ margin_left = 2.0
 margin_top = 2.0
 margin_right = 55.0
 margin_bottom = 55.0
-texture = ExtResource( 8 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -267,12 +270,15 @@ anchor_top = 1.0
 anchor_bottom = 1.0
 margin_left = 59.0
 margin_top = -22.0
-margin_right = 99.0
-margin_bottom = -6.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_shadow = Color( 1, 0, 0, 1 )
+margin_right = 459.0
+margin_bottom = 3.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 29 )
 text = "Ronaldinho Soccer"
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="bars" type="MarginContainer" parent="MarginContainer/HUD/top"]
 margin_left = 104.0
@@ -388,7 +394,6 @@ margin_left = -55.0
 margin_top = 2.0
 margin_right = -2.0
 margin_bottom = 55.0
-texture = ExtResource( 8 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -397,15 +402,15 @@ __meta__ = {
 [node name="name" type="Label" parent="MarginContainer/HUD/top/rigth/Node2D/player_2"]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_left = -218.0
+margin_left = -259.0
 margin_top = -22.0
 margin_right = 141.0
 margin_bottom = 3.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_shadow = Color( 1, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 29 )
-text = "Ronaldinho Soccer Ronaldinho Soccer"
+text = "Ronaldinho Soccer Ronaldinho Socc"
 align = 2
+uppercase = true
 
 [node name="center" type="Control" parent="MarginContainer/HUD"]
 anchor_left = 0.5

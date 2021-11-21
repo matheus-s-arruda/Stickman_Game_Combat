@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://src/stickman/characters/lee/lee.gd" type="Script" id=13]
 [ext_resource path="res://src/stickman/characters/lee/assets/articulacao.gd" type="Script" id=14]
@@ -3259,6 +3259,196 @@ tracks/13/keys = {
 "values": [ Vector2( -12, 36 ) ]
 }
 
+[sub_resource type="Animation" id=39]
+resource_name = "down_kick_atk"
+length = 0.4
+step = 0.0166667
+tracks/0/type = "value"
+tracks/0/path = NodePath("origin/bacia/tronco/clavícula:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.0666667, 0.15, 0.283333, 0.333333, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 11.0455, -14.8951 ), Vector2( 9.00006, -16 ), Vector2( -12, -18 ), Vector2( -11.79, -18.09 ), Vector2( -7.695, -19.845 ), Vector2( -3.6, -21.6 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("origin/bacia:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.03, 0.0666667, 0.1, 0.15, 0.283333, 0.333333, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -2, -40 ), Vector2( 2.20002, -51.7 ), Vector2( 5.00004, -59.5 ), Vector2( 7.80006, -67.3 ), Vector2( 24.0002, -78 ), Vector2( 22.8002, -78 ), Vector2( 23.4002, -78 ), Vector2( 24.0002, -78 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("origin/bacia/tronco:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.0666667, 0.15, 0.283333, 0.333333, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 4.5163, -19.3146 ), Vector2( -1.00001, -18.5 ), Vector2( -16, -15.2 ), Vector2( -15.79, -15.302 ), Vector2( -11.695, -17.291 ), Vector2( -7.6, -19.28 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("origin/bacia/tronco/clavícula/braco_2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.03, 0.0666667, 0.1, 0.15, 0.283333, 0.333333, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -23.5618, 16.2097 ), Vector2( -20.3934, 15.2468 ), Vector2( -18.2811, 14.6048 ), Vector2( -16.1688, 13.9629 ), Vector2( -13.0004, 13 ), Vector2( -12.1254, 12.978 ), Vector2( 4.93729, 12.549 ), Vector2( 22, 12.12 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("origin/bacia/perna_1:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.03, 0.0666667, 0.1, 0.116667, 0.133333, 0.15, 0.283333, 0.333333, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 16, 36 ), Vector2( 26.8002, 28.7 ), Vector2( 33.0002, 15.85 ), Vector2( 39.2003, 3 ), Vector2( 38.4669, -10 ), Vector2( 31.2335, -24 ), Vector2( 16.0001, -36 ), Vector2( 18.0093, -34.3762 ), Vector2( 35.7033, -13.5713 ), Vector2( 39.3333, -4.13333 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.03, 0.0666667, 0.1, 0.15, 0.283333, 0.333333, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 4, -6 ), Vector2( 6.05076, 8.14286 ), Vector2( 7.41794, 17.5714 ), Vector2( 8.78512, 27 ), Vector2( 6.00004, 22 ), Vector2( 5.95004, 21.51 ), Vector2( 4.97502, 11.955 ), Vector2( 4, 2.4 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("origin/bacia/tronco/clavícula/braco_2/mao_2:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.03, 0.0666667, 0.1, 0.15, 0.283333, 0.333333, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 24, 10 ), Vector2( 25.8001, 5.8 ), Vector2( 27.0001, 3 ), Vector2( 28.2001, 0.199999 ), Vector2( 28.0002, -4 ), Vector2( 27.4002, -4.15 ), Vector2( 15.7001, -7.075 ), Vector2( 4, -10 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("origin/bacia/perna_1/pe_1/ponta_pe_1:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.03, 0.0666667, 0.1, 0.116667, 0.133333, 0.15, 0.283333, 0.333333, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 2, 4 ), Vector2( -5.00003, 6 ), Vector2( 0.69988, 7.2 ), Vector2( 6.39979, 0.4 ), Vector2( 7.26652, -1.73333 ), Vector2( 3.13322, -6.86667 ), Vector2( -3.0001, -6 ), Vector2( -2.12429, -5.74267 ), Vector2( 7.3367, -2.03733 ), Vector2( 4.667, 1.86667 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("origin/bacia/tronco/clavícula/cabeca:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.03, 0.0666667, 0.1, 0.15, 0.283333, 0.333333, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 3.82097, -14 ), Vector2( 1.47468, -13.4 ), Vector2( 1.9105, -13 ), Vector2( -1.65371, -12.6 ), Vector2( -4, -12 ), Vector2( -3.91, -12.03 ), Vector2( -2.155, -12.615 ), Vector2( -0.4, -13.2 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("origin/bacia/perna_1/pe_1:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 0.03, 0.0666667, 0.1, 0.116667, 0.133333, 0.15, 0.283333, 0.333333, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -36, -4 ), Vector2( -37.0003, 1 ), Vector2( -5.99995, 25.37 ), Vector2( 25.0004, 27.74 ), Vector2( 36.3337, 7.82666 ), Vector2( 34.167, -16.0867 ), Vector2( 20.0001, -32 ), Vector2( 21.7052, -29.6898 ), Vector2( 30.8203, 20.3073 ), Vector2( -2.00001, 34.1333 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("origin/bacia/tronco/clavícula/braco_1:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.03, 0.0666667, 0.1, 0.15, 0.283333, 0.333333, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 26.4382, 4.2097 ), Vector2( 14.3988, 14.3211 ), Vector2( 6.37255, 21.062 ), Vector2( -1.65371, 27.8029 ), Vector2( -7.00038, 23 ), Vector2( -7.13537, 23.015 ), Vector2( -9.76768, 23.3075 ), Vector2( -12.4, 23.6 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("origin/bacia/perna_2:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.03, 0.0666667, 0.1, 0.15, 0.283333, 0.333333, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 38, -3.8147e-06 ), Vector2( 29.6, 11.64 ), Vector2( 24, 19.4 ), Vector2( 18.4, 27.16 ), Vector2( 4.00003, 37.8 ), Vector2( 4.60003, 37.8 ), Vector2( 4.30003, 37.8 ), Vector2( 4.00003, 37.8 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("origin/bacia/perna_2/pe_2:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 0.03, 0.0666667, 0.1, 0.15, 0.283333, 0.333333, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -12, 36 ), Vector2( -8.10004, 36 ), Vector2( -5.50007, 36 ), Vector2( -2.90009, 36 ), Vector2( -5.00018, 36 ), Vector2( -4.40017, 36 ), Vector2( -4.70017, 36 ), Vector2( -5.00018, 36 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("origin/bacia/perna_2/pe_2/ponta_pe_2:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 0.03, 0.0666667, 0.1, 0.15, 0.283333, 0.333333, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 5.57818, 0 ), Vector2( 5.70479, 0 ), Vector2( 5.78919, 0 ), Vector2( 5.8736, 0 ), Vector2( 6.00021, 0 ), Vector2( 6.00021, 0 ), Vector2( 6.00021, 0 ), Vector2( 6.00021, 0 ) ]
+}
+tracks/14/type = "method"
+tracks/14/path = NodePath(".")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0.15, 0.333333 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ 4 ],
+"method": "hitbox"
+}, {
+"args": [  ],
+"method": "reset_atk_props"
+} ]
+}
+
 [sub_resource type="Animation" id=18]
 resource_name = "down_walk"
 length = 0.666667
@@ -5409,6 +5599,7 @@ animation = NodePath("AnimationPlayer")
 _atks = [ [ "atk_punch_1", "atk_punch_2", "atk_punch_1", "atk_punch_2", "atk_punch_1", "atk_punch_2", "atk_punch_3" ], [ "atk_kick_1", "atk_kick_1", "atk_kick_2", "atk_kick_3" ], [ "atk_special_1" ] ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( 0, -5 )
 shape = SubResource( 1 )
 __meta__ = {
@@ -5438,6 +5629,7 @@ anims/damage_2_contact = SubResource( 14 )
 anims/die = SubResource( 15 )
 anims/die_contact = SubResource( 16 )
 anims/down_idle = SubResource( 17 )
+anims/down_kick_atk = SubResource( 39 )
 anims/down_walk = SubResource( 18 )
 anims/idle = SubResource( 19 )
 anims/jump_contact = SubResource( 20 )
@@ -5527,6 +5719,7 @@ script = ExtResource( 16 )
 _legth = 8
 
 [node name="hitbox" type="Area2D" parent="origin/bacia"]
+visible = false
 collision_layer = 0
 collision_mask = 0
 monitoring = false

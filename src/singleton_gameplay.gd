@@ -8,15 +8,15 @@ const FX_HIT_CIRCE = preload("res://src/assets/hits/impact_circle.tscn")
 const CUTSCENE_TIME = 4.0
 
 "refenrecias"
-var hud_ko_ref
-var player_1
-var player_2
+var hud_ko_ref : Node
+var player_1 : Node
+var player_2 : Node
 "interface novo jogo"
-var player_1_color : Color = Color(0.65, 0.15, 0.15)
-var player_2_color : Color = Color(0.55, 0.25, 0.55)
-var player_1_id
-var player_2_id
-var scenery_id
+var player_1_color : int
+var player_2_color : int
+var player_1_id : int
+var player_2_id : int
+var scenery_id : int
 " ... "
 
 

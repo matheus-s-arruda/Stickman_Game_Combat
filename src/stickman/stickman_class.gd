@@ -76,7 +76,7 @@ func _physics_process(delta):
 		MASTER_STATES.ATACK:
 			_atack_state()
 			if not _in_air:
-				motion.x = lerp(motion.x, 0, 0.2)
+				motion.x = lerp(motion.x, 0, 0.15)
 			
 		MASTER_STATES.DAMAGE:
 			if _in_air:
@@ -115,7 +115,6 @@ func _moviment():
 				_bloq_state(input_bloq)
 				if is_on_floor():
 					motion.y += -JUMP_FORCE if input_jump else 0
-					speed_target = 0
 					if input_down:
 						if abs(motion.x) > 200:
 							if motion_state != MOTION_STATES.IN_DOWN:
@@ -136,7 +135,8 @@ func _moviment():
 			
 		MOTION_STATES.IN_DOWN:
 			_bloq_state(true)
-			motion.x = lerp(motion.x, input_direction * SPEED * 0.2, 0.3)
+			if master_state == MASTER_STATES.MOTION:
+				motion.x = lerp(motion.x, input_direction * SPEED * 0.2, 0.3)
 			if not input_down:
 				motion_state = MOTION_STATES.STATELESS
 
@@ -208,7 +208,6 @@ func _damaged_state():
 func _atack_state():
 	if atk_state == ATK_STATES.CONDITIONAL:
 		return
-	
 	
 	if _combo_anim_list.size() == 0:
 		if not animation.is_playing():
@@ -344,6 +343,7 @@ func _die():
 	if motion.y < -40:
 		_died_standing = true
 	master_state = MASTER_STATES.DEAD
+	atk_state = ATK_STATES.STATELESS
 	motion_state = MOTION_STATES.STATELESS
 	Gameplay.end_game()
 

@@ -12,7 +12,8 @@ const sceneries_list = [
 const characters_list = {
 	stick_name.LEE : [
 			preload("res://src/stickman/characters/lee/lee.tscn"),
-			"Lee", Color(0.4, 0.15, 0.15), Color(0.3, 0.05, 0.05),
+			preload("res://img/stickmans/lee/lee.png"),
+			"Lee", Color(0.4, 0.15, 0.15), Color(0.25, 0.07, 0.07), Color(0.5, 0.25, 0.25),
 			],
 }
 

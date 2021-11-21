@@ -67,7 +67,7 @@ texture = ExtResource( 5 )
 centered = false
 
 [node name="montains" type="ParallaxLayer" parent="parallax"]
-motion_scale = Vector2( 0.15, 1 )
+motion_scale = Vector2( 0.1, 1 )
 motion_offset = Vector2( -700, 0 )
 
 [node name="Sprite" type="Sprite" parent="parallax/montains"]
@@ -75,7 +75,7 @@ texture = ExtResource( 4 )
 centered = false
 
 [node name="rocks" type="ParallaxLayer" parent="parallax"]
-motion_scale = Vector2( 0.6, 1 )
+motion_scale = Vector2( 0.5, 1 )
 motion_offset = Vector2( -400, 0 )
 
 [node name="Sprite" type="Sprite" parent="parallax/rocks"]
