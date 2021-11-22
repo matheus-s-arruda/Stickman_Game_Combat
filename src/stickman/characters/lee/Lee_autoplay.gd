@@ -1,18 +1,16 @@
 extends Node
 
+var _distance : float
 
-var _distance_to_target : float
 
 onready var lee = get_parent()
 
 
 func _physics_process(delta):
-	_distance_to_target = lee.global_position.distance_to(Gameplay.player_1.global_position)
+	_distance = lee.to_local(Gameplay.player_1.global_position).x
 	
-	if Gameplay.player_1.global_position.x > lee.global_position.x:
-		lee.input_direction = 1 if _distance_to_target > 60 else 0
-	else:
-		lee.input_direction = -1 if _distance_to_target > 60 else 0
+	lee.input_direction = sign(_distance)
 	
-	lee.input_down = false
-	lee.input_bloq = false
+	if abs(_distance) < 80:
+		lee.skills(0)
+	

@@ -243,8 +243,8 @@ func reset_atk_props():
 
 
 func atack_inputs(_atk, _is_onslaught := false):
-	if (master_state == MASTER_STATES.DAMAGE
-			or master_state == MASTER_STATES.DEAD
+	if (master_state == MASTER_STATES.DEAD
+			or master_state == MASTER_STATES.DAMAGE
 			or master_state == MASTER_STATES.CUTSCENE
 			or motion_state == MOTION_STATES.IN_SLIDE
 			or atk_state != ATK_STATES.STATELESS):
@@ -272,27 +272,52 @@ func _anim_atk_start(anim):
 
 
 func _hited(_hit):
-	if master_state == MASTER_STATES.DEAD:
+	if master_state == MASTER_STATES.DEAD or atk_state == ATK_STATES.ONSLAUGHT:
 		return
+	
+	if atk_state == ATK_STATES.CONDITIONAL:
+		take_damage(_hit[0])
+		return
+	
 	
 	if _hit.size() == 3:
 		if atk_state == ATK_STATES.IN_BLOQ:
 			if _hit[2] == true:
 				animation.play("damage_2")
-				_take_damage(_hit)
+				take_hited(_hit)
+				
 				return
 			animation.play("damage_1")
-			_take_damage(_hit, true)
+			take_hited(_hit, true)
+			
 			return
 		animation.play("damage_2")
-		_take_damage(_hit)
+		take_hited(_hit)
+		
 		return
 	if atk_state != ATK_STATES.IN_BLOQ:
 		animation.play("damage_1")
-		_take_damage(_hit)
+		take_hited(_hit)
+		
 		return
 	animation.play("bloq")
 	_knock_block( _hit, true )
+
+
+func take_hited(_hit, _knock := false):
+	master_state = MASTER_STATES.DAMAGE
+	take_damage(_hit[0])
+	reset_atk_props()
+	_knock_block( _hit, _knock)
+
+
+func take_damage(_damage):
+	_posture_recharge = 0.0
+	if posture >= _damage:
+		posture -= _damage
+	else:
+		life -= _damage - posture
+		posture = 0.0
 
 
 func _knock_block(_hit, _is_blocking := false):
@@ -301,18 +326,6 @@ func _knock_block(_hit, _is_blocking := false):
 		motion += Vector2(-origin.scale.x * 50, 0)
 		return
 	motion += _hit[1]
-
-
-func _take_damage(_hit, _is_blocking := false):
-	master_state = MASTER_STATES.DAMAGE
-	reset_atk_props()
-	_posture_recharge = 0.0
-	if posture >= _hit[0]:
-		posture -= _hit[0]
-	else:
-		life -= _hit[0] - posture
-		posture = 0.0
-	_knock_block( _hit, _is_blocking)
 
 
 func spawn_hitbox(_data : Array, _pos : Vector2, _size : Vector2, _mask := 1):

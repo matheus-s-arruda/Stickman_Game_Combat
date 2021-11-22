@@ -1,6 +1,6 @@
 extends Stickman
 
-const KICK_COOLDOWN := 2.0
+const KICK_COOLDOWN := 3.0
 const JUMP_COOLDOWN := 4.0
 const THROW_COOLDOWN := 5.0
 
@@ -30,13 +30,13 @@ func _physics_process(delta):
 func skills(_id : int):
 	match _id:
 		0:
-			if _in_air and master_state != MASTER_STATES.DEAD and atk_state != ATK_STATES.CONDITIONAL and jump_cooldown == JUMP_COOLDOWN and motion.y < -50:
+			if _in_air and master_state != MASTER_STATES.DAMAGE and master_state != MASTER_STATES.DEAD and atk_state != ATK_STATES.CONDITIONAL and jump_cooldown == JUMP_COOLDOWN and motion.y < -50:
 				jump_cooldown = 0.0
 				air_atk()
 			elif  not _in_air:
 				atack_inputs(0)
 		1:
-			if not _in_air and motion_state == MOTION_STATES.IN_DOWN and down_kick_cooldown == KICK_COOLDOWN:
+			if not _in_air and master_state != MASTER_STATES.DAMAGE and motion_state == MOTION_STATES.IN_DOWN and down_kick_cooldown == KICK_COOLDOWN:
 				down_kick_cooldown = 0.0
 				down_kick_atk()
 			elif  not _in_air:

@@ -3,6 +3,7 @@ extends Node
 const camera = preload("res://src/world/Camera.tscn")
 const gamedata = preload("res://src/resources/game_data.tres")
 const FX_HIT_PARTICLE = preload("res://src/assets/hits/hit_particles.tscn")
+const FX_SONIC_IMPACT = preload("res://src/assets/hits/sonic_impact.tscn")
 const FX_IMPACT_JUMP = preload("res://src/assets/hits/impact_jump.tscn")
 const FX_HIT_CIRCE = preload("res://src/assets/hits/impact_circle.tscn")
 const CUTSCENE_TIME = 4.0
