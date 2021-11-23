@@ -2,13 +2,21 @@ class_name GameData
 extends Resource
 
 
+enum scenery_data {DESERT, MONTAINS}
+enum scenery_info {SCENE, CAMERA_LIMITS}
 enum stick_name {LEE}
 enum stick_info {NAME, IMG, SCENE, AUTOPLAY, COLORS}
 
-const sceneries_list = [
-	"res://src/world/arena/desert.tscn",
-]
 
+const sceneries_list = {
+	scenery_data.DESERT : {
+		scenery_info.SCENE : "res://src/world/arena/desert.tscn",
+		scenery_info.CAMERA_LIMITS : Vector2(2000, 900) },
+		
+	scenery_data.MONTAINS : {
+		scenery_info.SCENE : "res://src/world/arena/montains.tscn",
+		scenery_info.CAMERA_LIMITS : Vector2(2000, 900) },
+}
 
 const characters_info = {
 	stick_name.LEE : {

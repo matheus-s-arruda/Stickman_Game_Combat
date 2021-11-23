@@ -1,6 +1,7 @@
 extends Node
 
 const camera = preload("res://src/world/Camera.tscn")
+const ray_shadow = preload("res://src/world/ray_shadow.tscn")
 const gamedata = preload("res://src/resources/game_data.tres")
 const FX_HIT_PARTICLE = preload("res://src/assets/hits/hit_particles.tscn")
 const FX_SONIC_IMPACT = preload("res://src/assets/hits/sonic_impact.tscn")
@@ -25,7 +26,7 @@ func start_game():
 	player_1 = gamedata.get_stick_data(player_1_id, gamedata.stick_info.SCENE).instance()
 	player_2 = gamedata.get_stick_data(player_2_id, gamedata.stick_info.SCENE).instance()
 	
-	get_tree().change_scene( gamedata.sceneries_list[scenery_id] )
+	get_tree().change_scene( gamedata.sceneries_list[scenery_id ][gamedata.scenery_info.SCENE ] )
 	
 	yield(get_tree().create_timer(CUTSCENE_TIME), "timeout")
 	player_1.master_state = player_1.MASTER_STATES.MOTION

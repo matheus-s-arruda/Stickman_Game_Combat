@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://img/fx/sombra.png" type="Texture" id=1]
+
+[sub_resource type="GDScript" id=4]
+script/source = "extends RayCast2D
+
+
+onready var _shadow = $shadow
+
+func _physics_process(delta):
+	if is_colliding():
+		_shadow.global_position = get_collision_point()
+"
+
+[node name="ray_shadow" type="RayCast2D"]
+enabled = true
+cast_to = Vector2( 0, 950 )
+script = SubResource( 4 )
+
+[node name="shadow" type="Sprite" parent="."]
+texture = ExtResource( 1 )

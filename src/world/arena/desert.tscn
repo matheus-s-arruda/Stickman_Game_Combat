@@ -1,13 +1,142 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=19 format=2]
 
-[ext_resource path="res://src/world/scenerys/desert_scenery.tscn" type="PackedScene" id=2]
+[ext_resource path="res://img/scenery/desert/background.png" type="Texture" id=1]
+[ext_resource path="res://img/scenery/desert/grass.png" type="Texture" id=2]
 [ext_resource path="res://src/GUI/GUI.tscn" type="PackedScene" id=3]
+[ext_resource path="res://img/scenery/desert/mastro.png" type="Texture" id=4]
 [ext_resource path="res://src/world/player_2.gd" type="Script" id=5]
 [ext_resource path="res://src/world/player_1.gd" type="Script" id=6]
+[ext_resource path="res://img/scenery/desert/floor.png" type="Texture" id=7]
+[ext_resource path="res://img/scenery/desert/clounds.png" type="Texture" id=8]
+[ext_resource path="res://img/scenery/desert/rocks.png" type="Texture" id=9]
+[ext_resource path="res://img/scenery/desert/bandeira.png" type="Texture" id=10]
+[ext_resource path="res://img/scenery/desert/montains.png" type="Texture" id=11]
+[ext_resource path="res://img/scenery/desert/back_floor.png" type="Texture" id=12]
+
+[sub_resource type="Shader" id=3]
+code = "shader_type canvas_item;
+
+uniform float uFreq = 10.;
+uniform float uSpeed = 3.;
+uniform float uAmplitude = 0.003;
+
+void fragment() {
+	vec2 _uv = vec2(sin( uFreq*UV.x + uSpeed *TIME) * uAmplitude, 0.0);
+    COLOR = texture(TEXTURE, UV + _uv * 0.01);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = SubResource( 3 )
+shader_param/uFreq = 30.0
+shader_param/uSpeed = 2.0
+shader_param/uAmplitude = 0.1
+
+[sub_resource type="Shader" id=5]
+code = "shader_type canvas_item;
+
+void fragment(){
+	vec2 _uv = vec2(0.0);
+	_uv.x = -0.8 + cos( (UV.y * 5.0) + TIME) / 5.0;
+	_uv.x += cos( (UV.y * 50.0) + (TIME * 10.0)) * 0.01;
+	COLOR = texture(TEXTURE, UV + _uv * (UV.y - 0.1)); 
+}"
+
+[sub_resource type="ShaderMaterial" id=6]
+shader = SubResource( 5 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 55, 865.933 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 1000, 56 )
 
 [node name="world" type="Node"]
 
-[node name="desert_scenery" parent="." instance=ExtResource( 2 )]
+[node name="desert_scenery" type="Node" parent="."]
+
+[node name="parallax" type="ParallaxBackground" parent="desert_scenery"]
+
+[node name="background" type="ParallaxLayer" parent="desert_scenery/parallax"]
+
+[node name="Sprite" type="Sprite" parent="desert_scenery/parallax/background"]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="clounds" type="ParallaxLayer" parent="desert_scenery/parallax"]
+motion_scale = Vector2( 0.05, 1 )
+motion_offset = Vector2( -1000, 0 )
+
+[node name="Sprite" type="Sprite" parent="desert_scenery/parallax/clounds"]
+texture = ExtResource( 8 )
+centered = false
+
+[node name="montains" type="ParallaxLayer" parent="desert_scenery/parallax"]
+motion_scale = Vector2( 0.1, 1 )
+motion_offset = Vector2( -700, 0 )
+
+[node name="Sprite" type="Sprite" parent="desert_scenery/parallax/montains"]
+texture = ExtResource( 11 )
+centered = false
+
+[node name="rocks" type="ParallaxLayer" parent="desert_scenery/parallax"]
+motion_scale = Vector2( 0.5, 1 )
+motion_offset = Vector2( -400, 0 )
+
+[node name="Sprite" type="Sprite" parent="desert_scenery/parallax/rocks"]
+texture = ExtResource( 9 )
+centered = false
+
+[node name="back_floor" type="ParallaxLayer" parent="desert_scenery/parallax"]
+motion_scale = Vector2( 0.9, 1 )
+
+[node name="grass" type="Sprite" parent="desert_scenery/parallax/back_floor"]
+material = SubResource( 4 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="gravel" type="Sprite" parent="desert_scenery/parallax/back_floor"]
+texture = ExtResource( 12 )
+centered = false
+
+[node name="mastro" type="Sprite" parent="desert_scenery/parallax/back_floor"]
+position = Vector2( 1000, 550 )
+texture = ExtResource( 4 )
+
+[node name="bandeira" type="Sprite" parent="desert_scenery/parallax/back_floor/mastro"]
+material = SubResource( 6 )
+position = Vector2( 50, 0 )
+rotation = -0.0284958
+texture = ExtResource( 10 )
+region_enabled = true
+region_rect = Rect2( 50, 0.433, 175, 519 )
+
+[node name="floor" type="ParallaxLayer" parent="desert_scenery/parallax"]
+
+[node name="Sprite" type="Sprite" parent="desert_scenery/parallax/floor"]
+texture = ExtResource( 7 )
+centered = false
+
+[node name="foreground" type="ParallaxLayer" parent="desert_scenery/parallax"]
+
+[node name="blocking" type="StaticBody2D" parent="desert_scenery"]
+visible = false
+
+[node name="left" type="CollisionShape2D" parent="desert_scenery/blocking"]
+position = Vector2( -55, 34.0674 )
+shape = SubResource( 1 )
+
+[node name="rigth" type="CollisionShape2D" parent="desert_scenery/blocking"]
+position = Vector2( 2055, 34 )
+shape = SubResource( 1 )
+
+[node name="cell" type="CollisionShape2D" parent="desert_scenery/blocking"]
+position = Vector2( 1000, -776 )
+shape = SubResource( 2 )
+
+[node name="floor" type="CollisionShape2D" parent="desert_scenery/blocking"]
+position = Vector2( 1000, 787 )
+shape = SubResource( 2 )
 
 [node name="GUI" parent="." instance=ExtResource( 3 )]
 

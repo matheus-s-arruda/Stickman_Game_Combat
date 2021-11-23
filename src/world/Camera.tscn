@@ -3,17 +3,28 @@
 [sub_resource type="GDScript" id=1]
 script/source = "extends Camera2D
 
+
 var _zoom_fator := 1.15
+
+
+func _ready():
+	position = Vector2.ZERO
+
 
 func _process(delta):
 	var a = Gameplay.player_1.to_local(Gameplay.player_2.global_position)
 	var d = Gameplay.player_1.global_position.distance_to(Gameplay.player_2.global_position)
-	_zoom_fator = lerp(_zoom_fator, clamp(d * 0.002, 0.8, 1.15), 0.16)
 	
+	_zoom_fator = lerp(_zoom_fator, clamp(d * 0.002, 0.8, 1.15), 0.16)
 	zoom = Vector2.ONE * _zoom_fator
+	
 	if (a * 0.5).length() < 700:
 		position = a * 0.5
 
+
+func set_limits(_limits : Vector2):
+	limit_right = _limits.x
+	limit_bottom = _limits.y
 "
 
 [node name="Camera" type="Camera2D"]

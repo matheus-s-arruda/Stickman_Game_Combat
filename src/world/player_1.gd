@@ -9,7 +9,11 @@ func _init():
 	var _color = Gameplay.gamedata.get_stick_data(Gameplay.player_1_id, Gameplay.gamedata.stick_info.COLORS)
 	Gameplay.player_1.set_color(_color[ Gameplay.player_1_color] )
 	Gameplay.player_1.hurtbox.set_collision_layer_bit(1, true)
-	Gameplay.player_1.add_child(Gameplay.camera.instance())
+	var camera = Gameplay.camera.instance()
+	Gameplay.player_1.add_child(camera)
+	
+	
+	camera.set_limits( Gameplay.gamedata.sceneries_list[Gameplay.scenery_id][Gameplay.gamedata.scenery_info.CAMERA_LIMITS])
 
 
 func _input(event):
