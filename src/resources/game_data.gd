@@ -2,18 +2,18 @@ class_name GameData
 extends Resource
 
 
-enum scenery_data {DESERT, MONTAINS}
+enum scenery_name {DESERT, MONTAINS}
 enum scenery_info {SCENE, CAMERA_LIMITS}
-enum stick_name {LEE}
-enum stick_info {NAME, IMG, SCENE, AUTOPLAY, COLORS}
+enum stick_info {NAME, IMG, SCENE, AUTOPLAY, COLOR}
+enum stick_name {LEE, MASTER_HONG}
 
 
 const sceneries_list = {
-	scenery_data.DESERT : {
+	scenery_name.DESERT : {
 		scenery_info.SCENE : "res://src/world/arena/desert.tscn",
 		scenery_info.CAMERA_LIMITS : Vector2(2000, 900) },
 		
-	scenery_data.MONTAINS : {
+	scenery_name.MONTAINS : {
 		scenery_info.SCENE : "res://src/world/arena/montains.tscn",
 		scenery_info.CAMERA_LIMITS : Vector2(2000, 900) },
 }
@@ -24,7 +24,14 @@ const characters_info = {
 		stick_info.IMG : preload("res://img/stickmans/lee/lee.png"),
 		stick_info.SCENE : preload("res://src/stickman/characters/lee/lee.tscn"),
 		stick_info.AUTOPLAY : preload("res://src/stickman/characters/lee/Lee_autoplay.tscn"),
-		stick_info.COLORS : [Color(0.4, 0.15, 0.15), Color(0.25, 0.07, 0.07), Color(0.5, 0.25, 0.25)]
+		stick_info.COLOR : Color(0.4, 0.15, 0.15),
+	},
+	stick_name.MASTER_HONG : {
+		stick_info.NAME : "Master Hong",
+		stick_info.IMG : preload("res://img/stickmans/lee/lee.png"),
+		stick_info.SCENE : preload("res://src/stickman/characters/master_hong/master_hong.tscn"),
+		#stick_info.AUTOPLAY : preload("res://src/stickman/characters/lee/Lee_autoplay.tscn"),
+		stick_info.COLOR : Color(0.6, 0.48, 0),
 	}
 }
 

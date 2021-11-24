@@ -86,14 +86,3 @@ func down_kick_atk():
 	animation.play("down_kick_atk")
 
 
-func set_color(_color : Color):
-	loop_set_color(origin, _color)
-
-
-func loop_set_color(_node, _color):
-	if _node.get_child_count() > 0:
-		for _c in range(_node.get_child_count()):
-			if _node.get_child(_c) is Position2D:
-				_node.get_child(_c).color = _color
-				loop_set_color(_node.get_child(_c), _color)
-

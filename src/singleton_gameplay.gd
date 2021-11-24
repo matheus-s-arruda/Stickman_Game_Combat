@@ -13,9 +13,8 @@ const CUTSCENE_TIME = 4.0
 var hud_ko_ref : Node
 var player_1 : Node
 var player_2 : Node
+
 "interface novo jogo"
-var player_1_color : int
-var player_2_color : int
 var player_1_id : int
 var player_2_id : int
 var scenery_id : int

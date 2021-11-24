@@ -17,11 +17,11 @@ export(NodePath) onready var player_2 = get_node(player_2)
 
 
 func _ready():
-	player_1.self_modulate = Gameplay.gamedata.get_stick_data(Gameplay.player_1_id, Gameplay.gamedata.stick_info.COLORS )[ Gameplay.player_1_color]
+	player_1.self_modulate = Gameplay.gamedata.get_stick_data(Gameplay.player_1_id, Gameplay.gamedata.stick_info.COLOR)
 	player_1.get_node(\"img\").texture = Gameplay.gamedata.get_stick_data(Gameplay.player_1_id, Gameplay.gamedata.stick_info.IMG)
 	player_1.get_node(\"name\").text = Gameplay.gamedata.get_stick_data(Gameplay.player_1_id, Gameplay.gamedata.stick_info.NAME)
 	
-	player_2.self_modulate = Gameplay.gamedata.get_stick_data(Gameplay.player_2_id, Gameplay.gamedata.stick_info.COLORS )[ Gameplay.player_2_color]
+	player_2.self_modulate = Gameplay.gamedata.get_stick_data(Gameplay.player_2_id, Gameplay.gamedata.stick_info.COLOR)
 	player_2.get_node(\"img\").texture = Gameplay.gamedata.get_stick_data(Gameplay.player_2_id, Gameplay.gamedata.stick_info.IMG)
 	player_2.get_node(\"name\").text = Gameplay.gamedata.get_stick_data(Gameplay.player_2_id, Gameplay.gamedata.stick_info.NAME)
 	

@@ -6,8 +6,6 @@ func _init():
 	add_child(Gameplay.player_1)
 	yield(Gameplay.player_1, "ready")
 	
-	var _color = Gameplay.gamedata.get_stick_data(Gameplay.player_1_id, Gameplay.gamedata.stick_info.COLORS)
-	Gameplay.player_1.set_color(_color[ Gameplay.player_1_color] )
 	Gameplay.player_1.hurtbox.set_collision_layer_bit(1, true)
 	var camera = Gameplay.camera.instance()
 	Gameplay.player_1.add_child(camera)

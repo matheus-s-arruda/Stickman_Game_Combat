@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://img/scenery/montains/front_montains.png" type="Texture" id=1]
 [ext_resource path="res://img/scenery/montains/background.png" type="Texture" id=2]
@@ -7,10 +7,8 @@
 [ext_resource path="res://src/world/player_2.gd" type="Script" id=5]
 [ext_resource path="res://src/world/player_1.gd" type="Script" id=6]
 [ext_resource path="res://src/GUI/GUI.tscn" type="PackedScene" id=7]
-[ext_resource path="res://img/scenery/montains/sun.png" type="Texture" id=8]
 [ext_resource path="res://img/scenery/montains/floor.png" type="Texture" id=9]
 [ext_resource path="res://img/scenery/montains/foreground.png" type="Texture" id=10]
-[ext_resource path="res://img/scenery/montains/sun_halos.png" type="Texture" id=11]
 
 [sub_resource type="GDScript" id=4]
 script/source = "extends Node
@@ -24,7 +22,7 @@ func _ready():
 "
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 1000, 134 )
+extents = Vector2( 1000, 120 )
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1000, 30 )
@@ -48,18 +46,19 @@ texture = ExtResource( 2 )
 centered = false
 
 [node name="last_montains" type="ParallaxLayer" parent="scenery/ParallaxBackground"]
-motion_scale = Vector2( 0.05, 1 )
-motion_offset = Vector2( -700, 0 )
+motion_scale = Vector2( 0.02, 1 )
+motion_offset = Vector2( -730, 0 )
 
 [node name="montains" type="Sprite" parent="scenery/ParallaxBackground/last_montains"]
 texture = ExtResource( 4 )
 centered = false
 
 [node name="mid_montains" type="ParallaxLayer" parent="scenery/ParallaxBackground"]
-motion_scale = Vector2( 0.1, 1 )
-motion_offset = Vector2( -670, 0 )
+motion_scale = Vector2( 0.07, 1 )
+motion_offset = Vector2( -700, 0 )
 
 [node name="Sprite" type="Sprite" parent="scenery/ParallaxBackground/mid_montains"]
+position = Vector2( 0, 24.202 )
 texture = ExtResource( 3 )
 centered = false
 
@@ -68,6 +67,7 @@ motion_scale = Vector2( 0.15, 1 )
 motion_offset = Vector2( -640, 0 )
 
 [node name="Sprite" type="Sprite" parent="scenery/ParallaxBackground/front_montains"]
+position = Vector2( 0, 17.052 )
 texture = ExtResource( 1 )
 centered = false
 
@@ -78,28 +78,18 @@ texture = ExtResource( 9 )
 centered = false
 
 [node name="foreground" type="ParallaxLayer" parent="scenery/ParallaxBackground"]
+motion_scale = Vector2( 2, 1 )
 
 [node name="Sprite" type="Sprite" parent="scenery/ParallaxBackground/foreground"]
 texture = ExtResource( 10 )
 centered = false
-offset = Vector2( 0, 500 )
-
-[node name="sun_halos" type="ParallaxLayer" parent="scenery/ParallaxBackground"]
-motion_scale = Vector2( 0.05, 1 )
-motion_offset = Vector2( -700, 0 )
-
-[node name="sun_halos" type="Sprite" parent="scenery/ParallaxBackground/sun_halos"]
-texture = ExtResource( 11 )
-centered = false
-
-[node name="sun" type="Sprite" parent="scenery/ParallaxBackground/sun_halos"]
-position = Vector2( 983, 392 )
-texture = ExtResource( 8 )
+offset = Vector2( 0, 400 )
 
 [node name="blocking" type="StaticBody2D" parent="scenery"]
+visible = false
 
 [node name="floor" type="CollisionShape2D" parent="scenery/blocking"]
-position = Vector2( 1000, 926 )
+position = Vector2( 1000, 881.218 )
 shape = SubResource( 3 )
 
 [node name="ceil" type="CollisionShape2D" parent="scenery/blocking"]
@@ -117,9 +107,9 @@ shape = SubResource( 2 )
 [node name="GUI" parent="." instance=ExtResource( 7 )]
 
 [node name="spawn_1" type="Node2D" parent="."]
-position = Vector2( 630.808, 777.005 )
+position = Vector2( 700, 760 )
 script = ExtResource( 6 )
 
 [node name="spawn_2" type="Node2D" parent="."]
-position = Vector2( 1336.42, 777.206 )
+position = Vector2( 1300, 760 )
 script = ExtResource( 5 )
