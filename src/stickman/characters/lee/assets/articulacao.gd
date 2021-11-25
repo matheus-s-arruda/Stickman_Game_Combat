@@ -1,7 +1,8 @@
 tool
 extends Position2D
 
-var color := Color(0.6, 0.45, 0.55)
+var color := Color(0.36, 0.15, 0.15)
+
 
 func _process(delta):
 	update()

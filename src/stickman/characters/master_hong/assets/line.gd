@@ -6,11 +6,8 @@ export(int) var _legth := 50
 var color := Color(0.6, 0.48, 0)
 
 func _process(delta):
-	if position.length() > _legth:
-		color = Color.red
-	else:
-		color = Color(0.6, 0.48, 0)
-		
+	color = Color(0.6, 0.48, 0) if position.length() < _legth else Color.red
+	
 	update()
 
 

@@ -30,7 +30,7 @@ const characters_info = {
 		stick_info.NAME : "Master Hong",
 		stick_info.IMG : preload("res://img/stickmans/lee/lee.png"),
 		stick_info.SCENE : preload("res://src/stickman/characters/master_hong/master_hong.tscn"),
-		#stick_info.AUTOPLAY : preload("res://src/stickman/characters/lee/Lee_autoplay.tscn"),
+		stick_info.AUTOPLAY : preload("res://src/stickman/characters/master_hong/marter_hong_autoplay.tscn"),
 		stick_info.COLOR : Color(0.6, 0.48, 0),
 	}
 }

@@ -7,6 +7,8 @@ export(int) var _legth := 50
 var color := Color(0.36, 0.15, 0.15)
 
 func _process(delta):
+	#color = Color(0.36, 0.15, 0.15) if position.length() < _legth else Color.aqua
+	
 	update()
 
 

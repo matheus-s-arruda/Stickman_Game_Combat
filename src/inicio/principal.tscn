@@ -4,7 +4,7 @@
 script/source = "extends Button
 
 
-var player_1_id = Gameplay.gamedata.stick_name.LEE
+var player_1_id = Gameplay.gamedata.stick_name.MASTER_HONG
 var player_2_id = Gameplay.gamedata.stick_name.MASTER_HONG
 var scenery = Gameplay.gamedata.scenery_name.DESERT
 
