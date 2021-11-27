@@ -11,7 +11,7 @@ extents = Vector2( 32, 5 )
 [sub_resource type="Animation" id=41]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("origin/bacia/tronco:position")
+tracks/0/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1/weapon:rotation_degrees")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -20,10 +20,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0, -23 ) ]
+"values": [ 0.0 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("origin/bacia/perna_1:position")
+tracks/1/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1/weapon:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -32,10 +32,10 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -16, 36 ) ]
+"values": [ Vector2( 0, -30 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("origin/bacia/perna_2:position")
+tracks/2/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:rotation_degrees")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -44,10 +44,10 @@ tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 16, 36 ) ]
+"values": [ 0.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("origin/bacia/tronco/clavícula/cabeca:position")
+tracks/3/path = NodePath("origin/bacia/perna_2/pe_2:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -56,10 +56,10 @@ tracks/3/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0, -14 ) ]
+"values": [ Vector2( 12, 36 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("origin/bacia/tronco/clavícula/braco_2/mao_2:position")
+tracks/4/path = NodePath("origin/bacia/perna_2/pe_2/ponta_pe_2:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -68,10 +68,10 @@ tracks/4/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 16, 24 ) ]
+"values": [ Vector2( 6, 0 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("origin/bacia/tronco/clavícula/braco_2:position")
+tracks/5/path = NodePath("origin/bacia/perna_1/pe_1:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -80,10 +80,10 @@ tracks/5/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 16, 24 ) ]
+"values": [ Vector2( -12, 36 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("origin/bacia/perna_1/pe_1/ponta_pe_1:position")
+tracks/6/path = NodePath("origin/bacia/tronco/clavícula/braco_1:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -92,10 +92,10 @@ tracks/6/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -6, 0 ) ]
+"values": [ Vector2( -16, 24 ) ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("origin/bacia/tronco/clavícula:position")
+tracks/7/path = NodePath("origin/bacia:position")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -104,7 +104,7 @@ tracks/7/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0, -23 ) ]
+"values": [ Vector2( 0, -76 ) ]
 }
 tracks/8/type = "value"
 tracks/8/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:position")
@@ -119,7 +119,7 @@ tracks/8/keys = {
 "values": [ Vector2( -16, 24 ) ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("origin/bacia:position")
+tracks/9/path = NodePath("origin/bacia/tronco/clavícula:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
@@ -128,10 +128,10 @@ tracks/9/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0, -76 ) ]
+"values": [ Vector2( 0, -23 ) ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("origin/bacia/tronco/clavícula/braco_1:position")
+tracks/10/path = NodePath("origin/bacia/perna_1/pe_1/ponta_pe_1:position")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/imported = false
@@ -140,10 +140,10 @@ tracks/10/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -16, 24 ) ]
+"values": [ Vector2( -6, 0 ) ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("origin/bacia/perna_1/pe_1:position")
+tracks/11/path = NodePath("origin/bacia/tronco/clavícula/braco_2:position")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/imported = false
@@ -152,10 +152,10 @@ tracks/11/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -12, 36 ) ]
+"values": [ Vector2( 16, 24 ) ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("origin/bacia/perna_2/pe_2/ponta_pe_2:position")
+tracks/12/path = NodePath("origin/bacia/tronco/clavícula/braco_2/mao_2:position")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/imported = false
@@ -164,10 +164,10 @@ tracks/12/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 6, 0 ) ]
+"values": [ Vector2( 16, 24 ) ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("origin/bacia/perna_2/pe_2:position")
+tracks/13/path = NodePath("origin/bacia/tronco/clavícula/cabeca:position")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
@@ -176,10 +176,10 @@ tracks/13/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 12, 36 ) ]
+"values": [ Vector2( 0, -14 ) ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:rotation_degrees")
+tracks/14/path = NodePath("origin/bacia/perna_2:position")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
@@ -188,10 +188,10 @@ tracks/14/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 0.0 ]
+"values": [ Vector2( 16, 36 ) ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1/weapon:position")
+tracks/15/path = NodePath("origin/bacia/perna_1:position")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
@@ -200,673 +200,95 @@ tracks/15/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0, -30 ) ]
+"values": [ Vector2( -16, 36 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("origin/bacia/tronco:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -23 ) ]
 }
 
 [sub_resource type="Animation" id=43]
 resource_name = "bloq"
 length = 0.2
 tracks/0/type = "value"
-tracks/0/path = NodePath("origin/bacia/tronco/clavícula/braco_2:position")
+tracks/0/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1/weapon:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( -4.00003, -27 ), Vector2( -4.00003, -27 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("origin/bacia/tronco/clavícula/braco_2/mao_2:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 18.0001, -20 ), Vector2( 18.0001, -20 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("origin/bacia:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray(  ),
-"transitions": PoolRealArray(  ),
-"update": 0,
-"values": [  ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("origin/bacia/tronco/clavícula:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 2.00001, -23 ), Vector2( 2.00001, -23 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("origin/bacia/tronco:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( -4.00003, -23 ), Vector2( -4.00003, -23 ) ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("origin/bacia/tronco/clavícula/cabeca:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 5.00004, -13 ), Vector2( 5.00004, -13 ) ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 15.0001, -17 ), Vector2( 15.0001, -17 ) ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("origin/bacia/perna_1:position")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"times": PoolRealArray(  ),
-"transitions": PoolRealArray(  ),
-"update": 0,
-"values": [  ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("origin/bacia/perna_2:position")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/keys = {
-"times": PoolRealArray(  ),
-"transitions": PoolRealArray(  ),
-"update": 0,
-"values": [  ]
-}
-tracks/9/type = "value"
-tracks/9/path = NodePath("origin/bacia/perna_2/pe_2:position")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/keys = {
-"times": PoolRealArray(  ),
-"transitions": PoolRealArray(  ),
-"update": 0,
-"values": [  ]
-}
-tracks/10/type = "value"
-tracks/10/path = NodePath("origin/bacia/perna_2/pe_2/ponta_pe_2:position")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/keys = {
-"times": PoolRealArray(  ),
-"transitions": PoolRealArray(  ),
-"update": 0,
-"values": [  ]
-}
-tracks/11/type = "value"
-tracks/11/path = NodePath("origin/bacia/perna_1/pe_1/ponta_pe_1:position")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/keys = {
-"times": PoolRealArray(  ),
-"transitions": PoolRealArray(  ),
-"update": 0,
-"values": [  ]
-}
-tracks/12/type = "value"
-tracks/12/path = NodePath("origin/bacia/tronco/clavícula/braco_1:position")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 13.0001, 26 ), Vector2( 13.0001, 26 ) ]
-}
-tracks/13/type = "value"
-tracks/13/path = NodePath("origin/bacia/perna_1/pe_1:position")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/keys = {
-"times": PoolRealArray(  ),
-"transitions": PoolRealArray(  ),
-"update": 0,
-"values": [  ]
-}
-tracks/14/type = "value"
-tracks/14/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:rotation_degrees")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ -14.1, -14.1 ]
-}
-tracks/15/type = "value"
-tracks/15/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1/weapon:position")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0, -19.714 ) ]
 }
-
-[sub_resource type="Animation" id=51]
-resource_name = "damage_1"
-length = 0.3
-step = 0.01
-tracks/0/type = "value"
-tracks/0/path = NodePath("origin/bacia:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( -4.00003, -72 ) ]
-}
 tracks/1/type = "value"
-tracks/1/path = NodePath("origin/bacia/tronco/clavícula/braco_2:position")
+tracks/1/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 21.0002, 15 ) ]
+"values": [ -14.1, -14.1 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("origin/bacia/tronco:position")
+tracks/2/path = NodePath("origin/bacia/perna_1/pe_1:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
 "update": 0,
-"values": [ Vector2( -6.00004, -23 ) ]
+"values": [  ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("origin/bacia/tronco/clavícula/braco_2/mao_2:position")
+tracks/3/path = NodePath("origin/bacia/tronco/clavícula/braco_1:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 9.00006, -28 ) ]
+"values": [ Vector2( 13.0001, 26 ), Vector2( 13.0001, 26 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("origin/bacia/tronco/clavícula/braco_1:position")
+tracks/4/path = NodePath("origin/bacia/perna_1/pe_1/ponta_pe_1:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
 "update": 0,
-"values": [ Vector2( -26.0002, 14 ) ]
+"values": [  ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("origin/bacia/tronco/clavícula:position")
+tracks/5/path = NodePath("origin/bacia/perna_2/pe_2/ponta_pe_2:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
 "update": 0,
-"values": [ Vector2( -4.76837e-07, -21 ) ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("origin/bacia/tronco/clavícula/cabeca:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 10.0001, -10 ) ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("origin/bacia/perna_1/pe_1:position")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( -20.0001, 16 ) ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("origin/bacia/perna_2/pe_2/ponta_pe_2:position")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 7.00005, 0 ) ]
-}
-tracks/9/type = "value"
-tracks/9/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:position")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( -24.0001, 17 ) ]
-}
-tracks/10/type = "value"
-tracks/10/path = NodePath("origin/bacia/perna_2:position")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 18.0001, 32 ) ]
-}
-tracks/11/type = "value"
-tracks/11/path = NodePath("origin/bacia/perna_1:position")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( -12.0001, 38 ) ]
-}
-tracks/12/type = "value"
-tracks/12/path = NodePath("origin/bacia/perna_2/pe_2:position")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( -14.0001, 36 ) ]
-}
-tracks/13/type = "value"
-tracks/13/path = NodePath("origin/bacia/perna_1/pe_1/ponta_pe_1:position")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( -2.00002, 7 ) ]
-}
-tracks/14/type = "value"
-tracks/14/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:rotation_degrees")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ -31.5623 ]
-}
-tracks/15/type = "value"
-tracks/15/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1/weapon:position")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ) ]
-}
-
-[sub_resource type="Animation" id=52]
-resource_name = "damage_2"
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("origin/bacia:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( -4.00003, -72 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("origin/bacia/tronco/clavícula/braco_2:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 24.0002, 13 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("origin/bacia/tronco:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( -18.0001, -14 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("origin/bacia/tronco/clavícula/braco_2/mao_2:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 27.0002, 9 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("origin/bacia/tronco/clavícula/braco_1:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 27.0002, -2 ) ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("origin/bacia/tronco/clavícula:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( -11.0001, -21 ) ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("origin/bacia/tronco/clavícula/cabeca:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( -1.00001, -14 ) ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("origin/bacia/perna_1/pe_1:position")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 28.0002, 17 ) ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("origin/bacia/perna_2/pe_2/ponta_pe_2:position")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 6.00004, 4 ) ]
-}
-tracks/9/type = "value"
-tracks/9/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:position")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 23.0002, -14.9999 ) ]
-}
-tracks/10/type = "value"
-tracks/10/path = NodePath("origin/bacia/perna_2:position")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 37.0003, 12 ) ]
-}
-tracks/11/type = "value"
-tracks/11/path = NodePath("origin/bacia/perna_1:position")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 37.0003, -1 ) ]
-}
-tracks/12/type = "value"
-tracks/12/path = NodePath("origin/bacia/perna_2/pe_2:position")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 25.0002, 25 ) ]
-}
-tracks/13/type = "value"
-tracks/13/path = NodePath("origin/bacia/perna_1/pe_1/ponta_pe_1:position")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 7.00005, -1 ) ]
-}
-tracks/14/type = "value"
-tracks/14/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:rotation_degrees")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ -72.3 ]
-}
-tracks/15/type = "value"
-tracks/15/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1/weapon:position")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ) ]
-}
-
-[sub_resource type="Animation" id=53]
-resource_name = "damage_2_contact"
-length = 0.78
-step = 0.01
-tracks/0/type = "value"
-tracks/0/path = NodePath("origin/bacia/tronco/clavícula:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.6, 0.65, 0.71, 0.78 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( -17.0001, -11 ), Vector2( -23.0002, 0 ), Vector2( -23.0002, 0 ), Vector2( -23.0002, -1 ), Vector2( -23.0002, -1 ), Vector2( -23.0002, -1 ), Vector2( -18.0001, -12 ), Vector2( 4.00003, -20 ), Vector2( 17.0001, -16 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("origin/bacia/tronco/clavícula/cabeca:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.6, 0.65, 0.71, 0.78 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( -10.0001, -8 ), Vector2( -10.0001, -8 ), Vector2( -10.0001, -6 ), Vector2( -10.0001, -7 ), Vector2( -10.0001, -7 ), Vector2( -10.0001, -7 ), Vector2( -4.00003, -13 ), Vector2( 6.00004, -10 ), Vector2( 6.00004, -10 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("origin/bacia:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.65, 0.71, 0.78 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( -24.0002, -5 ), Vector2( -24.0002, -5 ), Vector2( -11.0001, -42 ), Vector2( 0, -43 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("origin/bacia/perna_1/pe_1:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.6, 0.65, 0.71, 0.78 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 35.0002, -1 ), Vector2( 35.0002, -1 ), Vector2( 35.0002, 1 ), Vector2( 35.0002, 0 ), Vector2( 35.0002, 0 ), Vector2( 35.0002, 0 ), Vector2( 33.0002, -20 ), Vector2( 6.00003, 37 ), Vector2( -8.00006, 38 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.6, 0.65, 0.71, 0.78 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 24.9999, -15 ), Vector2( 26.9999, -12.0001 ), Vector2( 29.9998, -2.86102e-06 ), Vector2( 29.9998, -2.86102e-06 ), Vector2( 23.0001, 3.99995 ), Vector2( -14.0001, 25.0001 ), Vector2( -19.0001, 20.9999 ) ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("origin/bacia/tronco/clavícula/braco_2/mao_2:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.6, 0.65, 0.66, 0.67, 0.68, 0.71, 0.78 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 3.00002, -22 ), Vector2( 27.0002, -7 ), Vector2( 29.0002, -2 ), Vector2( 29.0002, 0 ), Vector2( 29.0002, 0 ), Vector2( 29.0002, 0 ), Vector2( 22.0002, 0 ), Vector2( 15.8001, 8.79999 ), Vector2( 9.85009, 17.35 ), Vector2( 6.38754, 25.2625 ), Vector2( -4.00003, 29 ), Vector2( 9.00006, 28 ) ]
+"values": [  ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("origin/bacia/perna_2/pe_2:position")
@@ -875,58 +297,58 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.6, 0.65, 0.71, 0.78 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
 "update": 0,
-"values": [ Vector2( 37.0003, 2 ), Vector2( 38.0003, 0 ), Vector2( 38.0003, 2 ), Vector2( 38.0003, 0 ), Vector2( 38.0003, 0 ), Vector2( 38.0003, 0 ), Vector2( 13.0001, 36 ), Vector2( -24.0002, 30 ), Vector2( -30.0002, 24 ) ]
+"values": [  ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("origin/bacia/perna_2/pe_2/ponta_pe_2:position")
+tracks/7/path = NodePath("origin/bacia/perna_2:position")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.6, 0.65, 0.71, 0.78 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
 "update": 0,
-"values": [ Vector2( 7.00005, -2 ), Vector2( 7.00005, -2 ), Vector2( 7.00005, -2 ), Vector2( 7.00005, -2 ), Vector2( 7.00005, -2 ), Vector2( 7.00005, -2 ), Vector2( 7.00005, 0 ), Vector2( 7.00005, 0 ), Vector2( 7.00005, 0 ) ]
+"values": [  ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("origin/bacia/tronco/clavícula/braco_1:position")
+tracks/8/path = NodePath("origin/bacia/perna_1:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.6, 0.65, 0.71, 0.78 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
 "update": 0,
-"values": [ Vector2( 28.0002, -8 ), Vector2( 28.0003, -4 ), Vector2( 31.0003, 1 ), Vector2( 31.0003, 1 ), Vector2( -7, 13 ), Vector2( -26.0002, 14 ), Vector2( -22.0002, 20 ) ]
+"values": [  ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("origin/bacia/perna_1:position")
+tracks/9/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.6, 0.65, 0.71, 0.78 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 34.0002, -16 ), Vector2( 39.0003, 0 ), Vector2( 39.0003, -2 ), Vector2( 39.0003, -2 ), Vector2( 39.0003, -2 ), Vector2( 39.0003, -2 ), Vector2( -3.00002, -36 ), Vector2( 38.0003, -11 ), Vector2( 32.0002, 0 ) ]
+"values": [ Vector2( 15.0001, -17 ), Vector2( 15.0001, -17 ) ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("origin/bacia/tronco/clavícula/braco_2:position")
+tracks/10/path = NodePath("origin/bacia/tronco/clavícula/cabeca:position")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/imported = false
 tracks/10/enabled = true
 tracks/10/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.6, 0.65, 0.71, 0.78 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 17.0001, -16 ), Vector2( 28.0002, -7 ), Vector2( 29.0002, 1 ), Vector2( 29.0002, 2 ), Vector2( 29.0002, 2 ), Vector2( 29.0002, 2 ), Vector2( -9.00006, 16 ), Vector2( -10.0001, 27 ), Vector2( -1.00001, 27 ) ]
+"values": [ Vector2( 5.00004, -13 ), Vector2( 5.00004, -13 ) ]
 }
 tracks/11/type = "value"
 tracks/11/path = NodePath("origin/bacia/tronco:position")
@@ -935,49 +357,246 @@ tracks/11/loop_wrap = true
 tracks/11/imported = false
 tracks/11/enabled = true
 tracks/11/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.6, 0.65, 0.71, 0.78 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -23.0002, -3 ), Vector2( -23.0002, 0 ), Vector2( -23.0002, -2 ), Vector2( -23.0002, -1 ), Vector2( -23.0002, -1 ), Vector2( -23.0002, -1 ), Vector2( -23.0002, -4 ), Vector2( -9.00006, -20 ), Vector2( 2.00001, -23 ) ]
+"values": [ Vector2( -4.00003, -23 ), Vector2( -4.00003, -23 ) ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("origin/bacia/perna_1/pe_1/ponta_pe_1:position")
+tracks/12/path = NodePath("origin/bacia/tronco/clavícula:position")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/imported = false
 tracks/12/enabled = true
 tracks/12/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.6, 0.65, 0.71, 0.78 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 7.00005, -2 ), Vector2( 7.00005, -2 ), Vector2( 7.00005, -2 ), Vector2( 7.00005, -2 ), Vector2( 7.00005, -2 ), Vector2( 7.00005, -2 ), Vector2( 4.00003, -6 ), Vector2( 7.00005, 3 ), Vector2( 7.00005, 0 ) ]
+"values": [ Vector2( 2.00001, -23 ), Vector2( 2.00001, -23 ) ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("origin/bacia/perna_2:position")
+tracks/13/path = NodePath("origin/bacia:position")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
 tracks/13/enabled = true
 tracks/13/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.6, 0.65, 0.71, 0.78 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
 "update": 0,
-"values": [ Vector2( 39.0003, -6 ), Vector2( 39.0003, 0 ), Vector2( 39.0003, -3 ), Vector2( 39.0003, -1 ), Vector2( 39.0003, -1 ), Vector2( 39.0003, -1 ), Vector2( 16.0001, -36 ), Vector2( 39.0003, 8 ), Vector2( 34.0002, 15 ) ]
+"values": [  ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:rotation_degrees")
+tracks/14/path = NodePath("origin/bacia/tronco/clavícula/braco_2/mao_2:position")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
 tracks/14/enabled = true
 tracks/14/keys = {
-"times": PoolRealArray( 0, 0.2, 0.3, 0.4, 0.6, 0.65, 0.78 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ -82.9, -94.8, -92.0, -92.0, -92.0, -90.0, -61.2543 ]
+"values": [ Vector2( 18.0001, -20 ), Vector2( 18.0001, -20 ) ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1/weapon:position")
+tracks/15/path = NodePath("origin/bacia/tronco/clavícula/braco_2:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -4.00003, -27 ), Vector2( -4.00003, -27 ) ]
+}
+
+[sub_resource type="Animation" id=51]
+resource_name = "damage_1"
+length = 0.3
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1/weapon:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -31.5623 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("origin/bacia/perna_1/pe_1/ponta_pe_1:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -2.00002, 7 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("origin/bacia/perna_2/pe_2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -14.0001, 36 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("origin/bacia/perna_1:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -12.0001, 38 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("origin/bacia/perna_2:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 18.0001, 32 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -24.0001, 17 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("origin/bacia/perna_2/pe_2/ponta_pe_2:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 7.00005, 0 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("origin/bacia/perna_1/pe_1:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -20.0001, 16 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("origin/bacia/tronco/clavícula/cabeca:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 10.0001, -10 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("origin/bacia/tronco/clavícula:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -4.76837e-07, -21 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("origin/bacia/tronco/clavícula/braco_1:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -26.0002, 14 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("origin/bacia/tronco/clavícula/braco_2/mao_2:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 9.00006, -28 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("origin/bacia/tronco:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -6.00004, -23 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("origin/bacia/tronco/clavícula/braco_2:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 21.0002, 15 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("origin/bacia:position")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
@@ -986,7 +605,400 @@ tracks/15/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
+"values": [ Vector2( -4.00003, -72 ) ]
+}
+
+[sub_resource type="Animation" id=52]
+resource_name = "damage_2"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1/weapon:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
 "values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -72.3 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("origin/bacia/perna_1/pe_1/ponta_pe_1:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 7.00005, -1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("origin/bacia/perna_2/pe_2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 25.0002, 25 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("origin/bacia/perna_1:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 37.0003, -1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("origin/bacia/perna_2:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 37.0003, 12 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 23.0002, -14.9999 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("origin/bacia/perna_2/pe_2/ponta_pe_2:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 6.00004, 4 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("origin/bacia/perna_1/pe_1:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 28.0002, 17 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("origin/bacia/tronco/clavícula/cabeca:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -1.00001, -14 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("origin/bacia/tronco/clavícula:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -11.0001, -21 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("origin/bacia/tronco/clavícula/braco_1:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 27.0002, -2 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("origin/bacia/tronco/clavícula/braco_2/mao_2:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 27.0002, 9 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("origin/bacia/tronco:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -18.0001, -14 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("origin/bacia/tronco/clavícula/braco_2:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 24.0002, 13 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("origin/bacia:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -4.00003, -72 ) ]
+}
+
+[sub_resource type="Animation" id=53]
+resource_name = "damage_2_contact"
+length = 0.78
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1/weapon:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3, 0.4, 0.6, 0.65, 0.78 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -82.9, -94.8, -92.0, -92.0, -92.0, -90.0, -61.2543 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("origin/bacia/perna_2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.6, 0.65, 0.71, 0.78 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 39.0003, -6 ), Vector2( 39.0003, 0 ), Vector2( 39.0003, -3 ), Vector2( 39.0003, -1 ), Vector2( 39.0003, -1 ), Vector2( 39.0003, -1 ), Vector2( 16.0001, -36 ), Vector2( 39.0003, 8 ), Vector2( 34.0002, 15 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("origin/bacia/perna_1/pe_1/ponta_pe_1:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.6, 0.65, 0.71, 0.78 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 7.00005, -2 ), Vector2( 7.00005, -2 ), Vector2( 7.00005, -2 ), Vector2( 7.00005, -2 ), Vector2( 7.00005, -2 ), Vector2( 7.00005, -2 ), Vector2( 4.00003, -6 ), Vector2( 7.00005, 3 ), Vector2( 7.00005, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("origin/bacia/tronco:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.6, 0.65, 0.71, 0.78 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -23.0002, -3 ), Vector2( -23.0002, 0 ), Vector2( -23.0002, -2 ), Vector2( -23.0002, -1 ), Vector2( -23.0002, -1 ), Vector2( -23.0002, -1 ), Vector2( -23.0002, -4 ), Vector2( -9.00006, -20 ), Vector2( 2.00001, -23 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("origin/bacia/tronco/clavícula/braco_2:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.6, 0.65, 0.71, 0.78 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 17.0001, -16 ), Vector2( 28.0002, -7 ), Vector2( 29.0002, 1 ), Vector2( 29.0002, 2 ), Vector2( 29.0002, 2 ), Vector2( 29.0002, 2 ), Vector2( -9.00006, 16 ), Vector2( -10.0001, 27 ), Vector2( -1.00001, 27 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("origin/bacia/perna_1:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.6, 0.65, 0.71, 0.78 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 34.0002, -16 ), Vector2( 39.0003, 0 ), Vector2( 39.0003, -2 ), Vector2( 39.0003, -2 ), Vector2( 39.0003, -2 ), Vector2( 39.0003, -2 ), Vector2( -3.00002, -36 ), Vector2( 38.0003, -11 ), Vector2( 32.0002, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("origin/bacia/tronco/clavícula/braco_1:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.6, 0.65, 0.71, 0.78 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 28.0002, -8 ), Vector2( 28.0003, -4 ), Vector2( 31.0003, 1 ), Vector2( 31.0003, 1 ), Vector2( -7, 13 ), Vector2( -26.0002, 14 ), Vector2( -22.0002, 20 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("origin/bacia/perna_2/pe_2/ponta_pe_2:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.6, 0.65, 0.71, 0.78 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 7.00005, -2 ), Vector2( 7.00005, -2 ), Vector2( 7.00005, -2 ), Vector2( 7.00005, -2 ), Vector2( 7.00005, -2 ), Vector2( 7.00005, -2 ), Vector2( 7.00005, 0 ), Vector2( 7.00005, 0 ), Vector2( 7.00005, 0 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("origin/bacia/perna_2/pe_2:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.6, 0.65, 0.71, 0.78 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 37.0003, 2 ), Vector2( 38.0003, 0 ), Vector2( 38.0003, 2 ), Vector2( 38.0003, 0 ), Vector2( 38.0003, 0 ), Vector2( 38.0003, 0 ), Vector2( 13.0001, 36 ), Vector2( -24.0002, 30 ), Vector2( -30.0002, 24 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("origin/bacia/tronco/clavícula/braco_2/mao_2:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.6, 0.65, 0.66, 0.67, 0.68, 0.71, 0.78 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 3.00002, -22 ), Vector2( 27.0002, -7 ), Vector2( 29.0002, -2 ), Vector2( 29.0002, 0 ), Vector2( 29.0002, 0 ), Vector2( 29.0002, 0 ), Vector2( 22.0002, 0 ), Vector2( 15.8001, 8.79999 ), Vector2( 9.85009, 17.35 ), Vector2( 6.38754, 25.2625 ), Vector2( -4.00003, 29 ), Vector2( 9.00006, 28 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.6, 0.65, 0.71, 0.78 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 24.9999, -15 ), Vector2( 26.9999, -12.0001 ), Vector2( 29.9998, -2.86102e-06 ), Vector2( 29.9998, -2.86102e-06 ), Vector2( 23.0001, 3.99995 ), Vector2( -14.0001, 25.0001 ), Vector2( -19.0001, 20.9999 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("origin/bacia/perna_1/pe_1:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.6, 0.65, 0.71, 0.78 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 35.0002, -1 ), Vector2( 35.0002, -1 ), Vector2( 35.0002, 1 ), Vector2( 35.0002, 0 ), Vector2( 35.0002, 0 ), Vector2( 35.0002, 0 ), Vector2( 33.0002, -20 ), Vector2( 6.00003, 37 ), Vector2( -8.00006, 38 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("origin/bacia:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 0.65, 0.71, 0.78 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -24.0002, -5 ), Vector2( -24.0002, -5 ), Vector2( -11.0001, -42 ), Vector2( 0, -43 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("origin/bacia/tronco/clavícula/cabeca:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.6, 0.65, 0.71, 0.78 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -10.0001, -8 ), Vector2( -10.0001, -8 ), Vector2( -10.0001, -6 ), Vector2( -10.0001, -7 ), Vector2( -10.0001, -7 ), Vector2( -10.0001, -7 ), Vector2( -4.00003, -13 ), Vector2( 6.00004, -10 ), Vector2( 6.00004, -10 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("origin/bacia/tronco/clavícula:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.6, 0.65, 0.71, 0.78 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -17.0001, -11 ), Vector2( -23.0002, 0 ), Vector2( -23.0002, 0 ), Vector2( -23.0002, -1 ), Vector2( -23.0002, -1 ), Vector2( -23.0002, -1 ), Vector2( -18.0001, -12 ), Vector2( 4.00003, -20 ), Vector2( 17.0001, -16 ) ]
 }
 
 [sub_resource type="Animation" id=54]
@@ -1001,91 +1013,91 @@ length = 0.8
 loop = true
 step = 0.01
 tracks/0/type = "value"
-tracks/0/path = NodePath("origin/bacia:position")
+tracks/0/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1/weapon:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.06, 0.34, 0.4, 0.46, 0.74 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -16.0001, -42 ), Vector2( -16.2251, -42.075 ), Vector2( -24.7564, -44.9188 ), Vector2( -25.0002, -45 ), Vector2( -24.7752, -44.925 ), Vector2( -16.2439, -42.0812 ) ]
+"values": [ Vector2( 0, -33 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("origin/bacia/perna_1:position")
+tracks/1/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.06, 0.34, 0.4, 0.46, 0.74 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -20.0001, 23 ), Vector2( -19.7751, 23.075 ), Vector2( -13.2438, 24.9188 ), Vector2( -13.0001, 25 ), Vector2( -13.2251, 24.925 ), Vector2( -19.7564, 23.0812 ) ]
+"values": [ -73.2 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("origin/bacia/perna_1/pe_1:position")
+tracks/2/path = NodePath("origin/bacia/perna_1/pe_1/ponta_pe_1:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.06, 0.34, 0.4, 0.46, 0.74 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -35.0002, 15 ), Vector2( -35.0002, 15 ), Vector2( -33.0002, 16 ), Vector2( -33.0002, 16 ), Vector2( -33.0002, 16 ), Vector2( -35.0002, 15 ) ]
+"values": [ Vector2( 3.00002, 0 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("origin/bacia/tronco/clavícula/braco_1:position")
+tracks/3/path = NodePath("origin/bacia/perna_2/pe_2/ponta_pe_2:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.08, 0.32, 0.4, 0.48, 0.72 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 15.0001, 19 ), Vector2( 15.0001, 19.075 ), Vector2( 15.0001, 21.925 ), Vector2( 15.0001, 22 ), Vector2( 15.0001, 21.925 ), Vector2( 15.0001, 19.075 ) ]
+"values": [ Vector2( 7.00005, 0 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("origin/bacia/tronco:position")
+tracks/4/path = NodePath("origin/bacia/perna_2:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.06, 0.34, 0.4, 0.46, 0.74 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 4.00003, -22 ) ]
+"values": [ Vector2( 39.0003, 5 ), Vector2( 39.2253, 5.075 ), Vector2( 38.7565, 3.91875 ), Vector2( 39.0003, 4 ), Vector2( 38.7753, 3.925 ), Vector2( 39.244, 5.08125 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("origin/bacia/tronco/clavícula/cabeca:position")
+tracks/5/path = NodePath("origin/bacia/perna_2/pe_2:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.06, 0.34, 0.4, 0.46, 0.74 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 5.00004, -13 ) ]
+"values": [ Vector2( -20.0001, 33 ), Vector2( -20.0001, 33 ), Vector2( -11.0001, 37 ), Vector2( -11.0001, 37 ), Vector2( -11.0001, 37 ), Vector2( -20.0001, 33 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("origin/bacia/tronco/clavícula/braco_2:position")
+tracks/6/path = NodePath("origin/bacia/tronco/clavícula:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0, 0.08, 0.32, 0.4, 0.48, 0.72 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -24.0002, 9 ), Vector2( -24.0002, 9.075 ), Vector2( -24.0002, 11.925 ), Vector2( -24.0002, 12 ), Vector2( -24.0002, 11.925 ), Vector2( -24.0002, 9.075 ) ]
+"values": [ Vector2( 10.0001, -17 ) ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("origin/bacia/tronco/clavícula/braco_2/mao_2:position")
+tracks/7/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:position")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -1094,10 +1106,10 @@ tracks/7/keys = {
 "times": PoolRealArray( 0, 0.08, 0.32, 0.4, 0.48, 0.72 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, -27 ), Vector2( 0, -26.975 ), Vector2( 0, -26.025 ), Vector2( 0, -26 ), Vector2( 0, -26.025 ), Vector2( 0, -26.975 ) ]
+"values": [ Vector2( 24.0001, -16.9999 ), Vector2( 24.0001, -16.9749 ), Vector2( 24.0001, -16.0249 ), Vector2( 24.0001, -15.9999 ), Vector2( 24.0001, -16.0249 ), Vector2( 24.0001, -16.9749 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:position")
+tracks/8/path = NodePath("origin/bacia/tronco/clavícula/braco_2/mao_2:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -1106,122 +1118,134 @@ tracks/8/keys = {
 "times": PoolRealArray( 0, 0.08, 0.32, 0.4, 0.48, 0.72 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 24.0001, -16.9999 ), Vector2( 24.0001, -16.9749 ), Vector2( 24.0001, -16.0249 ), Vector2( 24.0001, -15.9999 ), Vector2( 24.0001, -16.0249 ), Vector2( 24.0001, -16.9749 ) ]
+"values": [ Vector2( 0, -27 ), Vector2( 0, -26.975 ), Vector2( 0, -26.025 ), Vector2( 0, -26 ), Vector2( 0, -26.025 ), Vector2( 0, -26.975 ) ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("origin/bacia/tronco/clavícula:position")
+tracks/9/path = NodePath("origin/bacia/tronco/clavícula/braco_2:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.08, 0.32, 0.4, 0.48, 0.72 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 10.0001, -17 ) ]
+"values": [ Vector2( -24.0002, 9 ), Vector2( -24.0002, 9.075 ), Vector2( -24.0002, 11.925 ), Vector2( -24.0002, 12 ), Vector2( -24.0002, 11.925 ), Vector2( -24.0002, 9.075 ) ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("origin/bacia/perna_2/pe_2:position")
+tracks/10/path = NodePath("origin/bacia/tronco/clavícula/cabeca:position")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/imported = false
 tracks/10/enabled = true
 tracks/10/keys = {
-"times": PoolRealArray( 0, 0.06, 0.34, 0.4, 0.46, 0.74 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -20.0001, 33 ), Vector2( -20.0001, 33 ), Vector2( -11.0001, 37 ), Vector2( -11.0001, 37 ), Vector2( -11.0001, 37 ), Vector2( -20.0001, 33 ) ]
+"values": [ Vector2( 5.00004, -13 ) ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("origin/bacia/perna_2:position")
+tracks/11/path = NodePath("origin/bacia/tronco:position")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/imported = false
 tracks/11/enabled = true
 tracks/11/keys = {
-"times": PoolRealArray( 0, 0.06, 0.34, 0.4, 0.46, 0.74 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 39.0003, 5 ), Vector2( 39.2253, 5.075 ), Vector2( 38.7565, 3.91875 ), Vector2( 39.0003, 4 ), Vector2( 38.7753, 3.925 ), Vector2( 39.244, 5.08125 ) ]
+"values": [ Vector2( 4.00003, -22 ) ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("origin/bacia/perna_2/pe_2/ponta_pe_2:position")
+tracks/12/path = NodePath("origin/bacia/tronco/clavícula/braco_1:position")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/imported = false
 tracks/12/enabled = true
 tracks/12/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.08, 0.32, 0.4, 0.48, 0.72 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 7.00005, 0 ) ]
+"values": [ Vector2( 15.0001, 19 ), Vector2( 15.0001, 19.075 ), Vector2( 15.0001, 21.925 ), Vector2( 15.0001, 22 ), Vector2( 15.0001, 21.925 ), Vector2( 15.0001, 19.075 ) ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("origin/bacia/perna_1/pe_1/ponta_pe_1:position")
+tracks/13/path = NodePath("origin/bacia/perna_1/pe_1:position")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
 tracks/13/enabled = true
 tracks/13/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.06, 0.34, 0.4, 0.46, 0.74 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 3.00002, 0 ) ]
+"values": [ Vector2( -35.0002, 15 ), Vector2( -35.0002, 15 ), Vector2( -33.0002, 16 ), Vector2( -33.0002, 16 ), Vector2( -33.0002, 16 ), Vector2( -35.0002, 15 ) ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:rotation_degrees")
+tracks/14/path = NodePath("origin/bacia/perna_1:position")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
 tracks/14/enabled = true
 tracks/14/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.06, 0.34, 0.4, 0.46, 0.74 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ -73.2 ]
+"values": [ Vector2( -20.0001, 23 ), Vector2( -19.7751, 23.075 ), Vector2( -13.2438, 24.9188 ), Vector2( -13.0001, 25 ), Vector2( -13.2251, 24.925 ), Vector2( -19.7564, 23.0812 ) ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1/weapon:position")
+tracks/15/path = NodePath("origin/bacia:position")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
 tracks/15/enabled = true
 tracks/15/keys = {
+"times": PoolRealArray( 0, 0.06, 0.34, 0.4, 0.46, 0.74 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -16.0001, -42 ), Vector2( -16.2251, -42.075 ), Vector2( -24.7564, -44.9188 ), Vector2( -25.0002, -45 ), Vector2( -24.7752, -44.925 ), Vector2( -16.2439, -42.0812 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1/weapon:rotation_degrees")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0, -33 ) ]
+"values": [ 0.198 ]
 }
 
 [sub_resource type="Animation" id=57]
 resource_name = "down_walk"
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("origin/bacia:position")
+tracks/0/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:rotation_degrees")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.5, 0.7 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -25.0002, -45 ), Vector2( -25.0002, -47 ), Vector2( -25.0002, -45 ), Vector2( -25.0002, -47 ) ]
+"values": [ -73.2 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("origin/bacia/perna_1:position")
+tracks/1/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1/weapon:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 0.4, 0.5, 0.6, 0.7, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 17.0001, 24 ), Vector2( 22.5002, 18.5 ), Vector2( 39.0003, -1.90735e-06 ), Vector2( 39.0003, 4 ), Vector2( 34.6002, 8 ), Vector2( 30.2002, 14 ), Vector2( 21.4002, 20 ) ]
+"values": [ Vector2( 0, -33.166 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("origin/bacia/perna_1/pe_1:position")
+tracks/2/path = NodePath("origin/bacia/perna_1/pe_1/ponta_pe_1:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -1230,46 +1254,46 @@ tracks/2/keys = {
 "times": PoolRealArray( 0, 0.1, 0.4, 0.5, 0.6, 0.9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -37.0003, 12 ), Vector2( -27.2502, 16.5 ), Vector2( 2.00002, 30 ), Vector2( -11.0001, 37 ), Vector2( -16.2001, 33 ), Vector2( -31.8002, 21 ) ]
+"values": [ Vector2( 6.00004, 5 ), Vector2( 6.20004, 4.5 ), Vector2( 6.80005, 4 ), Vector2( 7.00005, 2.38419e-07 ), Vector2( 6.80005, 1.78814e-07 ), Vector2( 6.20004, 0 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("origin/bacia/tronco/clavícula/braco_1:position")
+tracks/3/path = NodePath("origin/bacia/perna_2/pe_2/ponta_pe_2:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.4, 0.5, 0.6, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 15.0001, 22 ), Vector2( 15.0001, 22 ) ]
+"values": [ Vector2( 7.00005, 0 ), Vector2( 7.05005, 0 ), Vector2( 7.20005, 0 ), Vector2( 6.00004, 5 ), Vector2( 3.75002, 6.25 ), Vector2( 5.00003, 6 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("origin/bacia/tronco:position")
+tracks/4/path = NodePath("origin/bacia/perna_2:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.4, 0.5, 0.6, 0.7, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 4.00003, -22 ), Vector2( 4.00003, -22 ) ]
+"values": [ Vector2( 39.0003, 4 ), Vector2( 34.6003, 8.8 ), Vector2( 21.4002, 22.2 ), Vector2( 17.0001, 28 ), Vector2( 28.5002, 19.75 ), Vector2( 32.0002, 15.1667 ), Vector2( 39.0003, 9.53674e-07 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("origin/bacia/tronco/clavícula/cabeca:position")
+tracks/5/path = NodePath("origin/bacia/perna_2/pe_2:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.4, 0.5, 0.6, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 5.00004, -13 ), Vector2( 5.00004, -13 ) ]
+"values": [ Vector2( -11.0001, 37 ), Vector2( -16.4001, 32.2 ), Vector2( -32.6002, 18.8 ), Vector2( -38.0003, 8 ), Vector2( -36.7503, 10.5 ), Vector2( 3.00001, 30 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("origin/bacia/tronco/clavícula/braco_2:position")
+tracks/6/path = NodePath("origin/bacia/tronco/clavícula:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -1278,10 +1302,10 @@ tracks/6/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -24.0002, 12 ), Vector2( -24.0002, 12 ) ]
+"values": [ Vector2( 10.0001, -17 ), Vector2( 10.0001, -17 ) ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("origin/bacia/tronco/clavícula/braco_2/mao_2:position")
+tracks/7/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:position")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -1290,10 +1314,10 @@ tracks/7/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, -26 ), Vector2( 0, -26 ) ]
+"values": [ Vector2( 24.0001, -15.9999 ), Vector2( 24.0001, -15.9999 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:position")
+tracks/8/path = NodePath("origin/bacia/tronco/clavícula/braco_2/mao_2:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -1302,10 +1326,10 @@ tracks/8/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 24.0001, -15.9999 ), Vector2( 24.0001, -15.9999 ) ]
+"values": [ Vector2( 0, -26 ), Vector2( 0, -26 ) ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("origin/bacia/tronco/clavícula:position")
+tracks/9/path = NodePath("origin/bacia/tronco/clavícula/braco_2:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
@@ -1314,46 +1338,46 @@ tracks/9/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 10.0001, -17 ), Vector2( 10.0001, -17 ) ]
+"values": [ Vector2( -24.0002, 12 ), Vector2( -24.0002, 12 ) ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("origin/bacia/perna_2/pe_2:position")
+tracks/10/path = NodePath("origin/bacia/tronco/clavícula/cabeca:position")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/imported = false
 tracks/10/enabled = true
 tracks/10/keys = {
-"times": PoolRealArray( 0, 0.1, 0.4, 0.5, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -11.0001, 37 ), Vector2( -16.4001, 32.2 ), Vector2( -32.6002, 18.8 ), Vector2( -38.0003, 8 ), Vector2( -36.7503, 10.5 ), Vector2( 3.00001, 30 ) ]
+"values": [ Vector2( 5.00004, -13 ), Vector2( 5.00004, -13 ) ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("origin/bacia/perna_2:position")
+tracks/11/path = NodePath("origin/bacia/tronco:position")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/imported = false
 tracks/11/enabled = true
 tracks/11/keys = {
-"times": PoolRealArray( 0, 0.1, 0.4, 0.5, 0.6, 0.7, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 39.0003, 4 ), Vector2( 34.6003, 8.8 ), Vector2( 21.4002, 22.2 ), Vector2( 17.0001, 28 ), Vector2( 28.5002, 19.75 ), Vector2( 32.0002, 15.1667 ), Vector2( 39.0003, 9.53674e-07 ) ]
+"values": [ Vector2( 4.00003, -22 ), Vector2( 4.00003, -22 ) ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("origin/bacia/perna_2/pe_2/ponta_pe_2:position")
+tracks/12/path = NodePath("origin/bacia/tronco/clavícula/braco_1:position")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/imported = false
 tracks/12/enabled = true
 tracks/12/keys = {
-"times": PoolRealArray( 0, 0.1, 0.4, 0.5, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 7.00005, 0 ), Vector2( 7.05005, 0 ), Vector2( 7.20005, 0 ), Vector2( 6.00004, 5 ), Vector2( 3.75002, 6.25 ), Vector2( 5.00003, 6 ) ]
+"values": [ Vector2( 15.0001, 22 ), Vector2( 15.0001, 22 ) ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("origin/bacia/perna_1/pe_1/ponta_pe_1:position")
+tracks/13/path = NodePath("origin/bacia/perna_1/pe_1:position")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
@@ -1362,31 +1386,31 @@ tracks/13/keys = {
 "times": PoolRealArray( 0, 0.1, 0.4, 0.5, 0.6, 0.9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 6.00004, 5 ), Vector2( 6.20004, 4.5 ), Vector2( 6.80005, 4 ), Vector2( 7.00005, 2.38419e-07 ), Vector2( 6.80005, 1.78814e-07 ), Vector2( 6.20004, 0 ) ]
+"values": [ Vector2( -37.0003, 12 ), Vector2( -27.2502, 16.5 ), Vector2( 2.00002, 30 ), Vector2( -11.0001, 37 ), Vector2( -16.2001, 33 ), Vector2( -31.8002, 21 ) ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1/weapon:position")
+tracks/14/path = NodePath("origin/bacia/perna_1:position")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
 tracks/14/enabled = true
 tracks/14/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.1, 0.4, 0.5, 0.6, 0.7, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, -33.166 ) ]
+"values": [ Vector2( 17.0001, 24 ), Vector2( 22.5002, 18.5 ), Vector2( 39.0003, -1.90735e-06 ), Vector2( 39.0003, 4 ), Vector2( 34.6002, 8 ), Vector2( 30.2002, 14 ), Vector2( 21.4002, 20 ) ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:rotation_degrees")
+tracks/15/path = NodePath("origin/bacia:position")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
 tracks/15/enabled = true
 tracks/15/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.2, 0.5, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ -73.2 ]
+"values": [ Vector2( -25.0002, -45 ), Vector2( -25.0002, -47 ), Vector2( -25.0002, -45 ), Vector2( -25.0002, -47 ) ]
 }
 
 [sub_resource type="Animation" id=42]
@@ -1394,207 +1418,6 @@ resource_name = "idle"
 length = 0.5
 loop = true
 step = 0.05
-tracks/0/type = "value"
-tracks/0/path = NodePath("origin/bacia/tronco:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 4.00003, -22 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("origin/bacia/perna_1:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.45 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( -28.0002, 15 ), Vector2( -28.0002, 15 ), Vector2( -28.0002, 12.5 ), Vector2( -28.0002, 12.3333 ), Vector2( -28.0002, 13.6667 ), Vector2( -28.0002, 14.3333 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("origin/bacia/perna_2:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.1, 0.15, 0.3, 0.35, 0.45 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 12.0001, 38 ), Vector2( 8.00007, 38 ), Vector2( 8.82361, 38 ), Vector2( 13.7428, 36.25 ), Vector2( 14.3867, 36 ), Vector2( 13.9094, 36.4 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("origin/bacia/tronco/clavícula/cabeca:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 5.00004, -13 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("origin/bacia/tronco/clavícula/braco_2/mao_2:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( -1.00001, -9 ), Vector2( -1.00001, -7.625 ), Vector2( -1.00001, -9.25 ), Vector2( -1.00001, -9.625 ) ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("origin/bacia/tronco/clavícula/braco_2:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 0, 0.2, 0.25, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 27.0002, 13 ), Vector2( 27.0287, 11.0964 ), Vector2( 27.0287, 10.5964 ), Vector2( 27.0075, 12.3676 ) ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("origin/bacia/perna_1/pe_1/ponta_pe_1:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 3.00002, 7 ) ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("origin/bacia/tronco/clavícula:position")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 10.0001, -17 ) ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:position")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( -18.0001, 19.9999 ) ]
-}
-tracks/9/type = "value"
-tracks/9/path = NodePath("origin/bacia:position")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/keys = {
-"times": PoolRealArray( 0, 0.1, 0.15, 0.3, 0.35, 0.45 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, -79 ), Vector2( 0, -80 ), Vector2( -0.039216, -79.9608 ), Vector2( -0.00735309, -77.3676 ), Vector2( -1.19209e-07, -77 ), Vector2( -9.53674e-08, -77.4 ) ]
-}
-tracks/10/type = "value"
-tracks/10/path = NodePath("origin/bacia/tronco/clavícula/braco_1:position")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( -27.0002, 11 ) ]
-}
-tracks/11/type = "value"
-tracks/11/path = NodePath("origin/bacia/perna_1/pe_1:position")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 18.0001, 15 ), Vector2( 18.0001, 14 ), Vector2( 18.0001, 13.5833 ), Vector2( 18.0001, 12.6667 ), Vector2( 18.0001, 14.75 ) ]
-}
-tracks/12/type = "value"
-tracks/12/path = NodePath("origin/bacia/perna_2/pe_2/ponta_pe_2:position")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 7.00005, 0 ) ]
-}
-tracks/13/type = "value"
-tracks/13/path = NodePath("origin/bacia/perna_2/pe_2:position")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/keys = {
-"times": PoolRealArray( 0, 0.1, 0.15, 0.3, 0.35, 0.45 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( -9.00006, 37 ), Vector2( -5.00003, 38 ), Vector2( -5.78435, 37.9608 ), Vector2( -10.7354, 37.1176 ), Vector2( -11.3867, 37 ), Vector2( -10.9093, 37 ) ]
-}
-tracks/14/type = "value"
-tracks/14/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:rotation_degrees")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ -31.5623 ]
-}
-tracks/15/type = "value"
-tracks/15/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1/weapon:position")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ) ]
-}
-
-[sub_resource type="Animation" id=58]
-resource_name = "jump_contact"
-
-[sub_resource type="Animation" id=59]
-resource_name = "jump_down"
-
-[sub_resource type="Animation" id=60]
-resource_name = "jump_up"
 tracks/0/type = "value"
 tracks/0/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1/weapon:position")
 tracks/0/interp = 1
@@ -1607,500 +1430,101 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Vector2( 0, 0 ) ]
 }
-
-[sub_resource type="Animation" id=44]
-resource_name = "open"
-length = 4.0
-tracks/0/type = "value"
-tracks/0/path = NodePath("origin/bacia/tronco/clavícula/braco_1:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 4 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( -27.0002, 11 ), Vector2( -27.0002, 11 ) ]
-}
 tracks/1/type = "value"
-tracks/1/path = NodePath("origin/bacia:position")
+tracks/1/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 4 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, -79 ), Vector2( 0, -79 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("origin/bacia/tronco/clavícula:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 4 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 10.0001, -17 ), Vector2( 10.0001, -17 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("origin/bacia/tronco/clavícula/braco_2:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0, 4 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 27.0002, 13 ), Vector2( 27.0002, 13 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("origin/bacia/tronco/clavícula/braco_2/mao_2:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0, 4 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( -1.00001, -9 ), Vector2( -1.00001, -9 ) ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("origin/bacia/tronco:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 0, 4 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 4.00003, -22 ), Vector2( 4.00003, -22 ) ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("origin/bacia/tronco/clavícula/cabeca:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PoolRealArray( 0, 4 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 5.00004, -13 ), Vector2( 5.00004, -13 ) ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("origin/bacia/perna_1/pe_1:position")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"times": PoolRealArray( 0, 4 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 18.0001, 15 ), Vector2( 18.0001, 15 ) ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("origin/bacia/perna_2/pe_2/ponta_pe_2:position")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/keys = {
-"times": PoolRealArray( 0, 4 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 7.00005, 0 ), Vector2( 7.00005, 0 ) ]
-}
-tracks/9/type = "value"
-tracks/9/path = NodePath("origin/bacia/perna_1:position")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/keys = {
-"times": PoolRealArray( 0, 4 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( -28.0002, 15 ), Vector2( -28.0002, 15 ) ]
-}
-tracks/10/type = "value"
-tracks/10/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:position")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/keys = {
-"times": PoolRealArray( 0, 4 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( -18.0001, 19.9999 ), Vector2( -18.0001, 19.9999 ) ]
-}
-tracks/11/type = "value"
-tracks/11/path = NodePath("origin/bacia/perna_2:position")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/keys = {
-"times": PoolRealArray( 0, 4 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 12.0001, 38 ), Vector2( 12.0001, 38 ) ]
-}
-tracks/12/type = "value"
-tracks/12/path = NodePath("origin/bacia/perna_1/pe_1/ponta_pe_1:position")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/keys = {
-"times": PoolRealArray( 0, 4 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 3.00002, 7 ), Vector2( 3.00002, 7 ) ]
-}
-tracks/13/type = "value"
-tracks/13/path = NodePath("origin/bacia/perna_2/pe_2:position")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/keys = {
-"times": PoolRealArray( 0, 4 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( -9.00006, 37 ), Vector2( -9.00006, 37 ) ]
-}
-tracks/14/type = "value"
-tracks/14/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:rotation_degrees")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ -31.5623 ]
 }
-
-[sub_resource type="Animation" id=45]
-resource_name = "run"
-length = 0.6
-loop = true
-step = 0.01
-tracks/0/type = "value"
-tracks/0/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:rotation_degrees")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 42.0, 42.0 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("origin/bacia/tronco:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 12.0001, -20 ) ]
-}
 tracks/2/type = "value"
-tracks/2/path = NodePath("origin/bacia/tronco/clavícula:position")
+tracks/2/path = NodePath("origin/bacia/perna_2/pe_2:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.05, 0.2, 0.3, 0.35, 0.5 ),
+"times": PoolRealArray( 0, 0.1, 0.15, 0.3, 0.35, 0.45 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 18.0001, -15 ), Vector2( 18.0001, -15 ), Vector2( 17.0001, -16 ), Vector2( 17.0001, -16 ), Vector2( 17.0001, -16 ), Vector2( 18.0001, -15 ) ]
+"values": [ Vector2( -9.00006, 37 ), Vector2( -5.00003, 38 ), Vector2( -5.78435, 37.9608 ), Vector2( -10.7354, 37.1176 ), Vector2( -11.3867, 37 ), Vector2( -10.9093, 37 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("origin/bacia/tronco/clavícula/braco_2:position")
+tracks/3/path = NodePath("origin/bacia/perna_2/pe_2/ponta_pe_2:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.06, 0.1, 0.15, 0.2, 0.25, 0.3, 0.45 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -9.1334, 28.4274 ), Vector2( -0.386679, 29.4783 ), Vector2( 7.11115, 28.3694 ), Vector2( 9.73338, 26.9833 ), Vector2( 8.60893, 27.4605 ), Vector2( -1.51113, 29.7555 ), Vector2( -7.13339, 28.1417 ), Vector2( -24.0002, 15.3 ) ]
+"values": [ Vector2( 7.00005, 0 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("origin/bacia/tronco/clavícula/cabeca:position")
+tracks/4/path = NodePath("origin/bacia/perna_1/pe_1:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 8.00005, -11 ) ]
+"values": [ Vector2( 18.0001, 15 ), Vector2( 18.0001, 14 ), Vector2( 18.0001, 13.5833 ), Vector2( 18.0001, 12.6667 ), Vector2( 18.0001, 14.75 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("origin/bacia:position")
+tracks/5/path = NodePath("origin/bacia/tronco/clavícula/braco_1:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 0.05, 0.2, 0.3, 0.35, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 1.19209e-07, -79.3 ), Vector2( -1.00001, -77.5 ), Vector2( -1.00001, -82 ), Vector2( 0, -79 ), Vector2( -1.00001, -77.5 ), Vector2( -1.00001, -82 ) ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("origin/bacia/tronco/clavícula/braco_2/mao_2:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PoolRealArray( 0, 0.1, 0.15, 0.2, 0.22, 0.4, 0.42, 0.45, 0.46, 0.48, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 27.1335, 10.8726 ), Vector2( 26.9469, -11.2374 ), Vector2( 26.9335, -12.8166 ), Vector2( 26.3469, -11.505 ), Vector2( 25.5302, -9.67913 ), Vector2( 10.0139, 25.0118 ), Vector2( 9.87783, 25.3161 ), Vector2( 9.3334, 26.5333 ), Vector2( 9.3334, 26.5333 ), Vector2( 9.37295, 26.4985 ), Vector2( 9.49162, 26.3941 ) ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("origin/bacia/tronco/clavícula/braco_1:position")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( -29.0002, 3 ), Vector2( -28.0002, 8.5 ), Vector2( -28.5002, 5 ), Vector2( -29.0002, 3 ), Vector2( -28.0002, 8.5 ), Vector2( -28.5002, 5 ) ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("origin/bacia/perna_1:position")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.26, 0.3, 0.37, 0.45, 0.56 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 9.00006, 38 ), Vector2( 36.0003, 15 ), Vector2( 26.0002, 30 ), Vector2( 16.2001, 36.2 ), Vector2( 12.0001, 38 ), Vector2( -8.00006, 38 ), Vector2( -22.0002, 28.5 ), Vector2( 0.733335, 35.4667 ) ]
-}
-tracks/9/type = "value"
-tracks/9/path = NodePath("origin/bacia/perna_1/pe_1:position")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.26, 0.3, 0.37, 0.45 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( -35.0002, 16 ), Vector2( -14.0001, 29 ), Vector2( 13.0001, 36 ), Vector2( 5.70005, 38.5 ), Vector2( -12.0001, 37 ), Vector2( -21.0001, 32 ), Vector2( -38.0003, 5 ) ]
-}
-tracks/10/type = "value"
-tracks/10/path = NodePath("origin/bacia/perna_1/pe_1/ponta_pe_1:position")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.26, 0.3, 0.37, 0.45 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( -2.00002, 6 ), Vector2( 3.00002, 6 ), Vector2( 7.00005, 0 ), Vector2( 6.40004, 0.199999 ), Vector2( 7.00005, 0 ), Vector2( 6.00004, 4 ), Vector2( -3.50002, 7 ) ]
-}
-tracks/11/type = "value"
-tracks/11/path = NodePath("origin/bacia/perna_2/pe_2:position")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/keys = {
-"times": PoolRealArray( 0, 0.07, 0.15, 0.3, 0.4, 0.5, 0.56 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( -11.0001, 37 ), Vector2( -21.0001, 32 ), Vector2( -38.5003, 4.5 ), Vector2( -32.0002, 8 ), Vector2( -14.0001, 29 ), Vector2( 13.0001, 36 ), Vector2( 4.60003, 38.6 ) ]
-}
-tracks/12/type = "value"
-tracks/12/path = NodePath("origin/bacia/perna_2/pe_2/ponta_pe_2:position")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/keys = {
-"times": PoolRealArray( 0, 0.07, 0.15, 0.3, 0.4, 0.5, 0.56 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 7.00005, 0 ), Vector2( 6.00004, 4 ), Vector2( -4.50003, 6 ), Vector2( -3.00002, 6 ), Vector2( 3.00002, 6 ), Vector2( 7.00004, 0 ), Vector2( 7.00005, 0 ) ]
-}
-tracks/13/type = "value"
-tracks/13/path = NodePath("origin/bacia/perna_2:position")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/keys = {
-"times": PoolRealArray( 0, 0.07, 0.15, 0.26, 0.3, 0.4, 0.5, 0.56 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 11.0001, 38.3 ), Vector2( -8.00006, 38 ), Vector2( -22.5002, 29 ), Vector2( 5.10003, 36.2 ), Vector2( 12.0001, 38 ), Vector2( 36.0003, 15 ), Vector2( 26.0002, 30 ), Vector2( 17.0001, 35.98 ) ]
-}
-tracks/14/type = "value"
-tracks/14/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:position")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( -28.0001, 9.00004 ), Vector2( -25.0002, 16 ), Vector2( -26.8335, 12.2222 ), Vector2( -28.0001, 9.00004 ), Vector2( -25.0002, 16 ), Vector2( -26.8335, 12.2222 ) ]
-}
-tracks/15/type = "value"
-tracks/15/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1/weapon:position")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ) ]
-}
-
-[sub_resource type="Animation" id=46]
-resource_name = "run_stop"
-length = 0.2
-step = 0.01
-tracks/0/type = "value"
-tracks/0/path = NodePath("origin/bacia/tronco:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 12.0001, -20 ), Vector2( 12.0001, -20 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("origin/bacia/tronco/clavícula:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 17.0001, -16 ), Vector2( 17.0001, -16 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("origin/bacia/tronco/clavícula/braco_2:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( -14.1334, 22.4667 ), Vector2( -14.0001, 26 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("origin/bacia/tronco/clavícula/cabeca:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 8.00005, -10.4 ), Vector2( 8.00005, -10 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("origin/bacia:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( -0.600004, -76.12 ), Vector2( -1.00001, -74 ) ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("origin/bacia/tronco/clavícula/braco_2/mao_2:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 10.7334, 18.4667 ), Vector2( 5.00003, 25 ) ]
+"values": [ Vector2( -27.0002, 11 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("origin/bacia/tronco/clavícula/braco_1:position")
+tracks/6/path = NodePath("origin/bacia:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.15, 0.3, 0.35, 0.45 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -29.0002, 3 ), Vector2( -29.0002, 3 ) ]
+"values": [ Vector2( 0, -79 ), Vector2( 0, -80 ), Vector2( -0.039216, -79.9608 ), Vector2( -0.00735309, -77.3676 ), Vector2( -1.19209e-07, -77 ), Vector2( -9.53674e-08, -77.4 ) ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("origin/bacia/perna_1:position")
+tracks/7/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:position")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 3.00002, 38.6 ), Vector2( -1.00001, 39 ) ]
+"values": [ Vector2( -18.0001, 19.9999 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("origin/bacia/perna_1/pe_1:position")
+tracks/8/path = NodePath("origin/bacia/tronco/clavícula:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -24.8002, 22 ), Vector2( -18.0001, 26 ) ]
+"values": [ Vector2( 10.0001, -17 ) ]
 }
 tracks/9/type = "value"
 tracks/9/path = NodePath("origin/bacia/perna_1/pe_1/ponta_pe_1:position")
@@ -2109,70 +1533,635 @@ tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0.400002, 5.4 ), Vector2( 2.00001, 5 ) ]
+"values": [ Vector2( 3.00002, 7 ) ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("origin/bacia/perna_2/pe_2:position")
+tracks/10/path = NodePath("origin/bacia/tronco/clavícula/braco_2:position")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/imported = false
 tracks/10/enabled = true
 tracks/10/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.25, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -13.4001, 35.8 ), Vector2( -15.0001, 35 ) ]
+"values": [ Vector2( 27.0002, 13 ), Vector2( 27.0287, 11.0964 ), Vector2( 27.0287, 10.5964 ), Vector2( 27.0075, 12.3676 ) ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("origin/bacia/perna_2/pe_2/ponta_pe_2:position")
+tracks/11/path = NodePath("origin/bacia/tronco/clavícula/braco_2/mao_2:position")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/imported = false
 tracks/11/enabled = true
 tracks/11/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 7.00005, 0 ), Vector2( 7.00005, 0 ) ]
+"values": [ Vector2( -1.00001, -9 ), Vector2( -1.00001, -7.625 ), Vector2( -1.00001, -9.25 ), Vector2( -1.00001, -9.625 ) ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("origin/bacia/perna_2:position")
+tracks/12/path = NodePath("origin/bacia/tronco/clavícula/cabeca:position")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/imported = false
 tracks/12/enabled = true
 tracks/12/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 15.8001, 36.32 ), Vector2( 19.0001, 35 ) ]
+"values": [ Vector2( 5.00004, -13 ) ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:position")
+tracks/13/path = NodePath("origin/bacia/perna_2:position")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
 tracks/13/enabled = true
 tracks/13/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.15, 0.3, 0.35, 0.45 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -20.2001, 18.6 ), Vector2( -15.0001, 25 ) ]
+"values": [ Vector2( 12.0001, 38 ), Vector2( 8.00007, 38 ), Vector2( 8.82361, 38 ), Vector2( 13.7428, 36.25 ), Vector2( 14.3867, 36 ), Vector2( 13.9094, 36.4 ) ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:rotation_degrees")
+tracks/14/path = NodePath("origin/bacia/perna_1:position")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
 tracks/14/enabled = true
 tracks/14/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.45 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 42.0, 16.8 ]
+"values": [ Vector2( -28.0002, 15 ), Vector2( -28.0002, 15 ), Vector2( -28.0002, 12.5 ), Vector2( -28.0002, 12.3333 ), Vector2( -28.0002, 13.6667 ), Vector2( -28.0002, 14.3333 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("origin/bacia/tronco:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 4.00003, -22 ) ]
+}
+
+[sub_resource type="Animation" id=58]
+resource_name = "jump_contact"
+length = 0.1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -88.3 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("origin/bacia/perna_2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 11.0144, 14.5482 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("origin/bacia/perna_2/pe_2/ponta_pe_2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 4.00003, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 11.0002, 25.0001 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("origin/bacia/tronco/clavícula/braco_2/mao_2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -10.0001, 26 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("origin/bacia/tronco/clavícula/braco_1:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -0.985743, 28.5482 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("origin/bacia/perna_1:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 39.0146, 1.54819 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("origin/bacia/perna_2/pe_2:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -10.0001, 23 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("origin/bacia/perna_1/pe_1/ponta_pe_1:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 7, 0 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("origin/bacia/perna_1/pe_1:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -10.0001, 36 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("origin/bacia/tronco/clavícula/braco_2:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -25.9859, 10.5482 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("origin/bacia/tronco/clavícula/cabeca:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5.00004, -13 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("origin/bacia/tronco/clavícula:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 16.0001, -17 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("origin/bacia/tronco:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 7.00005, -22 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("origin/bacia:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -0.0142975, -41.5482 ) ]
+}
+
+[sub_resource type="Animation" id=59]
+resource_name = "jump_down"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -71.8 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("origin/bacia/perna_2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 9.00006, 38 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("origin/bacia/perna_2/pe_2/ponta_pe_2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 3.14713e-05, 7 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 22.0001, 20 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("origin/bacia/tronco/clavícula/braco_2/mao_2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 24.0002, 5 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("origin/bacia/tronco/clavícula/braco_1:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 12 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("origin/bacia/perna_1:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 30.0002, 26 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("origin/bacia/perna_2/pe_2:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -13.0001, 36 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("origin/bacia/perna_1/pe_1/ponta_pe_1:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5.00004, 6 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("origin/bacia/perna_1/pe_1:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -9.00007, 32 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("origin/bacia/tronco/clavícula/braco_2:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -23.0002, 6 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("origin/bacia/tronco/clavícula/cabeca:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5.00004, -13 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("origin/bacia/tronco/clavícula:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 10.0001, -17 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("origin/bacia/tronco:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 4.00003, -22 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("origin/bacia:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -85 ) ]
+}
+
+[sub_resource type="Animation" id=60]
+resource_name = "jump_up"
+length = 0.15
+tracks/0/type = "value"
+tracks/0/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 24.8034 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("origin/bacia/perna_2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -11.0001, 38 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("origin/bacia/perna_2/pe_2/ponta_pe_2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 3.14713e-05, 7 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -18.0001, 19.9999 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("origin/bacia/tronco/clavícula/braco_2/mao_2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 23.0002, 11 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("origin/bacia/tronco/clavícula/braco_1:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -27.0002, 12.5 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("origin/bacia/perna_1:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 30.0002, 26 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("origin/bacia/perna_2/pe_2:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -13.0001, 36 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("origin/bacia/perna_1/pe_1/ponta_pe_1:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -4.76837e-07, 7 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("origin/bacia/perna_1/pe_1:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -30.0002, 24 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("origin/bacia/tronco/clavícula/braco_2:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -20.0002, 20 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("origin/bacia/tronco/clavícula/cabeca:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5.00004, -13 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("origin/bacia/tronco/clavícula:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 10.0001, -17 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("origin/bacia/tronco:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 4.00003, -22 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("origin/bacia:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -80 ) ]
 }
 tracks/15/type = "value"
 tracks/15/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1/weapon:position")
@@ -2185,6 +2174,610 @@ tracks/15/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=44]
+resource_name = "open"
+length = 4.0
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1/weapon:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2.5, 2.6, 2.8, 2.85, 2.95, 3.1, 3.25, 3.4 ),
+"transitions": PoolRealArray( 1, 2, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 2.2, 0.0, 2.2, 0.0, -4.9, -10.3, -11.2369, 0.0, 0.0, -15.95, -31.9 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1/weapon:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2.5, 2.6, 2.8, 2.85, 2.95, 3.1, 3.25, 3.4 ),
+"transitions": PoolRealArray( 1, 2, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 38.0002, 203 ), Vector2( 38.0002, 203 ), Vector2( 38.0002, 203 ), Vector2( 38.0002, 203 ), Vector2( 38.0002, 203 ), Vector2( 30.418, 123.576 ), Vector2( 14.0001, 54 ), Vector2( 12.3334, 41.3334 ), Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2.5, 2.6, 2.8, 2.95, 3.1, 3.25, 3.4 ),
+"transitions": PoolRealArray( 1, 2, 2, 1, 2, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("origin/bacia/perna_2/pe_2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2.5, 2.6, 2.8, 2.95, 3.1, 3.25, 3.4 ),
+"transitions": PoolRealArray( 1, 2, 2, 1, 2, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -9.00006, 37 ), Vector2( -9.00006, 37 ), Vector2( -9.00006, 37 ), Vector2( -9.00006, 37 ), Vector2( -9.00006, 37 ), Vector2( 3.00002, 38 ), Vector2( 7.50004, 38 ), Vector2( -24.0002, 30 ), Vector2( -22.7502, 30.5833 ), Vector2( -15.8751, 33.7917 ), Vector2( -9.00006, 37 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("origin/bacia/perna_1/pe_1/ponta_pe_1:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2.5, 2.6, 2.8, 2.95, 3.1, 3.25, 3.4 ),
+"transitions": PoolRealArray( 1, 2, 2, 1, 2, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 3.00002, 7 ), Vector2( 3.00002, 7 ), Vector2( 3.00002, 7 ), Vector2( 3.00002, 7 ), Vector2( 3.00002, 7 ), Vector2( -2.00001, 7 ), Vector2( 0.500003, 7 ), Vector2( -2.00002, 5 ), Vector2( -1.58335, 5.16667 ), Vector2( 0.708334, 6.08333 ), Vector2( 3.00002, 7 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("origin/bacia/perna_2:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2.5, 2.6, 2.8, 2.95, 3.1, 3.25, 3.4 ),
+"transitions": PoolRealArray( 1, 2, 2, 1, 2, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 12.0001, 38 ), Vector2( 12.0001, 38 ), Vector2( 12.0001, 38 ), Vector2( 12.0001, 38 ), Vector2( 12.0001, 38 ), Vector2( 18.5557, 29.7778 ), Vector2( 15.2779, 36.8889 ), Vector2( 25.0002, 30 ), Vector2( 23.9168, 30.6667 ), Vector2( 17.9585, 34.3333 ), Vector2( 12.0001, 38 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2.5, 2.6, 2.8, 2.95, 3.1, 3.25, 3.4 ),
+"transitions": PoolRealArray( 1, 2, 2, 1, 2, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -10.0001, -11 ), Vector2( -10.0001, -11 ), Vector2( -10.0001, -11 ), Vector2( -10.0001, -11 ), Vector2( -10.0001, -11 ), Vector2( -6.00004, 26 ), Vector2( -14.0001, 26 ), Vector2( -24.0002, 4 ), Vector2( -23.5002, 5.33332 ), Vector2( -20.7501, 12.6666 ), Vector2( -18.0001, 19.9999 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("origin/bacia/perna_1:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2.5, 2.6, 2.8, 2.95, 3.1, 3.25, 3.4 ),
+"transitions": PoolRealArray( 1, 2, 2, 1, 2, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -28.0002, 15 ), Vector2( -28.0002, 15 ), Vector2( -28.0002, 15 ), Vector2( -28.0002, 15 ), Vector2( -28.0002, 15 ), Vector2( -22.4446, 29.7778 ), Vector2( -11.2223, 35.8889 ), Vector2( -12.0001, 16 ), Vector2( -13.3334, 15.9167 ), Vector2( -20.6668, 15.4583 ), Vector2( -28.0002, 15 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("origin/bacia/perna_2/pe_2/ponta_pe_2:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2.5, 2.6, 2.8, 2.95, 3.1, 3.25, 3.4 ),
+"transitions": PoolRealArray( 1, 2, 2, 1, 2, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 7.00005, 0 ), Vector2( 7.00005, 0 ), Vector2( 7.00005, 0 ), Vector2( 7.00005, 0 ), Vector2( 7.00005, 0 ), Vector2( 7.00005, 0 ), Vector2( 7.00005, 0 ), Vector2( 7.00005, 0 ), Vector2( 7.00005, 0 ), Vector2( 7.00005, 0 ), Vector2( 7.00005, 0 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("origin/bacia/perna_1/pe_1:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2.5, 2.6, 2.8, 2.95, 3.1, 3.25, 3.4 ),
+"transitions": PoolRealArray( 1, 2, 2, 1, 2, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 18.0001, 15 ), Vector2( 18.0001, 15 ), Vector2( 18.0001, 15 ), Vector2( 18.0001, 15 ), Vector2( 18.0001, 15 ), Vector2( 22.0002, 22 ), Vector2( 8.00005, 11 ), Vector2( 1.00001, 25 ), Vector2( 2.41668, 24.1667 ), Vector2( 10.2084, 19.5833 ), Vector2( 18.0001, 15 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("origin/bacia/tronco/clavícula/cabeca:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2.5, 2.6, 2.8, 2.95, 3.1, 3.25, 3.4 ),
+"transitions": PoolRealArray( 1, 2, 2, 1, 2, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 5.36442e-06, -15 ), Vector2( 5.36442e-06, -15 ), Vector2( 5.36442e-06, -15 ), Vector2( 5.36442e-06, -15 ), Vector2( 5.36442e-06, -15 ), Vector2( 0.555565, -14.7778 ), Vector2( 2.7778, -13.8889 ), Vector2( 5.00004, -13 ), Vector2( 5.00004, -13 ), Vector2( 5.00004, -13 ), Vector2( 5.00004, -13 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("origin/bacia/tronco:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2.5, 2.6, 2.8, 2.95, 3.1, 3.25, 3.4 ),
+"transitions": PoolRealArray( 1, 2, 2, 1, 2, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -23 ), Vector2( -3.00002, -23 ), Vector2( 0, -23 ), Vector2( -3.00002, -23 ), Vector2( 0, -23 ), Vector2( -3.44447, -15.2222 ), Vector2( 0.277781, -18.6111 ), Vector2( 6.00004, -18 ), Vector2( 5.83337, -18.3333 ), Vector2( 4.9167, -20.1667 ), Vector2( 4.00003, -22 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("origin/bacia/tronco/clavícula/braco_2/mao_2:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2.5, 2.6, 2.8, 2.95, 3.1, 3.25, 3.4 ),
+"transitions": PoolRealArray( 1, 2, 2, 1, 2, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 14.0001, -8 ), Vector2( 14.0001, -8 ), Vector2( 14.0001, -8 ), Vector2( 14.0001, -8 ), Vector2( 14.0001, -8 ), Vector2( 16.0001, 3.8147e-06 ), Vector2( 8.50004, 4.5 ), Vector2( 12, 2 ), Vector2( 10.9167, 1.08333 ), Vector2( 4.95835, -3.95833 ), Vector2( -1.00001, -9 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("origin/bacia/tronco/clavícula/braco_2:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2.5, 2.6, 2.8, 2.95, 3.1, 3.25, 3.4 ),
+"transitions": PoolRealArray( 1, 2, 2, 1, 2, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 22.0002, 10 ), Vector2( 22.0002, 10 ), Vector2( 22.0002, 10 ), Vector2( 22.0002, 10 ), Vector2( 22.0002, 10 ), Vector2( 21.0001, -12 ), Vector2( 17.5001, -0.999997 ), Vector2( 27.0002, 13 ), Vector2( 27.0002, 13 ), Vector2( 27.0002, 13 ), Vector2( 27.0002, 13 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("origin/bacia/tronco/clavícula:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2.5, 2.6, 2.8, 2.95, 3.1, 3.25, 3.4 ),
+"transitions": PoolRealArray( 1, 2, 2, 1, 2, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1.3113e-06, -23 ), Vector2( -1.00001, -23 ), Vector2( -1.3113e-06, -23 ), Vector2( -1.00001, -23 ), Vector2( -1.3113e-06, -23 ), Vector2( -10.0001, -14 ), Vector2( 1.52588e-05, -15.5 ), Vector2( 12.0001, -12 ), Vector2( 11.8334, -12.4167 ), Vector2( 10.9168, -14.7083 ), Vector2( 10.0001, -17 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("origin/bacia:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2.5, 2.6, 2.8, 2.95, 3.1, 3.25, 3.4 ),
+"transitions": PoolRealArray( 1, 2, 2, 1, 2, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -4.00003, -243 ), Vector2( 3.00002, -243 ), Vector2( -4.00003, -243 ), Vector2( 3.00002, -243 ), Vector2( -4.00003, -243 ), Vector2( -3.55558, -224.778 ), Vector2( -1.77779, -151.889 ), Vector2( -1.00001, -65 ), Vector2( -0.916673, -66.1667 ), Vector2( -0.458337, -72.5833 ), Vector2( 0, -79 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("origin/bacia/tronco/clavícula/braco_1:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2.5, 2.6, 2.8, 2.95, 3.1, 3.25, 3.4 ),
+"transitions": PoolRealArray( 1, 2, 2, 1, 2, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -24.0002, 15 ), Vector2( -24.0002, 15 ), Vector2( -24.0002, 15 ), Vector2( -24.0002, 15 ), Vector2( -24.0002, 15 ), Vector2( -15.1112, 24.3333 ), Vector2( -13.5001, 26 ), Vector2( -26.0002, -8 ), Vector2( -26.0835, -6.41667 ), Vector2( -26.5419, 2.29167 ), Vector2( -27.0002, 11 ) ]
+}
+
+[sub_resource type="Animation" id=45]
+resource_name = "run"
+length = 0.6
+loop = true
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1/weapon:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -28.0001, 9.00004 ), Vector2( -25.0002, 16 ), Vector2( -26.8335, 12.2222 ), Vector2( -28.0001, 9.00004 ), Vector2( -25.0002, 16 ), Vector2( -26.8335, 12.2222 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("origin/bacia/perna_2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.07, 0.15, 0.26, 0.3, 0.4, 0.5, 0.56 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 11.0001, 38.3 ), Vector2( -8.00006, 38 ), Vector2( -22.5002, 29 ), Vector2( 5.10003, 36.2 ), Vector2( 12.0001, 38 ), Vector2( 36.0003, 15 ), Vector2( 26.0002, 30 ), Vector2( 17.0001, 35.98 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("origin/bacia/perna_2/pe_2/ponta_pe_2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.07, 0.15, 0.3, 0.4, 0.5, 0.56 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 7.00005, 0 ), Vector2( 6.00004, 4 ), Vector2( -4.50003, 6 ), Vector2( -3.00002, 6 ), Vector2( 3.00002, 6 ), Vector2( 7.00004, 0 ), Vector2( 7.00005, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("origin/bacia/perna_2/pe_2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.07, 0.15, 0.3, 0.4, 0.5, 0.56 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -11.0001, 37 ), Vector2( -21.0001, 32 ), Vector2( -38.5003, 4.5 ), Vector2( -32.0002, 8 ), Vector2( -14.0001, 29 ), Vector2( 13.0001, 36 ), Vector2( 4.60003, 38.6 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("origin/bacia/perna_1/pe_1/ponta_pe_1:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.26, 0.3, 0.37, 0.45 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -2.00002, 6 ), Vector2( 3.00002, 6 ), Vector2( 7.00005, 0 ), Vector2( 6.40004, 0.199999 ), Vector2( 7.00005, 0 ), Vector2( 6.00004, 4 ), Vector2( -3.50002, 7 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("origin/bacia/perna_1/pe_1:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.26, 0.3, 0.37, 0.45 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -35.0002, 16 ), Vector2( -14.0001, 29 ), Vector2( 13.0001, 36 ), Vector2( 5.70005, 38.5 ), Vector2( -12.0001, 37 ), Vector2( -21.0001, 32 ), Vector2( -38.0003, 5 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("origin/bacia/perna_1:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.26, 0.3, 0.37, 0.45, 0.56 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 9.00006, 38 ), Vector2( 36.0003, 15 ), Vector2( 26.0002, 30 ), Vector2( 16.2001, 36.2 ), Vector2( 12.0001, 38 ), Vector2( -8.00006, 38 ), Vector2( -22.0002, 28.5 ), Vector2( 0.733335, 35.4667 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("origin/bacia/tronco/clavícula/braco_1:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -29.0002, 3 ), Vector2( -28.0002, 8.5 ), Vector2( -28.5002, 5 ), Vector2( -29.0002, 3 ), Vector2( -28.0002, 8.5 ), Vector2( -28.5002, 5 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("origin/bacia/tronco/clavícula/braco_2/mao_2:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 0.1, 0.15, 0.2, 0.22, 0.4, 0.42, 0.45, 0.46, 0.48, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 27.1335, 10.8726 ), Vector2( 26.9469, -11.2374 ), Vector2( 26.9335, -12.8166 ), Vector2( 26.3469, -11.505 ), Vector2( 25.5302, -9.67913 ), Vector2( 10.0139, 25.0118 ), Vector2( 9.87783, 25.3161 ), Vector2( 9.3334, 26.5333 ), Vector2( 9.3334, 26.5333 ), Vector2( 9.37295, 26.4985 ), Vector2( 9.49162, 26.3941 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("origin/bacia:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.05, 0.2, 0.3, 0.35, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1.19209e-07, -79.3 ), Vector2( -1.00001, -77.5 ), Vector2( -1.00001, -82 ), Vector2( 0, -79 ), Vector2( -1.00001, -77.5 ), Vector2( -1.00001, -82 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("origin/bacia/tronco/clavícula/cabeca:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 8.00005, -11 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("origin/bacia/tronco/clavícula/braco_2:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 0.06, 0.1, 0.15, 0.2, 0.25, 0.3, 0.45 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -9.1334, 28.4274 ), Vector2( -0.386679, 29.4783 ), Vector2( 7.11115, 28.3694 ), Vector2( 9.73338, 26.9833 ), Vector2( 8.60893, 27.4605 ), Vector2( -1.51113, 29.7555 ), Vector2( -7.13339, 28.1417 ), Vector2( -24.0002, 15.3 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("origin/bacia/tronco/clavícula:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 0.05, 0.2, 0.3, 0.35, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 18.0001, -15 ), Vector2( 18.0001, -15 ), Vector2( 17.0001, -16 ), Vector2( 17.0001, -16 ), Vector2( 17.0001, -16 ), Vector2( 18.0001, -15 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("origin/bacia/tronco:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 12.0001, -20 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:rotation_degrees")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 42.0, 42.0 ]
+}
+
+[sub_resource type="Animation" id=46]
+resource_name = "run_stop"
+length = 0.2
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1/weapon:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 42.0, 16.8 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -20.2001, 18.6 ), Vector2( -15.0001, 25 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("origin/bacia/perna_2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 15.8001, 36.32 ), Vector2( 19.0001, 35 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("origin/bacia/perna_2/pe_2/ponta_pe_2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 7.00005, 0 ), Vector2( 7.00005, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("origin/bacia/perna_2/pe_2:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -13.4001, 35.8 ), Vector2( -15.0001, 35 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("origin/bacia/perna_1/pe_1/ponta_pe_1:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.400002, 5.4 ), Vector2( 2.00001, 5 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("origin/bacia/perna_1/pe_1:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -24.8002, 22 ), Vector2( -18.0001, 26 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("origin/bacia/perna_1:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 3.00002, 38.6 ), Vector2( -1.00001, 39 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("origin/bacia/tronco/clavícula/braco_1:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -29.0002, 3 ), Vector2( -29.0002, 3 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("origin/bacia/tronco/clavícula/braco_2/mao_2:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 10.7334, 18.4667 ), Vector2( 5.00003, 25 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("origin/bacia:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -0.600004, -76.12 ), Vector2( -1.00001, -74 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("origin/bacia/tronco/clavícula/cabeca:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 8.00005, -10.4 ), Vector2( 8.00005, -10 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("origin/bacia/tronco/clavícula/braco_2:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -14.1334, 22.4667 ), Vector2( -14.0001, 26 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("origin/bacia/tronco/clavícula:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 17.0001, -16 ), Vector2( 17.0001, -16 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("origin/bacia/tronco:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 12.0001, -20 ), Vector2( 12.0001, -20 ) ]
 }
 
 [sub_resource type="Animation" id=48]
@@ -2192,7 +2785,7 @@ resource_name = "slide"
 length = 0.1
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("origin/bacia/tronco/clavícula/braco_2:position")
+tracks/0/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1/weapon:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -2201,10 +2794,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -1.00001, 28 ) ]
+"values": [ Vector2( 0, 0 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("origin/bacia/tronco/clavícula/braco_2/mao_2:position")
+tracks/1/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -2213,10 +2806,10 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 17.0001, 9 ) ]
+"values": [ -90.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("origin/bacia:position")
+tracks/2/path = NodePath("origin/bacia/perna_1/pe_1:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -2225,10 +2818,10 @@ tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0, -4 ) ]
+"values": [ Vector2( 33.0002, 17 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("origin/bacia/tronco/clavícula:position")
+tracks/3/path = NodePath("origin/bacia/tronco/clavícula/braco_1:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -2237,10 +2830,10 @@ tracks/3/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -11.0001, -21 ) ]
+"values": [ Vector2( -14.0001, 19 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("origin/bacia/tronco:position")
+tracks/4/path = NodePath("origin/bacia/perna_1/pe_1/ponta_pe_1:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -2249,10 +2842,10 @@ tracks/4/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -17.0001, -16 ) ]
+"values": [ Vector2( 7.00007, 0 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("origin/bacia/tronco/clavícula/cabeca:position")
+tracks/5/path = NodePath("origin/bacia/perna_2/pe_2/ponta_pe_2:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -2261,10 +2854,10 @@ tracks/5/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 5.00004, -13 ) ]
+"values": [ Vector2( 7.00005, 0 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:position")
+tracks/6/path = NodePath("origin/bacia/perna_2/pe_2:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -2273,10 +2866,10 @@ tracks/6/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 4.00006, 19 ) ]
+"values": [ Vector2( 38.0003, 4 ) ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("origin/bacia/perna_1:position")
+tracks/7/path = NodePath("origin/bacia/perna_2:position")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -2285,10 +2878,10 @@ tracks/7/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 36.0003, -17 ) ]
+"values": [ Vector2( 39.0003, -4 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("origin/bacia/perna_2:position")
+tracks/8/path = NodePath("origin/bacia/perna_1:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -2297,10 +2890,10 @@ tracks/8/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 39.0003, -4 ) ]
+"values": [ Vector2( 36.0003, -17 ) ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("origin/bacia/perna_2/pe_2:position")
+tracks/9/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
@@ -2309,10 +2902,10 @@ tracks/9/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 38.0003, 4 ) ]
+"values": [ Vector2( 4.00006, 19 ) ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("origin/bacia/perna_2/pe_2/ponta_pe_2:position")
+tracks/10/path = NodePath("origin/bacia/tronco/clavícula/cabeca:position")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/imported = false
@@ -2321,10 +2914,10 @@ tracks/10/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 7.00005, 0 ) ]
+"values": [ Vector2( 5.00004, -13 ) ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("origin/bacia/perna_1/pe_1/ponta_pe_1:position")
+tracks/11/path = NodePath("origin/bacia/tronco:position")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/imported = false
@@ -2333,10 +2926,10 @@ tracks/11/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 7.00007, 0 ) ]
+"values": [ Vector2( -17.0001, -16 ) ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("origin/bacia/tronco/clavícula/braco_1:position")
+tracks/12/path = NodePath("origin/bacia/tronco/clavícula:position")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/imported = false
@@ -2345,10 +2938,10 @@ tracks/12/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -14.0001, 19 ) ]
+"values": [ Vector2( -11.0001, -21 ) ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("origin/bacia/perna_1/pe_1:position")
+tracks/13/path = NodePath("origin/bacia:position")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
@@ -2357,10 +2950,10 @@ tracks/13/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 33.0002, 17 ) ]
+"values": [ Vector2( 0, -4 ) ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:rotation_degrees")
+tracks/14/path = NodePath("origin/bacia/tronco/clavícula/braco_2/mao_2:position")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
@@ -2369,10 +2962,10 @@ tracks/14/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ -90.0 ]
+"values": [ Vector2( 17.0001, 9 ) ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1/weapon:position")
+tracks/15/path = NodePath("origin/bacia/tronco/clavícula/braco_2:position")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
@@ -2381,7 +2974,7 @@ tracks/15/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ) ]
+"values": [ Vector2( -1.00001, 28 ) ]
 }
 
 [sub_resource type="Animation" id=49]
@@ -2389,31 +2982,31 @@ resource_name = "slide_in"
 length = 0.3
 step = 0.01
 tracks/0/type = "value"
-tracks/0/path = NodePath("origin/bacia/tronco/clavícula/braco_2:position")
+tracks/0/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1/weapon:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.24, 0.3 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 27.0002, 13 ), Vector2( -3.00004, 26.5 ), Vector2( -1.00001, 28 ), Vector2( -1.00001, 29 ), Vector2( -1.00001, 28 ) ]
+"values": [ Vector2( 0, 0 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("origin/bacia/tronco/clavícula/braco_2/mao_2:position")
+tracks/1/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.24, 0.3 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -1.00001, -9 ), Vector2( 18.0001, 21 ), Vector2( 17.0001, 9 ), Vector2( 17.0001, 9 ), Vector2( 17.0001, 9 ) ]
+"values": [ -31.5623, -81.5, -90.0, -90.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("origin/bacia:position")
+tracks/2/path = NodePath("origin/bacia/perna_1/pe_1:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -2422,10 +3015,10 @@ tracks/2/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.24, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, -79 ), Vector2( 0, -41.5 ), Vector2( 0, -4 ), Vector2( 0, -6 ), Vector2( 0, -4 ) ]
+"values": [ Vector2( 18.0001, 15 ), Vector2( 12.0001, 29 ), Vector2( 33.0002, 17 ), Vector2( 33.0002, 17 ), Vector2( 33.0002, 17 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("origin/bacia/tronco/clavícula:position")
+tracks/3/path = NodePath("origin/bacia/tronco/clavícula/braco_1:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -2434,10 +3027,10 @@ tracks/3/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.24, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 10.0001, -17 ), Vector2( -6.50003, -20 ), Vector2( -11.0001, -21 ), Vector2( -11.0001, -20 ), Vector2( -11.0001, -21 ) ]
+"values": [ Vector2( -27.0002, 11 ), Vector2( -16.5001, 25 ), Vector2( -14.0001, 19 ), Vector2( -14.0001, 20 ), Vector2( -14.0001, 19 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("origin/bacia/tronco:position")
+tracks/4/path = NodePath("origin/bacia/perna_1/pe_1/ponta_pe_1:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -2446,10 +3039,10 @@ tracks/4/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.24, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 4.00003, -22 ), Vector2( -16.5001, -17 ), Vector2( -17.0001, -16 ), Vector2( -17.0001, -16 ), Vector2( -17.0001, -16 ) ]
+"values": [ Vector2( 3.00002, 7 ), Vector2( 5.00005, 3.5 ), Vector2( 7.00007, 0 ), Vector2( 7.00007, 0 ), Vector2( 7.00007, 0 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("origin/bacia/tronco/clavícula/cabeca:position")
+tracks/5/path = NodePath("origin/bacia/perna_2/pe_2/ponta_pe_2:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -2458,10 +3051,10 @@ tracks/5/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.24, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 5.00004, -13 ), Vector2( 5.00004, -13 ), Vector2( 5.00004, -13 ), Vector2( 5.00004, -13 ), Vector2( 5.00004, -13 ) ]
+"values": [ Vector2( 7.00005, 0 ), Vector2( 7.00005, 0 ), Vector2( 7.00005, 0 ), Vector2( 7.00005, 0 ), Vector2( 7.00005, 0 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:position")
+tracks/6/path = NodePath("origin/bacia/perna_2/pe_2:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -2470,10 +3063,10 @@ tracks/6/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.24, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -18.0001, 19.9999 ), Vector2( -8.00003, 28.5 ), Vector2( 4.00006, 19 ), Vector2( 4.00006, 18 ), Vector2( 4.00006, 19 ) ]
+"values": [ Vector2( -9.00006, 37 ), Vector2( 28.5002, 20.5 ), Vector2( 38.0003, 4 ), Vector2( 38.0003, 4 ), Vector2( 38.0003, 4 ) ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("origin/bacia/perna_1:position")
+tracks/7/path = NodePath("origin/bacia/perna_2:position")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -2482,10 +3075,10 @@ tracks/7/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.24, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -28.0002, 15 ), Vector2( 39.0003, -6.5 ), Vector2( 36.0003, -17 ), Vector2( 36.0003, -15 ), Vector2( 36.0003, -17 ) ]
+"values": [ Vector2( 12.0001, 38 ), Vector2( 25.5002, 17 ), Vector2( 39.0003, -4 ), Vector2( 39.0003, -2 ), Vector2( 39.0003, -4 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("origin/bacia/perna_2:position")
+tracks/8/path = NodePath("origin/bacia/perna_1:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -2494,10 +3087,10 @@ tracks/8/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.24, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 12.0001, 38 ), Vector2( 25.5002, 17 ), Vector2( 39.0003, -4 ), Vector2( 39.0003, -2 ), Vector2( 39.0003, -4 ) ]
+"values": [ Vector2( -28.0002, 15 ), Vector2( 39.0003, -6.5 ), Vector2( 36.0003, -17 ), Vector2( 36.0003, -15 ), Vector2( 36.0003, -17 ) ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("origin/bacia/perna_2/pe_2:position")
+tracks/9/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
@@ -2506,10 +3099,10 @@ tracks/9/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.24, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -9.00006, 37 ), Vector2( 28.5002, 20.5 ), Vector2( 38.0003, 4 ), Vector2( 38.0003, 4 ), Vector2( 38.0003, 4 ) ]
+"values": [ Vector2( -18.0001, 19.9999 ), Vector2( -8.00003, 28.5 ), Vector2( 4.00006, 19 ), Vector2( 4.00006, 18 ), Vector2( 4.00006, 19 ) ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("origin/bacia/perna_2/pe_2/ponta_pe_2:position")
+tracks/10/path = NodePath("origin/bacia/tronco/clavícula/cabeca:position")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/imported = false
@@ -2518,10 +3111,10 @@ tracks/10/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.24, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 7.00005, 0 ), Vector2( 7.00005, 0 ), Vector2( 7.00005, 0 ), Vector2( 7.00005, 0 ), Vector2( 7.00005, 0 ) ]
+"values": [ Vector2( 5.00004, -13 ), Vector2( 5.00004, -13 ), Vector2( 5.00004, -13 ), Vector2( 5.00004, -13 ), Vector2( 5.00004, -13 ) ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("origin/bacia/perna_1/pe_1/ponta_pe_1:position")
+tracks/11/path = NodePath("origin/bacia/tronco:position")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/imported = false
@@ -2530,10 +3123,10 @@ tracks/11/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.24, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 3.00002, 7 ), Vector2( 5.00005, 3.5 ), Vector2( 7.00007, 0 ), Vector2( 7.00007, 0 ), Vector2( 7.00007, 0 ) ]
+"values": [ Vector2( 4.00003, -22 ), Vector2( -16.5001, -17 ), Vector2( -17.0001, -16 ), Vector2( -17.0001, -16 ), Vector2( -17.0001, -16 ) ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("origin/bacia/tronco/clavícula/braco_1:position")
+tracks/12/path = NodePath("origin/bacia/tronco/clavícula:position")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/imported = false
@@ -2542,10 +3135,10 @@ tracks/12/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.24, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -27.0002, 11 ), Vector2( -16.5001, 25 ), Vector2( -14.0001, 19 ), Vector2( -14.0001, 20 ), Vector2( -14.0001, 19 ) ]
+"values": [ Vector2( 10.0001, -17 ), Vector2( -6.50003, -20 ), Vector2( -11.0001, -21 ), Vector2( -11.0001, -20 ), Vector2( -11.0001, -21 ) ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("origin/bacia/perna_1/pe_1:position")
+tracks/13/path = NodePath("origin/bacia:position")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
@@ -2554,31 +3147,31 @@ tracks/13/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.24, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 18.0001, 15 ), Vector2( 12.0001, 29 ), Vector2( 33.0002, 17 ), Vector2( 33.0002, 17 ), Vector2( 33.0002, 17 ) ]
+"values": [ Vector2( 0, -79 ), Vector2( 0, -41.5 ), Vector2( 0, -4 ), Vector2( 0, -6 ), Vector2( 0, -4 ) ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:rotation_degrees")
+tracks/14/path = NodePath("origin/bacia/tronco/clavícula/braco_2/mao_2:position")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
 tracks/14/enabled = true
 tracks/14/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.24, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ -31.5623, -81.5, -90.0, -90.0 ]
+"values": [ Vector2( -1.00001, -9 ), Vector2( 18.0001, 21 ), Vector2( 17.0001, 9 ), Vector2( 17.0001, 9 ), Vector2( 17.0001, 9 ) ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1/weapon:position")
+tracks/15/path = NodePath("origin/bacia/tronco/clavícula/braco_2:position")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
 tracks/15/enabled = true
 tracks/15/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.24, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ) ]
+"values": [ Vector2( 27.0002, 13 ), Vector2( -3.00004, 26.5 ), Vector2( -1.00001, 28 ), Vector2( -1.00001, 29 ), Vector2( -1.00001, 28 ) ]
 }
 
 [sub_resource type="Animation" id=50]
@@ -2586,43 +3179,43 @@ resource_name = "slide_out"
 length = 0.17
 step = 0.01
 tracks/0/type = "value"
-tracks/0/path = NodePath("origin/bacia/tronco/clavícula/braco_2:position")
+tracks/0/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1/weapon:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.08, 0.16 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -1.00001, 28 ), Vector2( -7.98578, 26.5482 ), Vector2( 27.0287, 11.0964 ) ]
+"values": [ Vector2( 0, 0 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("origin/bacia/tronco/clavícula/braco_2/mao_2:position")
+tracks/1/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.08, 0.16 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.16 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 17.0001, 9 ), Vector2( -3.00002, 29 ), Vector2( -1.00001, -9.25 ) ]
+"values": [ -90.0, -31.5623 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("origin/bacia:position")
+tracks/2/path = NodePath("origin/bacia/perna_1/pe_1:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.16 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.08, 0.12, 0.16 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, -4 ), Vector2( -0.028595, -79.0964 ) ]
+"values": [ Vector2( 33.0002, 17 ), Vector2( 17.0001, 35 ), Vector2( 8.00006, 24 ), Vector2( 18.0001, 13.5833 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("origin/bacia/tronco/clavícula:position")
+tracks/3/path = NodePath("origin/bacia/tronco/clavícula/braco_1:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -2631,106 +3224,106 @@ tracks/3/keys = {
 "times": PoolRealArray( 0, 0.16 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -11.0001, -21 ), Vector2( 10.0001, -17 ) ]
+"values": [ Vector2( -14.0001, 19 ), Vector2( -27.0002, 11 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("origin/bacia/tronco:position")
+tracks/4/path = NodePath("origin/bacia/perna_1/pe_1/ponta_pe_1:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 0.16 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( -17.0001, -16 ), Vector2( 4.00003, -22 ) ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("origin/bacia/tronco/clavícula/cabeca:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 0, 0.16 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 5.00004, -13 ), Vector2( 5.00004, -13 ) ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PoolRealArray( 0, 0.16 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 4.00006, 19 ), Vector2( -18.0001, 19.9999 ) ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("origin/bacia/perna_1:position")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"times": PoolRealArray( 0, 0.08, 0.12, 0.16 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 36.0003, -17 ), Vector2( 39.0146, 1.54819 ), Vector2( -12.9786, 24.3223 ), Vector2( -28.0002, 12.5 ) ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("origin/bacia/perna_2:position")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/keys = {
-"times": PoolRealArray( 0, 0.08, 0.16 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 39.0003, -4 ), Vector2( 23.5594, 15.935 ), Vector2( 10.4633, 37.4167 ) ]
-}
-tracks/9/type = "value"
-tracks/9/path = NodePath("origin/bacia/perna_2/pe_2:position")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/keys = {
-"times": PoolRealArray( 0, 0.08, 0.16 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 38.0003, 4 ), Vector2( -17.7436, 21.368 ), Vector2( -7.4347, 37.6797 ) ]
-}
-tracks/10/type = "value"
-tracks/10/path = NodePath("origin/bacia/perna_2/pe_2/ponta_pe_2:position")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/keys = {
-"times": PoolRealArray( 0, 0.08, 0.16 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 7.00005, 0 ), Vector2( 7.00005, 0 ), Vector2( 7.00005, 0 ) ]
-}
-tracks/11/type = "value"
-tracks/11/path = NodePath("origin/bacia/perna_1/pe_1/ponta_pe_1:position")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/keys = {
 "times": PoolRealArray( 0, 0.08, 0.12, 0.16 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 7.00007, 0 ), Vector2( 7, 0 ), Vector2( -1.00001, 7 ), Vector2( 3.00002, 7 ) ]
 }
+tracks/5/type = "value"
+tracks/5/path = NodePath("origin/bacia/perna_2/pe_2/ponta_pe_2:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.08, 0.16 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 7.00005, 0 ), Vector2( 7.00005, 0 ), Vector2( 7.00005, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("origin/bacia/perna_2/pe_2:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.08, 0.16 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 38.0003, 4 ), Vector2( -17.7436, 21.368 ), Vector2( -7.4347, 37.6797 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("origin/bacia/perna_2:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.08, 0.16 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 39.0003, -4 ), Vector2( 23.5594, 15.935 ), Vector2( 10.4633, 37.4167 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("origin/bacia/perna_1:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.08, 0.12, 0.16 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 36.0003, -17 ), Vector2( 39.0146, 1.54819 ), Vector2( -12.9786, 24.3223 ), Vector2( -28.0002, 12.5 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 0.16 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 4.00006, 19 ), Vector2( -18.0001, 19.9999 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("origin/bacia/tronco/clavícula/cabeca:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.16 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 5.00004, -13 ), Vector2( 5.00004, -13 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("origin/bacia/tronco:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.16 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -17.0001, -16 ), Vector2( 4.00003, -22 ) ]
+}
 tracks/12/type = "value"
-tracks/12/path = NodePath("origin/bacia/tronco/clavícula/braco_1:position")
+tracks/12/path = NodePath("origin/bacia/tronco/clavícula:position")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/imported = false
@@ -2739,43 +3332,43 @@ tracks/12/keys = {
 "times": PoolRealArray( 0, 0.16 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -14.0001, 19 ), Vector2( -27.0002, 11 ) ]
+"values": [ Vector2( -11.0001, -21 ), Vector2( 10.0001, -17 ) ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("origin/bacia/perna_1/pe_1:position")
+tracks/13/path = NodePath("origin/bacia:position")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
 tracks/13/enabled = true
 tracks/13/keys = {
-"times": PoolRealArray( 0, 0.08, 0.12, 0.16 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.16 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 33.0002, 17 ), Vector2( 17.0001, 35 ), Vector2( 8.00006, 24 ), Vector2( 18.0001, 13.5833 ) ]
+"values": [ Vector2( 0, -4 ), Vector2( -0.028595, -79.0964 ) ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:rotation_degrees")
+tracks/14/path = NodePath("origin/bacia/tronco/clavícula/braco_2/mao_2:position")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
 tracks/14/enabled = true
 tracks/14/keys = {
-"times": PoolRealArray( 0, 0.16 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.08, 0.16 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ -90.0, -31.5623 ]
+"values": [ Vector2( 17.0001, 9 ), Vector2( -3.00002, 29 ), Vector2( -1.00001, -9.25 ) ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1/weapon:position")
+tracks/15/path = NodePath("origin/bacia/tronco/clavícula/braco_2:position")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
 tracks/15/enabled = true
 tracks/15/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.08, 0.16 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ) ]
+"values": [ Vector2( -1.00001, 28 ), Vector2( -7.98578, 26.5482 ), Vector2( 27.0287, 11.0964 ) ]
 }
 
 [sub_resource type="Animation" id=47]
@@ -2784,31 +3377,31 @@ length = 0.8
 loop = true
 step = 0.01
 tracks/0/type = "value"
-tracks/0/path = NodePath("origin/bacia/tronco/clavícula/braco_2:position")
+tracks/0/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1/weapon:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.28, 0.4, 0.5, 0.6, 0.68 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 26.0002, 14 ), Vector2( 25.0002, 15 ), Vector2( 26.0002, 14 ), Vector2( 27.0002, 13 ), Vector2( 26.0002, 14 ), Vector2( 25.0002, 15 ), Vector2( 26.0002, 14 ), Vector2( 27.0002, 13 ) ]
+"values": [ Vector2( 0, 0 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("origin/bacia/tronco/clavícula/braco_2/mao_2:position")
+tracks/1/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.28, 0.4, 0.5, 0.6, 0.68 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -1.00001, -9 ), Vector2( -1.00001, -9 ), Vector2( -1.00001, -9 ), Vector2( -1.00001, -9 ), Vector2( -1.00001, -9 ), Vector2( -1.00001, -9 ), Vector2( -1.00001, -9 ), Vector2( -1.00001, -9 ) ]
+"values": [ -31.5623 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("origin/bacia:position")
+tracks/2/path = NodePath("origin/bacia/perna_1/pe_1:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -2817,22 +3410,22 @@ tracks/2/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.28, 0.4, 0.5, 0.6, 0.68 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, -79 ), Vector2( 0, -79.5 ), Vector2( 0, -80 ), Vector2( 0, -79.5 ), Vector2( 0, -79 ), Vector2( 0, -79.5 ), Vector2( 0, -80 ), Vector2( 0, -79.5 ) ]
+"values": [ Vector2( -29.0002, 24 ), Vector2( -10.2001, 28.2 ), Vector2( 11.0001, 37 ), Vector2( 11.0001, 37 ), Vector2( -9.00006, 37 ), Vector2( -11.0001, 37 ), Vector2( -12.0001, 37 ), Vector2( -24.0002, 30 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("origin/bacia/tronco/clavícula:position")
+tracks/3/path = NodePath("origin/bacia/tronco/clavícula/braco_1:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.28, 0.4, 0.5, 0.6, 0.68 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.15, 0.2, 0.28, 0.35, 0.4, 0.5, 0.55, 0.6, 0.68, 0.75 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 10.0001, -17 ), Vector2( 10.0001, -17 ), Vector2( 10.0001, -17 ), Vector2( 10.0001, -17 ), Vector2( 10.0001, -17 ), Vector2( 10.0001, -17 ), Vector2( 10.0001, -17 ), Vector2( 10.0001, -17 ) ]
+"values": [ Vector2( -27.0002, 11.5 ), Vector2( -27.0002, 12.5 ), Vector2( -27.0002, 13 ), Vector2( -27.0002, 12.5 ), Vector2( -27.0002, 11.5 ), Vector2( -27.0002, 11 ), Vector2( -27.0002, 11.5 ), Vector2( -27.0002, 12.5 ), Vector2( -27.0002, 13 ), Vector2( -27.0002, 12.5 ), Vector2( -27.0002, 11.5 ), Vector2( -27.0002, 11 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("origin/bacia/tronco:position")
+tracks/4/path = NodePath("origin/bacia/perna_1/pe_1/ponta_pe_1:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -2841,10 +3434,10 @@ tracks/4/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.28, 0.4, 0.5, 0.6, 0.68 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 4.00003, -22 ), Vector2( 4.00003, -22 ), Vector2( 4.00003, -22 ), Vector2( 4.00003, -22 ), Vector2( 4.00003, -22 ), Vector2( 4.00003, -22 ), Vector2( 4.00003, -22 ), Vector2( 4.00003, -22 ) ]
+"values": [ Vector2( 3.00002, 7 ), Vector2( 3.00002, 5 ), Vector2( 7.00005, 1 ), Vector2( 7.00005, 0 ), Vector2( 7.00005, 0 ), Vector2( 7.00005, 0 ), Vector2( 7.00005, 0 ), Vector2( 4.00003, 6 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("origin/bacia/tronco/clavícula/cabeca:position")
+tracks/5/path = NodePath("origin/bacia/perna_2/pe_2/ponta_pe_2:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -2853,10 +3446,10 @@ tracks/5/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.28, 0.4, 0.5, 0.6, 0.68 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 5.00004, -13 ), Vector2( 5.00004, -13 ), Vector2( 5.00004, -13 ), Vector2( 5.00004, -13 ), Vector2( 5.00004, -13 ), Vector2( 5.00004, -13 ), Vector2( 5.00004, -13 ), Vector2( 5.00004, -13 ) ]
+"values": [ Vector2( 7.00005, 0 ), Vector2( 7.00005, 0 ), Vector2( 7.00005, 1 ), Vector2( 4.00002, 6 ), Vector2( 3.00002, 7 ), Vector2( 4.00003, 5 ), Vector2( 7.00005, 1 ), Vector2( 7.00005, 0 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:position")
+tracks/6/path = NodePath("origin/bacia/perna_2/pe_2:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -2865,10 +3458,10 @@ tracks/6/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.28, 0.4, 0.5, 0.6, 0.68 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -18.0001, 19.9999 ), Vector2( -18.0001, 19.9999 ), Vector2( -18.0001, 19.9999 ), Vector2( -18.0001, 19.9999 ), Vector2( -18.0001, 19.9999 ), Vector2( -18.0001, 19.9999 ), Vector2( -18.0001, 19.9999 ), Vector2( -18.0001, 19.9999 ) ]
+"values": [ Vector2( -9.00006, 37 ), Vector2( -10.5001, 37 ), Vector2( -12.0001, 37 ), Vector2( -22.0002, 30 ), Vector2( -29.0002, 24 ), Vector2( -10.0001, 29 ), Vector2( 11.0001, 37 ), Vector2( 11.0001, 37 ) ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("origin/bacia/perna_1:position")
+tracks/7/path = NodePath("origin/bacia/perna_2:position")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -2877,10 +3470,10 @@ tracks/7/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.28, 0.4, 0.5, 0.6, 0.68 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 16.0001, 33 ), Vector2( 21.0001, 33.2 ), Vector2( 21.2001, 33.5 ), Vector2( 15.0001, 37 ), Vector2( 12.0001, 38 ), Vector2( 0, 38 ), Vector2( -12.0001, 38 ), Vector2( -9.00007, 37 ) ]
+"values": [ Vector2( 12.0001, 38 ), Vector2( 1.43051e-05, 38 ), Vector2( -12.0001, 38 ), Vector2( -9.00006, 37 ), Vector2( 16.0001, 33 ), Vector2( 21.0001, 33 ), Vector2( 22.0002, 33 ), Vector2( 15.0001, 37 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("origin/bacia/perna_2:position")
+tracks/8/path = NodePath("origin/bacia/perna_1:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -2889,10 +3482,10 @@ tracks/8/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.28, 0.4, 0.5, 0.6, 0.68 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 12.0001, 38 ), Vector2( 1.43051e-05, 38 ), Vector2( -12.0001, 38 ), Vector2( -9.00006, 37 ), Vector2( 16.0001, 33 ), Vector2( 21.0001, 33 ), Vector2( 22.0002, 33 ), Vector2( 15.0001, 37 ) ]
+"values": [ Vector2( 16.0001, 33 ), Vector2( 21.0001, 33.2 ), Vector2( 21.2001, 33.5 ), Vector2( 15.0001, 37 ), Vector2( 12.0001, 38 ), Vector2( 0, 38 ), Vector2( -12.0001, 38 ), Vector2( -9.00007, 37 ) ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("origin/bacia/perna_2/pe_2:position")
+tracks/9/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
@@ -2901,10 +3494,10 @@ tracks/9/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.28, 0.4, 0.5, 0.6, 0.68 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -9.00006, 37 ), Vector2( -10.5001, 37 ), Vector2( -12.0001, 37 ), Vector2( -22.0002, 30 ), Vector2( -29.0002, 24 ), Vector2( -10.0001, 29 ), Vector2( 11.0001, 37 ), Vector2( 11.0001, 37 ) ]
+"values": [ Vector2( -18.0001, 19.9999 ), Vector2( -18.0001, 19.9999 ), Vector2( -18.0001, 19.9999 ), Vector2( -18.0001, 19.9999 ), Vector2( -18.0001, 19.9999 ), Vector2( -18.0001, 19.9999 ), Vector2( -18.0001, 19.9999 ), Vector2( -18.0001, 19.9999 ) ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("origin/bacia/perna_2/pe_2/ponta_pe_2:position")
+tracks/10/path = NodePath("origin/bacia/tronco/clavícula/cabeca:position")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/imported = false
@@ -2913,10 +3506,10 @@ tracks/10/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.28, 0.4, 0.5, 0.6, 0.68 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 7.00005, 0 ), Vector2( 7.00005, 0 ), Vector2( 7.00005, 1 ), Vector2( 4.00002, 6 ), Vector2( 3.00002, 7 ), Vector2( 4.00003, 5 ), Vector2( 7.00005, 1 ), Vector2( 7.00005, 0 ) ]
+"values": [ Vector2( 5.00004, -13 ), Vector2( 5.00004, -13 ), Vector2( 5.00004, -13 ), Vector2( 5.00004, -13 ), Vector2( 5.00004, -13 ), Vector2( 5.00004, -13 ), Vector2( 5.00004, -13 ), Vector2( 5.00004, -13 ) ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("origin/bacia/perna_1/pe_1/ponta_pe_1:position")
+tracks/11/path = NodePath("origin/bacia/tronco:position")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/imported = false
@@ -2925,22 +3518,22 @@ tracks/11/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.28, 0.4, 0.5, 0.6, 0.68 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 3.00002, 7 ), Vector2( 3.00002, 5 ), Vector2( 7.00005, 1 ), Vector2( 7.00005, 0 ), Vector2( 7.00005, 0 ), Vector2( 7.00005, 0 ), Vector2( 7.00005, 0 ), Vector2( 4.00003, 6 ) ]
+"values": [ Vector2( 4.00003, -22 ), Vector2( 4.00003, -22 ), Vector2( 4.00003, -22 ), Vector2( 4.00003, -22 ), Vector2( 4.00003, -22 ), Vector2( 4.00003, -22 ), Vector2( 4.00003, -22 ), Vector2( 4.00003, -22 ) ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("origin/bacia/tronco/clavícula/braco_1:position")
+tracks/12/path = NodePath("origin/bacia/tronco/clavícula:position")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/imported = false
 tracks/12/enabled = true
 tracks/12/keys = {
-"times": PoolRealArray( 0, 0.1, 0.15, 0.2, 0.28, 0.35, 0.4, 0.5, 0.55, 0.6, 0.68, 0.75 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.28, 0.4, 0.5, 0.6, 0.68 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -27.0002, 11.5 ), Vector2( -27.0002, 12.5 ), Vector2( -27.0002, 13 ), Vector2( -27.0002, 12.5 ), Vector2( -27.0002, 11.5 ), Vector2( -27.0002, 11 ), Vector2( -27.0002, 11.5 ), Vector2( -27.0002, 12.5 ), Vector2( -27.0002, 13 ), Vector2( -27.0002, 12.5 ), Vector2( -27.0002, 11.5 ), Vector2( -27.0002, 11 ) ]
+"values": [ Vector2( 10.0001, -17 ), Vector2( 10.0001, -17 ), Vector2( 10.0001, -17 ), Vector2( 10.0001, -17 ), Vector2( 10.0001, -17 ), Vector2( 10.0001, -17 ), Vector2( 10.0001, -17 ), Vector2( 10.0001, -17 ) ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("origin/bacia/perna_1/pe_1:position")
+tracks/13/path = NodePath("origin/bacia:position")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
@@ -2949,31 +3542,31 @@ tracks/13/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.28, 0.4, 0.5, 0.6, 0.68 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -29.0002, 24 ), Vector2( -10.2001, 28.2 ), Vector2( 11.0001, 37 ), Vector2( 11.0001, 37 ), Vector2( -9.00006, 37 ), Vector2( -11.0001, 37 ), Vector2( -12.0001, 37 ), Vector2( -24.0002, 30 ) ]
+"values": [ Vector2( 0, -79 ), Vector2( 0, -79.5 ), Vector2( 0, -80 ), Vector2( 0, -79.5 ), Vector2( 0, -79 ), Vector2( 0, -79.5 ), Vector2( 0, -80 ), Vector2( 0, -79.5 ) ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1:rotation_degrees")
+tracks/14/path = NodePath("origin/bacia/tronco/clavícula/braco_2/mao_2:position")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
 tracks/14/enabled = true
 tracks/14/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.28, 0.4, 0.5, 0.6, 0.68 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ -31.5623 ]
+"values": [ Vector2( -1.00001, -9 ), Vector2( -1.00001, -9 ), Vector2( -1.00001, -9 ), Vector2( -1.00001, -9 ), Vector2( -1.00001, -9 ), Vector2( -1.00001, -9 ), Vector2( -1.00001, -9 ), Vector2( -1.00001, -9 ) ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("origin/bacia/tronco/clavícula/braco_1/mao_1/weapon:position")
+tracks/15/path = NodePath("origin/bacia/tronco/clavícula/braco_2:position")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
 tracks/15/enabled = true
 tracks/15/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.28, 0.4, 0.5, 0.6, 0.68 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ) ]
+"values": [ Vector2( 26.0002, 14 ), Vector2( 25.0002, 15 ), Vector2( 26.0002, 14 ), Vector2( 27.0002, 13 ), Vector2( 26.0002, 14 ), Vector2( 25.0002, 15 ), Vector2( 26.0002, 14 ), Vector2( 27.0002, 13 ) ]
 }
 
 [sub_resource type="GDScript" id=61]
@@ -3049,7 +3642,9 @@ func _physics_process(delta):
 collision_layer = 0
 script = ExtResource( 4 )
 __meta__ = {
-"_edit_lock_": true
+"_edit_horizontal_guides_": [ -238.0 ],
+"_edit_lock_": true,
+"_edit_vertical_guides_": [ 213.0 ]
 }
 hurtbox = NodePath("origin/bacia/hitbox")
 origin = NodePath("origin")
@@ -3138,9 +3733,6 @@ _legth = 30
 position = Vector2( 0, -30 )
 z_index = -1
 script = SubResource( 61 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="perna_1" type="Position2D" parent="origin/bacia"]
 position = Vector2( -16, 36 )
